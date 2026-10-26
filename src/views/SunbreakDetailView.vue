@@ -1,5 +1,5 @@
 <script setup>
-import { computed, onMounted, ref } from 'vue'
+import { computed, onMounted, ref, nextTick } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Star, ChevronLeft } from '@lucide/vue'
 import { useSunbreakMonsters } from '../composables/useSunbreakMonsters'
@@ -24,7 +24,48 @@ const imgError = ref(false)
 onMounted(async () => {
   await load()
   loading.value = false
+  scrollToHash()
 })
+
+/** 从掉落查询进来时定位的素材名 */
+const focusItem = computed(() =>
+  route.hash === '#rewards' ? new URLSearchParams(route.query).get('item') : null
+)
+
+/** 定位到高亮的素材行 */
+function findFocusEl() {
+  const item = focusItem.value
+  if (!item) return null
+  const rows = [...document.querySelectorAll('#sec-rewards [data-item]')].filter(
+    (el) => el.dataset.item === item
+  )
+  return rows.find((el) => el.className.includes('bg-gold')) || rows[0] || null
+}
+
+/** 数据就绪后滚动到素材区（图片懒加载会持续改变高度，轮询校正） */
+function scrollToHash() {
+  if (route.hash !== '#rewards') return
+  let stable = 0
+  let lastTop = -1
+  let ticks = 0
+
+  const seek = () => {
+    const target = findFocusEl() || document.getElementById('sec-rewards')
+    if (!target) {
+      if (ticks++ < 60) setTimeout(seek, 100)
+      return
+    }
+    const want = Math.round(target.getBoundingClientRect().top + window.scrollY - 72)
+    if (Math.abs(want - lastTop) < 3) stable++
+    else stable = 0
+    lastTop = want
+    document.documentElement.scrollTop = Math.max(0, want)
+    document.body.scrollTop = Math.max(0, want)
+    if (stable < 3 && ticks++ < 25) setTimeout(seek, 100)
+  }
+
+  setTimeout(seek, 0)
+}
 
 const monster = computed(() => bySlug(route.params.slug))
 
@@ -266,7 +307,7 @@ function jumpTo(id) {
           素材
           <span class="text-[11px] font-normal text-parch-dim">{{ monster.rewards.length }}</span>
         </h3>
-        <SunbreakRewards :rewards="monster.rewards" />
+        <SunbreakRewards :rewards="monster.rewards" :focus-item="focusItem" />
       </section>
     </template>
   </div>

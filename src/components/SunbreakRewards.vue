@@ -4,6 +4,8 @@ import { ChevronDown } from '@lucide/vue'
 
 const props = defineProps({
   rewards: { type: Array, required: true },
+  /** 要高亮的素材名（从掉落查询进来） */
+  focusItem: { type: String, default: null },
 })
 
 /** 获取方式的展示顺序 */
@@ -54,7 +56,19 @@ const open = ref(new Set())
 watch(
   groups,
   (g) => {
-    if (g.length && open.value.size === 0) open.value = new Set([g[0].method])
+    if (!g.length) return
+    // 有 focusItem 时，展开包含该素材的所有分组
+    if (props.focusItem) {
+      const hit = new Set()
+      for (const grp of g) {
+        if (grp.rows.some((r) => r.item === props.focusItem)) hit.add(grp.method)
+      }
+      if (hit.size) {
+        open.value = hit
+        return
+      }
+    }
+    if (open.value.size === 0) open.value = new Set([g[0].method])
   },
   { immediate: true }
 )
@@ -97,9 +111,14 @@ function toggle(method) {
           <div
             v-for="(r, i) in rg.list"
             :key="i"
-            class="flex items-center gap-2 border-t border-ink-line/30 px-3 py-1.5"
+            :data-item="r.item"
+            class="flex items-center gap-2 border-t border-ink-line/30 px-3 py-1.5 transition-colors"
+            :class="r.item === focusItem ? 'bg-gold/15' : ''"
           >
-            <span class="min-w-0 flex-1 truncate text-[12px] text-parch">{{ r.item }}</span>
+            <span
+              class="min-w-0 flex-1 truncate text-[12px]"
+              :class="r.item === focusItem ? 'font-semibold text-gold' : 'text-parch'"
+            >{{ r.item }}</span>
             <span v-if="r.source" class="shrink-0 text-[10px] text-parch-dim">{{ r.source }}</span>
             <span v-if="r.amount" class="shrink-0 text-[10px] tabular-nums text-parch-dim">
               {{ r.amount }}

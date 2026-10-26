@@ -116,24 +116,6 @@ const sorts = [
 
 <template>
   <div>
-    <!-- 图鉴内切换 -->
-    <div class="flex gap-1 px-3 pt-2.5">
-      <button
-        type="button"
-        class="flex-1 rounded-t-lg border-b-2 border-gold px-3 py-1.5 text-[12px] font-semibold text-gold"
-        aria-current="page"
-      >
-        怪物图鉴
-      </button>
-      <button
-        type="button"
-        class="flex-1 rounded-t-lg border-b-2 border-transparent px-3 py-1.5 text-[12px] font-medium text-parch-dim transition-colors hover:text-parch"
-        @click="router.push('/wilds/drops')"
-      >
-        掉落查询
-      </button>
-    </div>
-
     <!-- 搜索栏 -->
     <div class="sticky top-14 z-20 border-b border-ink-line bg-ink/95 px-3 py-2.5 backdrop-blur">
       <!-- 搜索框：全宽 -->

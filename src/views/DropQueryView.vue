@@ -124,7 +124,12 @@ function onStar() {
 }
 
 function openMonster(slug) {
-  router.push(`${detailBase.value}/${slug}`)
+  // 带上 #rewards + item，详情页会滚动到素材区并高亮该素材
+  router.push({
+    path: `${detailBase.value}/${slug}`,
+    hash: '#rewards',
+    query: { item: selected.value },
+  })
 }
 
 // 上报顶栏「共 X 只」
@@ -148,24 +153,6 @@ function savedCount(item) {
 
 <template>
   <div class="pb-24">
-    <!-- 图鉴内切换 -->
-    <div class="flex gap-1 px-3 pt-2.5">
-      <button
-        type="button"
-        class="flex-1 rounded-t-lg border-b-2 border-transparent px-3 py-1.5 text-[12px] font-medium text-parch-dim transition-colors hover:text-parch"
-        @click="router.push(listPath)"
-      >
-        怪物图鉴
-      </button>
-      <button
-        type="button"
-        class="flex-1 rounded-t-lg border-b-2 border-gold px-3 py-1.5 text-[12px] font-semibold text-gold"
-        aria-current="page"
-      >
-        掉落查询
-      </button>
-    </div>
-
     <div class="px-3 pt-3">
     <!-- 搜索区 -->
     <div class="relative">

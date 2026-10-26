@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, watch, nextTick } from 'vue'
 import { useRoute } from 'vue-router'
 import { AlertTriangle } from '@lucide/vue'
 import { useMonsters } from '../composables/useMonsters'
@@ -31,7 +31,62 @@ async function resolve() {
   imgError.value = false
 }
 
-onMounted(resolve)
+/** 从掉落查询进来时定位的素材名 */
+const focusItem = computed(() =>
+  route.hash ? new URLSearchParams(route.query).get('item') : null
+)
+/** 定位到高亮的素材行 */
+function findFocusEl() {
+  const item = focusItem.value
+  if (!item) return null
+  // 优先取带高亮（bg-gold/15）的那一行，它已排除占位
+  const rows = [...document.querySelectorAll('#sec-rewards [data-item]')].filter(
+    (el) => el.dataset.item === item
+  )
+  return rows.find((el) => el.className.includes('bg-gold')) || rows[0] || null
+}
+
+/** 是否是该素材的「真实」掉落行（荒野的目标报酬 100% 是占位标记） */
+function isFocusRow(r) {
+  if (r.item !== focusItem.value) return false
+  return !(r.source === '目标报酬' && String(r.rate || '') === '100%')
+}
+
+onMounted(async () => {
+  await resolve()
+  if (route.hash) scrollToHash()
+})
+
+/** 数据就绪后滚动到 #rewards 并定位到具体素材行 */
+function scrollToHash() {
+  if (!route.hash) return
+  // 详情页图片是懒加载的，页面高度会持续增长。用轮询校正直到位置稳定。
+  let stable = 0
+  let lastTop = -1
+  let ticks = 0
+
+  const seek = () => {
+    const target = findFocusEl() || document.getElementById('sec-rewards')
+    if (!target) {
+      if (ticks++ < 60) setTimeout(seek, 100)
+      return
+    }
+    const want = Math.round(target.getBoundingClientRect().top + window.scrollY - 72)
+
+    if (Math.abs(want - lastTop) < 3) stable++
+    else stable = 0
+    lastTop = want
+
+    // 直接写 scrollTop，绕开 scroll-behavior: smooth 的干扰
+    document.documentElement.scrollTop = Math.max(0, want)
+    document.body.scrollTop = Math.max(0, want)
+
+    // 位置连续 3 次稳定，或超过 25 次（2.5s）就停
+    if (stable < 3 && ticks++ < 25) setTimeout(seek, 100)
+  }
+
+  setTimeout(seek, 0)
+}
 watch(() => route.params.slug, resolve)
 
 const advice = computed(() =>
@@ -299,8 +354,12 @@ const stateBadge = (s) => {
         <div
           v-for="(r, i) in monster.rewards"
           :key="i"
-          class="flex items-center gap-2 px-3 py-2"
-          :class="i > 0 ? 'border-t border-ink-line/60' : ''"
+          :data-item="r.item"
+          class="flex items-center gap-2 px-3 py-2 transition-colors"
+          :class="[
+            i > 0 ? 'border-t border-ink-line/60' : '',
+            isFocusRow(r) ? 'bg-gold/15' : '',
+          ]"
         >
           <span class="min-w-0 flex-1 truncate text-xs text-parch">{{ r.item }}</span>
           <span v-if="r.source" class="shrink-0 text-[11px] text-parch-dim">{{ r.source }}</span>

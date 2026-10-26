@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, computed } from 'vue'
 import { useRouter } from 'vue-router'
-import { BookOpen, ChevronRight } from '@lucide/vue'
+import { BookOpen, Package, ChevronRight } from '@lucide/vue'
 import { useSettings } from '../composables/useSettings'
 
 const router = useRouter()
@@ -16,6 +16,14 @@ const features = [
     desc: '55 种怪物肉质、部位耐久、素材掉落',
     icon: BookOpen,
     to: '/wilds/monsters',
+    available: true,
+  },
+  {
+    id: 'drops',
+    title: '掉落查询',
+    desc: '输入素材名，反查哪些怪物掉落',
+    icon: Package,
+    to: '/wilds/drops',
     available: true,
   },
 ]

@@ -52,7 +52,12 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
-  scrollBehavior: () => ({ top: 0 }),
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) return savedPosition
+    // 带 hash 的交给页面自己处理（素材区需要等异步数据）
+    if (to.hash) return false
+    return { top: 0 }
+  },
 })
 
 export default router
