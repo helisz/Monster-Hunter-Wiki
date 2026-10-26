@@ -24,28 +24,17 @@ const icon = (name) => `${import.meta.env.BASE_URL}ui-icons/${name}.png`
       <Sword :size="16" class="shrink-0 text-gold" />
       <h3 class="shrink-0 text-sm font-semibold text-gold">出战建议</h3>
 
-      <!-- 右侧：当前武器类型 → 建议武器类型 -->
-      <div class="ml-auto flex shrink-0 items-center gap-1 text-[10px]">
+      <!-- 右侧：当前武器类型 + 问号 -->
+      <div class="ml-auto flex shrink-0 items-center gap-1">
         <span
           v-if="weapon"
-          class="inline-flex items-center gap-0.5 rounded bg-ink-soft px-1.5 py-0.5 font-medium text-parch-dim"
-          title="当前武器类型"
+          class="inline-flex items-center gap-0.5 rounded bg-gold/15 px-1.5 py-0.5 text-[10px] font-medium text-gold"
         >
-          <img :src="icon(weapon.hit)" alt="" class="size-3 opacity-80" />
+          <img :src="icon(weapon.hit)" alt="" class="size-3" />
           {{ weapon.label }}
-        </span>
-        <span v-if="suggested && suggested.key !== weapon?.key" class="text-parch-dim/50">→</span>
-        <span
-          v-if="suggested && suggested.key !== weapon?.key"
-          class="inline-flex items-center gap-0.5 rounded bg-gold/15 px-1.5 py-0.5 font-medium text-gold"
-          title="建议武器类型"
-        >
-          <img :src="icon(suggested.hit)" alt="" class="size-3" />
-          {{ suggested.label }}
         </span>
       </div>
 
-      <!-- 帮助问号 + 齿轮 -->
       <div class="relative flex shrink-0 items-center">
         <button
           type="button"
@@ -84,13 +73,13 @@ const icon = (name) => `${import.meta.env.BASE_URL}ui-icons/${name}.png`
             v-if="showHelp"
             class="absolute right-0 top-full z-30 mt-1.5 w-60 rounded-xl border border-ink-line bg-ink-soft p-3 text-[11px] leading-relaxed text-parch-dim shadow-xl shadow-black/60"
           >
-            <p class="mb-1.5 font-medium text-parch">怎么用？</p>
+            <p class="mb-1.5 font-medium text-parch">建议怎么读？</p>
             <p>
-              点击右上角的
-              <span class="inline-flex items-center gap-0.5 rounded bg-gold/15 px-1 py-0.5 font-medium text-gold">⚙</span>
-              齿轮按钮，切换你当前使用的武器类型（斩 / 打 / 弹）。
+              这里的属性、优先与避开部位，都是按
+              <span class="rounded bg-gold/15 px-1 py-0.5 font-medium text-gold">{{ weapon?.label || '当前' }}</span>
+              这一列肉质算出来的。
             </p>
-            <p class="mt-1.5">切换后，这里会根据该武器的肉质数值给出建议属性、优先攻击部位与应避开的低效部位。</p>
+            <p class="mt-1.5">换武器后结论会变，建议参考下方给出的推荐武器类型再决定带什么。</p>
           </div>
         </Transition>
       </div>
@@ -186,10 +175,17 @@ const icon = (name) => `${import.meta.env.BASE_URL}ui-icons/${name}.png`
         </div>
       </div>
 
-      <!-- 伤口提示 -->
-      <p class="border-t border-ink-line pt-2.5 text-[11px] leading-relaxed text-parch-dim/80">
-        伤口肉质更高，打破后切输出。
-      </p>
+      <!-- 底部：推荐武器 + 伤口提示 -->
+      <div class="space-y-1.5 border-t border-ink-line pt-2.5 text-[11px] leading-relaxed text-parch-dim/80">
+        <p v-if="suggested" class="flex flex-wrap items-center gap-x-1">
+          <span class="inline-flex items-center gap-1 align-middle">
+            <img :src="icon(suggested.hit)" alt="" class="size-3.5" />
+            <span class="font-medium text-gold">推荐{{ suggested.label }}武器</span>
+          </span>
+          <span>{{ suggested.key !== weapon?.key ? `（当前选择是${weapon?.label}，该武器有效部位较少）` : '（与当前选择一致）' }}</span>
+        </p>
+        <p>伤口肉质更高，打破后切输出。</p>
+      </div>
     </div>
   </section>
 </template>

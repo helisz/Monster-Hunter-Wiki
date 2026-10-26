@@ -94,15 +94,6 @@ const BASE = import.meta.env.BASE_URL
         {{ pageTitle }}
       </h1>
 
-      <!-- 配置齿轮 -->
-      <button
-        type="button"
-        class="-mr-1 flex size-10 shrink-0 items-center justify-center rounded-lg text-gold active:bg-ink-card"
-        aria-label="打开配置"
-        @click="showConfig = true"
-      >
-        <Settings :size="20" />
-      </button>
     </header>
 
     <main class="flex-1 pb-24">
@@ -119,7 +110,7 @@ const BASE = import.meta.env.BASE_URL
       <button
         v-if="showBackToTop"
         type="button"
-        class="fixed bottom-5 right-4 z-40 flex size-11 items-center justify-center rounded-full border border-ink-line bg-ink-card/95 text-parch-dim shadow-lg shadow-black/60 backdrop-blur active:scale-95"
+        class="fixed bottom-5 right-4 z-40 flex size-11 items-center justify-center rounded-full border border-gold/60 bg-ink-card/95 text-gold shadow-lg shadow-black/60 backdrop-blur active:scale-95"
         aria-label="回到顶部"
         @click="backToTop"
       >
