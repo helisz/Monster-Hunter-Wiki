@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch, inject, onUnmounted } from 'vue'
 import { Star } from '@lucide/vue'
 import { useFavorites } from '../composables/useFavorites'
 import { useRouter } from 'vue-router'
@@ -71,6 +71,19 @@ const filtered = computed(() => {
     })
   }
   return list
+})
+
+// 把「共 X 只」上报到顶栏右侧
+const headerMeta = inject('headerMeta', null)
+watch(
+  () => filtered.value.length,
+  (n) => {
+    if (headerMeta) headerMeta.value = `共 ${n} 只`
+  },
+  { immediate: true }
+)
+onUnmounted(() => {
+  if (headerMeta) headerMeta.value = ''
 })
 
 const activeFilterCount = computed(() => {
@@ -289,10 +302,7 @@ const sorts = [
         </button>
       </div>
 
-      <div class="mt-2 flex items-center justify-between px-0.5 text-[11px] text-parch-dim">
-        <span>共 {{ filtered.length }} 只</span>
-        <span v-if="loading">加载中…</span>
-      </div>
+      <div v-if="loading" class="mt-2 px-0.5 text-[11px] text-parch-dim">加载中…</div>
     </div>
 
     <!-- 内容 -->
@@ -326,7 +336,7 @@ const sorts = [
         v-else
         :class="
           settings.viewMode === 'card'
-            ? 'grid grid-cols-2 gap-2.5'
+            ? 'grid grid-cols-3 gap-1.5 sm:grid-cols-4 xl:grid-cols-5'
             : 'flex flex-col gap-2'
         "
       >

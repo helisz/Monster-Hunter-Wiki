@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted, onUnmounted } from 'vue'
+import { ref, computed, provide, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ChevronLeft, Settings, ArrowUp } from '@lucide/vue'
 import { useSettings, WEAPON_TYPES } from './composables/useSettings'
@@ -12,6 +12,10 @@ const { settings, setWeaponType } = useSettings()
 const showConfig = ref(false)
 
 const pageTitle = computed(() => route.meta?.title || '')
+
+// 子页面往顶栏右侧塞的补充信息（如怪物图鉴的「共 55 只」）
+const headerMeta = ref('')
+provide('headerMeta', headerMeta)
 const canGoBack = computed(() => route.name && route.name !== 'games')
 const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, '')
 
@@ -94,6 +98,14 @@ const BASE = import.meta.env.BASE_URL
       <h1 class="min-w-0 flex-1 truncate text-[17px] font-semibold tracking-wide text-parch">
         {{ pageTitle }}
       </h1>
+
+      <!-- 子页面上报的补充信息（共 X 只） -->
+      <span
+        v-if="headerMeta"
+        class="shrink-0 whitespace-nowrap text-[11px] tabular-nums text-parch-dim"
+      >
+        {{ headerMeta }}
+      </span>
 
       <!-- 详情页显示配置齿轮 -->
       <button
