@@ -11,7 +11,19 @@ const { settings, setWeaponType } = useSettings()
 
 const showConfig = ref(false)
 
-const pageTitle = computed(() => route.meta?.title || '')
+// 游戏名：目前只有荒野，后续可扩展
+const GAME_NAMES = { wilds: '荒野' }
+const gameName = computed(() => GAME_NAMES[settings.game] || '')
+
+// 列表 / 详情页在标题里带上游戏名，如「荒野 · 怪物图鉴」
+const SUB_PAGES = ['monsters', 'monster-detail']
+const pageTitle = computed(() => {
+  const base = route.meta?.title || ''
+  if (SUB_PAGES.includes(route.name) && gameName.value) {
+    return `${gameName.value} · ${base}`
+  }
+  return base
+})
 
 // 子页面往顶栏右侧塞的补充信息（如怪物图鉴的「共 55 只」）
 const headerMeta = ref('')
