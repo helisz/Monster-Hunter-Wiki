@@ -12,6 +12,8 @@ const { settings } = useSettings()
 
 const icon = (name) => `${import.meta.env.BASE_URL}ui-icons/${name}.png`
 
+const WEAPON_HIT = { slash: 'hit_slash', strike: 'hit_strike', shell: 'hit_shell' }
+
 /** 列表模式简写：优先用当前武器；未配置时用斩/打/弹里最优的一列 */
 const adviceBrief = computed(() => {
   if (settings.weaponType) return buildAdvice(props.monster, settings.weaponType)
@@ -86,8 +88,15 @@ const adviceBrief = computed(() => {
         <span class="font-medium">{{ e.label }}{{ e.value }}</span>
       </span>
       <span class="text-parch-dim/30">|</span>
-      <span v-if="adviceBrief.good.length" class="text-[10px] text-emerald-300">
-        打 {{ adviceBrief.good.map((g) => g.part).join('·') }}
+      <span v-if="adviceBrief.good.length" class="inline-flex items-center gap-1">
+        <img
+          :src="icon(WEAPON_HIT[adviceBrief.weaponType] || 'hit_slash')"
+          alt=""
+          class="size-[18px] shrink-0 brightness-125 contrast-110"
+        />
+        <span class="text-[10px] text-emerald-300">
+          {{ adviceBrief.good.map((g) => g.part).join('·') }}
+        </span>
       </span>
       <span v-else class="text-[10px] text-amber-300/80">无有效弱点</span>
     </div>
