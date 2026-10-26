@@ -63,7 +63,7 @@ const guide = computed(() =>
 )
 
 const related = computed(() =>
-  monster.value ? getRelatedMonsters(monster.value, monsters.value) : []
+  monster.value ? getRelatedMonsters(monster.value, monsters.value) : { family: '', list: [] }
 )
 
 const sections = computed(() => {
@@ -220,7 +220,7 @@ const stateBadge = (s) => {
     </div>
 
     <!-- 同系怪物 -->
-    <RelatedMonsters :monsters="related" />
+    <RelatedMonsters :monsters="related.list" :family="related.family" />
 
     <!-- 肉质 -->
     <section id="sec-hitzone" class="mb-4 scroll-mt-16">

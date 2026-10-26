@@ -3,7 +3,10 @@ import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 
 const props = defineProps({
+  /** 同族成员列表 */
   monsters: { type: Array, required: true },
+  /** 家族名，如「火龙一族」 */
+  family: { type: String, default: '' },
 })
 
 const router = useRouter()
@@ -18,7 +21,7 @@ function go(m) {
 <template>
   <section v-if="visible.length" class="mb-4">
     <h3 class="mb-2 flex items-center gap-2 px-0.5 text-sm font-semibold text-parch">
-      同系怪物
+      {{ family || '同族怪物' }}
       <span class="text-[11px] font-normal text-parch-dim">{{ visible.length }}</span>
     </h3>
 
