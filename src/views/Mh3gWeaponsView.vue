@@ -1,13 +1,11 @@
 <script setup>
 import { computed, inject, onMounted, onUnmounted, ref, watch } from 'vue'
-import { useRouter } from 'vue-router'
-import { Search, X, ChevronDown, Sword, Crosshair } from '@lucide/vue'
+import { Search, X, ChevronDown, Sword } from '@lucide/vue'
 import { useMh3gWeapons, WEAPON_CATS, CAT_ABBR } from '../composables/useMh3gWeapons'
 
-const router = useRouter()
 const { weapons, pending, error, load } = useMh3gWeapons()
 
-const KEY = 'mhw.mh3gWeaponFilters'
+const KEY = 'mhw.mh3gWeaponFilters2'
 const defaults = { cat: '大剑', keyword: '', rank: 'all', sortKey: 'default' }
 
 function readFilters() {
@@ -20,11 +18,15 @@ function readFilters() {
 }
 
 const f = ref(readFilters())
-watch(f, (v) => {
-  try {
-    localStorage.setItem(KEY, JSON.stringify(v))
-  } catch {}
-}, { deep: true })
+watch(
+  f,
+  (v) => {
+    try {
+      localStorage.setItem(KEY, JSON.stringify(v))
+    } catch {}
+  },
+  { deep: true }
+)
 
 const cat = computed({ get: () => f.value.cat, set: (v) => (f.value.cat = v) })
 const keyword = computed({ get: () => f.value.keyword, set: (v) => (f.value.keyword = v) })
@@ -33,34 +35,26 @@ const sortKey = computed({ get: () => f.value.sortKey, set: (v) => (f.value.sort
 
 onMounted(load)
 
-/** 当前类别的原始行 */
-const baseRows = computed(() => (weapons.value[cat.value]?.rows || []))
+const baseRows = computed(() => weapons.value[cat.value]?.rows || [])
 
-/** 过滤 + 排序 */
 const rows = computed(() => {
   const kw = keyword.value.trim().toLowerCase()
   let list = baseRows.value.filter((w) => {
     if (rank.value !== 'all' && w.rank !== rank.value) return false
     if (!kw) return true
     const hay = `${w.n || ''} ${w.mat || ''}`.toLowerCase()
-    // 片假名 → 平假名
     const hira = hay.replace(/[\u30a1-\u30f6]/g, (c) =>
       String.fromCharCode(c.charCodeAt(0) - 0x60)
     )
     return hay.includes(kw) || hira.includes(kw)
   })
-
-  if (sortKey.value === 'atk-desc') {
-    list = [...list].sort((a, b) => (b.atk || 0) - (a.atk || 0))
-  } else if (sortKey.value === 'atk-asc') {
-    list = [...list].sort((a, b) => (a.atk || 0) - (b.atk || 0))
-  } else if (sortKey.value === 'sharp-desc') {
-    list = [...list].sort((a, b) => (b.sharp || 0) - (a.sharp || 0))
-  }
+  if (sortKey.value === 'atk-desc') list = [...list].sort((a, b) => (b.atk || 0) - (a.atk || 0))
+  else if (sortKey.value === 'atk-asc') list = [...list].sort((a, b) => (a.atk || 0) - (b.atk || 0))
+  else if (sortKey.value === 'sharp-desc')
+    list = [...list].sort((a, b) => (b.sharp?.[0]?.total || 0) - (a.sharp?.[0]?.total || 0))
   return list
 })
 
-// 上报「共 X 把」到顶栏
 const headerMeta = inject('headerMeta', null)
 watch(
   () => rows.value.length,
@@ -74,25 +68,34 @@ onUnmounted(() => {
 })
 
 const open = ref(new Set())
-function toggle(name) {
+function toggle(key) {
   const s = new Set(open.value)
-  if (s.has(name)) s.delete(name)
-  else s.add(name)
+  if (s.has(key)) s.delete(key)
+  else s.add(key)
   open.value = s
 }
 
-/** 稀有度标签（3G 用等级） */
+const openSharp = ref(new Set())
+function toggleSharp(key) {
+  const s = new Set(openSharp.value)
+  if (s.has(key)) s.delete(key)
+  else s.add(key)
+  openSharp.value = s
+}
+
 const rankClass = {
   下位: 'bg-slate-500/15 text-slate-300',
   上位: 'bg-emerald-500/15 text-emerald-300',
   G级: 'bg-amber-500/15 text-amber-300',
 }
 
-/** 斩味色带：长度换算成 5 段颜色（很浅的近似，源站未给颜色分区） */
-function sharpSegs(n) {
-  // 3G 斩味长度上限约 90-150，按比例配色
-  const pct = Math.min(100, Math.round((n / 150) * 100))
-  return pct
+/** 派生树：nodes 每元素一条缩进边。' '=空 'I'=竖线 'T'=├ 'L'=└ */
+function treeInfo(w) {
+  const nb = w.nodes || []
+  if (!nb.length) return { indent: [], branch: '' }
+  const last = nb[nb.length - 1]
+  const indent = nb.slice(0, -1).map((ch) => ch === 'I' || ch === 'T')
+  return { indent, branch: last === 'T' ? '├' : last === 'L' ? '└' : '' }
 }
 
 const sorts = [
@@ -109,16 +112,12 @@ const ranks = [
 ]
 const showRank = ref(false)
 
-const totalAll = computed(() =>
-  WEAPON_CATS.reduce((n, c) => n + (weapons.value[c]?.count || 0), 0)
-)
+const SHARP_PX = 3.0
 </script>
 
 <template>
   <div>
-    <!-- 顶部：类别切换 + 搜索 -->
     <div class="sticky top-14 z-20 border-b border-ink-line bg-ink/95 backdrop-blur">
-      <!-- 类别横滑 -->
       <div class="no-scrollbar flex gap-1 overflow-x-auto px-3 py-2">
         <button
           v-for="c in WEAPON_CATS"
@@ -137,10 +136,12 @@ const totalAll = computed(() =>
         </button>
       </div>
 
-      <!-- 搜索 + 筛选 -->
       <div class="flex items-center gap-2 px-3 pb-2.5">
         <div class="relative flex-1">
-          <Search :size="14" class="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-parch-dim" />
+          <Search
+            :size="14"
+            class="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-parch-dim"
+          />
           <input
             v-model="keyword"
             type="search"
@@ -173,7 +174,6 @@ const totalAll = computed(() =>
         </button>
       </div>
 
-      <!-- 等级 + 排序面板 -->
       <div v-if="showRank" class="border-t border-ink-line px-3 py-2.5">
         <div class="mb-2 flex flex-wrap gap-1.5">
           <button
@@ -208,7 +208,6 @@ const totalAll = computed(() =>
       <div v-if="pending" class="px-3 pb-2 text-[11px] text-parch-dim">加载中…</div>
     </div>
 
-    <!-- 列表 -->
     <div class="px-3 pb-24 pt-3">
       <div v-if="error" class="rounded-xl border border-ink-line bg-ink-card p-4 text-sm text-parch-dim">
         数据加载失败：{{ error }}
@@ -230,96 +229,146 @@ const totalAll = computed(() =>
         </button>
       </div>
 
-      <div v-else class="space-y-1">
+      <div v-else class="space-y-0.5">
         <div
           v-for="(w, i) in rows"
           :key="`${w.n}-${w.atk}-${i}`"
-          class="rounded-lg border border-ink-line bg-ink-card px-3 py-2"
+          class="rounded-md border px-2 py-1.5"
+          :class="w.d === 0 ? 'mt-2 border-gold/25 bg-ink-card' : 'border-ink-line/50 bg-ink-soft/25'"
         >
-          <!-- 名字行 -->
-          <div class="flex items-baseline gap-2">
-            <span
+          <div class="flex items-stretch">
+            <!-- 派生缩进线 -->
+            <div
               v-if="w.d > 0"
-              class="shrink-0 text-[10px] text-parch-dim/50"
-              :style="{ paddingLeft: `${Math.min(w.d - 1, 4) * 8}px` }"
+              class="relative shrink-0"
+              :style="{ width: treeInfo(w).indent.length * 9 + 11 + 'px' }"
+              aria-hidden="true"
             >
-              └
-            </span>
-            <span class="min-w-0 flex-1 truncate text-[13px] font-medium text-parch">
-              {{ w.n }}
-            </span>
-            <span
-              v-if="w.rank"
-              class="shrink-0 rounded px-1.5 py-0.5 text-[9px] font-medium"
-              :class="rankClass[w.rank] || 'bg-ink-soft text-parch-dim'"
-            >
-              {{ w.rank }}
-            </span>
+              <!-- 祖先竖线 -->
+              <span
+                v-for="(v, gi) in treeInfo(w).indent"
+                :key="gi"
+                v-show="v"
+                class="absolute top-0 bottom-0 bg-parch-dim/55"
+                :style="{ left: gi * 9 + 4 + 'px', width: '1.5px' }"
+              ></span>
+              <!-- 本行分支：└ 或 ├ -->
+              <span
+                v-if="treeInfo(w).branch"
+                class="absolute"
+                :style="{
+                  left: (treeInfo(w).indent.length - 1) * 9 + 4 + 'px',
+                  top: '0',
+                  width: '7px',
+                  height: '11px',
+                  borderLeft: '1.5px solid rgba(169,155,136,0.55)',
+                  borderBottom: '1.5px solid rgba(169,155,136,0.55)',
+                  borderBottomLeftRadius: '3px',
+                }"
+              ></span>
+            </div>
+
+            <div class="min-w-0 flex-1">
+              <div class="flex items-baseline gap-1.5">
+                <span
+                  class="min-w-0 flex-1 truncate text-[12.5px] font-medium"
+                  :class="w.d === 0 ? 'text-gold' : 'text-parch'"
+                >
+                  {{ w.n }}
+                </span>
+                <span
+                  v-if="w.rank"
+                  class="shrink-0 rounded px-1 py-0.5 text-[8.5px] font-medium"
+                  :class="rankClass[w.rank] || 'bg-ink-soft text-parch-dim'"
+                >
+                  {{ w.rank }}
+                </span>
+              </div>
+
+              <div
+                class="mt-0.5 flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[10.5px] tabular-nums text-parch-dim"
+              >
+                <span class="flex items-center gap-0.5 font-medium text-parch">
+                  <Sword :size="10" class="text-gold/70" />{{ w.atk }}
+                </span>
+                <span v-if="w.eff && w.eff.includes('防')" class="text-emerald-300/80">
+                  {{ w.eff.split('(')[0].trim() }}
+                </span>
+                <span v-if="w.aff" :class="w.aff > 0 ? 'text-emerald-300/80' : 'text-red-300/80'">
+                  会心{{ w.aff > 0 ? '+' : '' }}{{ w.aff }}%
+                </span>
+                <span v-if="w.slot && w.slot !== '---'" class="text-parch-dim">{{ w.slot }}</span>
+                <span v-if="w.tone" class="text-[9.5px]">{{ w.tone }}</span>
+              </div>
+
+              <!-- 斩味（等比色段） -->
+              <div v-if="w.sharp && w.sharp.length" class="mt-1">
+                <button
+                  type="button"
+                  class="flex items-center gap-1.5"
+                  @click="toggleSharp(`${w.n}|${i}`)"
+                >
+                  <span class="flex h-[8px] shrink-0 items-stretch gap-px overflow-hidden rounded-[1px]">
+                    <span
+                      v-for="(s, si) in w.sharp[0].segs"
+                      :key="si"
+                      class="block rounded-[1px]"
+                      :style="{ width: s.n * SHARP_PX + 'px', backgroundColor: s.c }"
+                    ></span>
+                  </span>
+                  <span class="text-[8.5px] text-parch-dim/45">
+                    {{ w.sharp[0].total
+                    }}<template v-if="w.sharp[1]">/{{ w.sharp[1].total }}</template>
+                  </span>
+                </button>
+                <div
+                  v-if="w.sharp[1] && openSharp.has(`${w.n}|${i}`)"
+                  class="mt-1 flex items-center gap-1.5"
+                >
+                  <span class="text-[8px] text-parch-dim/45">+1</span>
+                  <span class="flex h-[8px] shrink-0 items-stretch gap-px overflow-hidden rounded-[1px]">
+                    <span
+                      v-for="(s, si) in w.sharp[1].segs"
+                      :key="si"
+                      class="block rounded-[1px]"
+                      :style="{ width: s.n * SHARP_PX + 'px', backgroundColor: s.c }"
+                    ></span>
+                  </span>
+                </div>
+              </div>
+
+              <div v-if="w.melo" class="mt-0.5 text-[9.5px] leading-snug text-parch-dim/70">
+                ♪ {{ w.melo }}
+              </div>
+
+              <button
+                v-if="w.mat"
+                type="button"
+                class="mt-0.5 flex w-full items-center gap-1 text-left text-[10px] leading-snug text-parch-dim/85"
+                @click="toggle(`${w.n}|${i}`)"
+              >
+                <span
+                  class="shrink-0 rounded px-1 text-[8.5px]"
+                  :class="
+                    w.matType === '生产'
+                      ? 'bg-emerald-500/15 text-emerald-300'
+                      : w.matType === '强化'
+                        ? 'bg-sky-500/15 text-sky-300'
+                        : 'bg-amber-500/15 text-amber-300'
+                  "
+                  >{{ w.matType }}</span
+                >
+                <span class="min-w-0 flex-1" :class="open.has(`${w.n}|${i}`) ? '' : 'line-clamp-1'">
+                  {{ w.mat }}
+                </span>
+                <ChevronDown
+                  :size="9"
+                  class="shrink-0 transition-transform"
+                  :class="open.has(`${w.n}|${i}`) ? 'rotate-180' : ''"
+                />
+              </button>
+            </div>
           </div>
-
-          <!-- 属性行 -->
-          <div class="mt-1 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-[11px] tabular-nums text-parch-dim">
-            <span class="flex items-center gap-0.5 text-parch">
-              <Sword :size="11" class="text-gold/70" />{{ w.atk }}
-            </span>
-            <span v-if="w.def" class="text-emerald-300/80">防+{{ w.def }}</span>
-            <span v-if="w.el" class="text-sky-300/80">{{ w.el }} {{ w.elv }}</span>
-            <span v-if="w.aff" :class="w.aff > 0 ? 'text-emerald-300/80' : 'text-red-300/80'">
-              会心{{ w.aff > 0 ? '+' : '' }}{{ w.aff }}%
-            </span>
-            <span v-if="w.slot && w.slot !== '---'" class="text-parch-dim">{{ w.slot }}</span>
-
-            <!-- 斩味条 -->
-            <span v-if="w.sharp" class="flex items-center gap-1">
-              <span class="h-1.5 w-10 overflow-hidden rounded-sm bg-ink-soft">
-                <span class="block h-full bg-gradient-to-r from-red-500 via-amber-400 to-emerald-400"
-                      :style="{ width: sharpSegs(w.sharp) + '%' }" />
-              </span>
-              <span class="text-[9px] opacity-60">{{ w.sharp }}</span>
-            </span>
-
-            <!-- 远程：弹种 -->
-            <span v-if="w.ammo && w.ammo.length" class="flex items-center gap-0.5">
-              <Crosshair :size="11" class="text-sky-400/70" />
-              {{ w.ammo[0] }}
-            </span>
-
-            <!-- 狩猎笛：音色 -->
-            <span v-if="w.tone" class="text-[10px]">{{ w.tone }}</span>
-          </div>
-
-          <!-- 旋律（狩猎笛） -->
-          <div v-if="w.melo" class="mt-1 text-[10px] leading-relaxed text-parch-dim/80">
-            ♪ {{ w.melo }}
-          </div>
-
-          <!-- 素材 -->
-          <button
-            v-if="w.mat"
-            type="button"
-            class="mt-1.5 flex w-full items-center gap-1.5 text-left text-[10.5px] leading-relaxed text-parch-dim/90"
-            :aria-expanded="open.has(`${w.n}|${i}`)"
-            @click="toggle(`${w.n}|${i}`)"
-          >
-            <span
-              class="shrink-0 rounded px-1 py-0.5 text-[9px]"
-              :class="
-                w.matType === '生产'
-                  ? 'bg-emerald-500/15 text-emerald-300'
-                  : w.matType === '强化'
-                    ? 'bg-sky-500/15 text-sky-300'
-                    : 'bg-amber-500/15 text-amber-300'
-              "
-            >{{ w.matType }}</span>
-            <span class="min-w-0 flex-1" :class="open.has(`${w.n}|${i}`) ? '' : 'line-clamp-1'">
-              {{ w.mat }}
-            </span>
-            <ChevronDown
-              :size="11"
-              class="shrink-0 transition-transform"
-              :class="open.has(`${w.n}|${i}`) ? 'rotate-180' : ''"
-            />
-          </button>
         </div>
       </div>
     </div>
