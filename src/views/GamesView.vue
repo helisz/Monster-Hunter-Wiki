@@ -11,7 +11,7 @@ const games = [
     id: 'wilds',
     title: '怪物猎人：荒野',
     subtitle: 'Monster Hunter Wilds',
-    icon: `${import.meta.env.BASE_URL}icons/EM0001_00_0.webp`,
+    cover: `${import.meta.env.BASE_URL}wilds-cover.jpg`,
     available: true,
   },
 ]
@@ -36,31 +36,31 @@ function enter(game) {
         v-for="g in games"
         :key="g.id"
         type="button"
-        class="flex w-full items-center gap-4 rounded-2xl border border-ink-line bg-ink-card p-3 text-left transition-colors active:border-gold/50"
+        class="w-full overflow-hidden rounded-2xl border border-ink-line bg-ink-card text-left transition-colors active:border-gold/50"
         @click="enter(g)"
       >
-        <div class="size-16 shrink-0 overflow-hidden rounded-xl bg-black">
-          <img :src="g.icon" :alt="g.title" class="icon-blend size-full object-cover" />
-        </div>
-        <div class="min-w-0 flex-1">
-          <div class="truncate text-base font-semibold text-parch">{{ g.title }}</div>
-          <div class="truncate text-xs text-parch-dim">{{ g.subtitle }}</div>
-          <div
-            class="mt-1.5 inline-block rounded px-1.5 py-0.5 text-[10px] font-medium"
-            :class="g.available ? 'bg-gold/15 text-gold' : 'bg-ink-line text-parch-dim'"
+        <div class="relative w-full bg-black">
+          <img :src="g.cover" :alt="g.title" class="block size-full object-cover" />
+          <span
+            class="absolute right-2 top-2 rounded px-1.5 py-0.5 text-[10px] font-medium backdrop-blur-sm"
+            :class="g.available ? 'bg-black/60 text-gold' : 'bg-black/60 text-parch-dim'"
           >
             {{ g.available ? '已开放' : '敬请期待' }}
-          </div>
+          </span>
         </div>
-        <ChevronRight :size="20" class="shrink-0 text-parch-dim" />
+        <div class="flex items-center gap-3 px-3 py-3">
+          <div class="min-w-0 flex-1">
+            <div class="truncate text-base font-semibold text-parch">{{ g.title }}</div>
+            <div class="truncate text-xs text-parch-dim">{{ g.subtitle }}</div>
+          </div>
+          <ChevronRight :size="20" class="shrink-0 text-parch-dim" />
+        </div>
       </button>
 
       <div
-        v-for="i in 1"
-        :key="`soon-${i}`"
-        class="flex w-full items-center gap-4 rounded-2xl border border-dashed border-ink-line/70 bg-ink-soft/50 p-3"
+        class="flex w-full items-center gap-4 rounded-2xl border border-dashed border-ink-line/70 bg-ink-soft/50 p-4"
       >
-        <div class="flex size-16 shrink-0 items-center justify-center rounded-xl border border-ink-line">
+        <div class="flex size-12 shrink-0 items-center justify-center rounded-xl border border-ink-line">
           <span class="text-xl text-parch-dim/40">?</span>
         </div>
         <div class="min-w-0 flex-1">

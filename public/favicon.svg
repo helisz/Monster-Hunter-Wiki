@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
-  <rect width="64" height="64" rx="14" fill="#12100E"/>
-  <!-- 三道平行斜爪痕，等长等距，间距拉大 -->
-  <g stroke="#E8A33D" stroke-width="8" stroke-linecap="round" fill="none">
-    <path d="M14 21 L24 43"/>
-    <path d="M28 17 L38 49"/>
-    <path d="M44 21 L52 40"/>
-  </g>
-</svg>
