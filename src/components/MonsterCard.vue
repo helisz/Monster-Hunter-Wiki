@@ -47,7 +47,7 @@ const adviceBrief = computed(() => {
 </script>
 
 <template>
-  <div v-if="mode === 'card'" class="overflow-hidden rounded-2xl border border-ink-line bg-ink-card">
+  <div v-if="mode === 'card'" class="overflow-hidden rounded-md border border-ink-line bg-ink-card">
     <div class="relative aspect-square w-full bg-black">
       <img
         :src="monster.icon"
@@ -83,7 +83,7 @@ const adviceBrief = computed(() => {
     </div>
   </div>
 
-  <div v-else class="rounded-xl border border-ink-line bg-ink-card px-3 py-2">
+  <div v-else class="rounded-md border border-ink-line bg-ink-card px-3 py-2">
     <div class="flex items-center gap-3">
       <div class="size-10 shrink-0 overflow-hidden rounded-lg bg-black">
         <img
