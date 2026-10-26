@@ -21,10 +21,10 @@ const features = [
   {
     id: 'weapons',
     title: '武器',
-    desc: '14 种武器 1654 把，含派生路线',
+    desc: '12 种武器 1399 把，含派生路线',
     icon: Swords,
     to: '/mh3g/weapons',
-    ready: false,
+    ready: true,
   },
   {
     id: 'armor',

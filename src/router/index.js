@@ -65,6 +65,12 @@ const routes = [
     component: () => import('../views/Mh3gDetailView.vue'),
     meta: { title: '怪物详情' },
   },
+  {
+    path: '/mh3g/weapons',
+    name: 'mh3g-weapons',
+    component: () => import('../views/Mh3gWeaponsView.vue'),
+    meta: { title: '武器' },
+  },
   { path: '/:pathMatch(.*)*', redirect: '/' },
 ]
 
