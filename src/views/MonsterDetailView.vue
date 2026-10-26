@@ -7,6 +7,8 @@ import { useSettings } from '../composables/useSettings'
 import { buildAdvice, groupHitzones, ELEMENTS, SEVER_COLORS } from '../utils/advice'
 import AdvicePanel from '../components/AdvicePanel.vue'
 import HitzoneTable from '../components/HitzoneTable.vue'
+import GuidePanel from '../components/GuidePanel.vue'
+import { getGuide } from '../data/guides'
 
 const route = useRoute()
 const { monsters, loading, load } = useMonsters()
@@ -43,10 +45,16 @@ const iconSrc = computed(() => {
 const severColor = (s) => SEVER_COLORS[s] || '#8A8071'
 
 /** 详情页小节锚点：只列出当前怪物实际存在的小节 */
+const guide = computed(() =>
+  monster.value ? getGuide(monster.value.slug) : null
+)
+
 const sections = computed(() => {
   const m = monster.value
   if (!m) return []
   const out = []
+  if (advice.value && !advice.value.empty) out.push({ id: 'sec-advice', label: '出战建议' })
+  if (guide.value) out.push({ id: 'sec-guide', label: '狩猎攻略' })
   if (hzGroups.value.length) out.push({ id: 'sec-hitzone', label: '肉质部位' })
   if (m.parts?.length) out.push({ id: 'sec-durability', label: '耐久' })
   if (m.statusResist?.length) out.push({ id: 'sec-status', label: '状态抗性' })
@@ -84,14 +92,14 @@ const stateBadge = (s) => {
     <!-- 小节快速跳转 -->
     <nav
       v-if="sections.length > 1"
-      class="mb-3 flex flex-wrap gap-1.5"
+      class="mb-3 flex flex-wrap gap-1"
       aria-label="小节跳转"
     >
       <button
         v-for="s in sections"
         :key="s.id"
         type="button"
-        class="rounded-full border border-ink-line bg-ink-card px-2.5 py-1 text-[11px] text-parch-dim active:border-gold/50 active:text-gold"
+        class="whitespace-nowrap rounded-full border border-ink-line bg-ink-card px-2 py-1 text-[10.5px] text-parch-dim active:border-gold/50 active:text-gold"
         @click="jumpTo(s.id)"
       >
         {{ s.label }}
@@ -173,8 +181,13 @@ const stateBadge = (s) => {
     </div>
 
     <!-- 出战建议（未配置武器类型则不渲染） -->
-    <div v-if="advice" class="mb-4">
+    <div v-if="advice && !advice.empty" id="sec-advice" class="mb-4 scroll-mt-16">
       <AdvicePanel :advice="advice" />
+    </div>
+
+    <!-- 狩猎攻略（试点怪物才有） -->
+    <div v-if="guide" id="sec-guide" class="mb-4 scroll-mt-16">
+      <GuidePanel :text="guide" />
     </div>
 
     <!-- 肉质 -->
