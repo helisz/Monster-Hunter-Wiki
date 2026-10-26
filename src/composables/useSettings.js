@@ -6,6 +6,9 @@ const DEFAULTS = {
   game: null,          // 'wilds'
   weaponType: null,    // 'slash' | 'strike' | 'shell'
   viewMode: 'card',    // 'card' | 'list'
+  sizeFilter: 'all',   // 'all' | 'large' | 'small'
+  speciesFilter: 'all',
+  sortKey: 'default',  // 'default' | 'hr-desc' | 'hr-asc'
 }
 
 function read() {
@@ -49,5 +52,10 @@ export function useSettings() {
   function setGame(game) {
     settings.game = game
   }
-  return { settings, setWeaponType, setViewMode, setGame, WEAPON_TYPES }
+  function resetFilters() {
+    settings.sizeFilter = 'all'
+    settings.speciesFilter = 'all'
+    settings.sortKey = 'default'
+  }
+  return { settings, setWeaponType, setViewMode, setGame, resetFilters, WEAPON_TYPES }
 }

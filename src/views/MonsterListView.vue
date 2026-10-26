@@ -8,13 +8,24 @@ import { useSettings } from '../composables/useSettings'
 
 const router = useRouter()
 const { monsters, loading, error, load } = useMonsters()
-const { settings, setViewMode } = useSettings()
+const { settings, setViewMode, resetFilters: resetFiltersStore } = useSettings()
 
 const keyword = ref('')
-const sizeFilter = ref('all') // all | large | small
-const speciesFilter = ref('all')
-const sortKey = ref('default') // default | hr-desc | hr-asc
 const showFilters = ref(false)
+
+// 过滤/排序全部走 settings（已持久化到 localStorage）
+const sizeFilter = computed({
+  get: () => settings.sizeFilter,
+  set: (v) => (settings.sizeFilter = v),
+})
+const speciesFilter = computed({
+  get: () => settings.speciesFilter,
+  set: (v) => (settings.speciesFilter = v),
+})
+const sortKey = computed({
+  get: () => settings.sortKey,
+  set: (v) => (settings.sortKey = v),
+})
 
 onMounted(async () => {
   await load()
@@ -65,9 +76,7 @@ const activeFilterCount = computed(() => {
 })
 
 function resetFilters() {
-  sizeFilter.value = 'all'
-  speciesFilter.value = 'all'
-  sortKey.value = 'default'
+  resetFiltersStore()
 }
 
 function openDetail(m) {
