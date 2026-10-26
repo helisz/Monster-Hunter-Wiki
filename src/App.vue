@@ -23,6 +23,7 @@ function chooseWeapon(key) {
 }
 
 const weaponIcon = (hit) => `${import.meta.env.BASE_URL}ui-icons/${hit}.png`
+const BASE = import.meta.env.BASE_URL
 </script>
 
 <template>
@@ -40,7 +41,13 @@ const weaponIcon = (hit) => `${import.meta.env.BASE_URL}ui-icons/${hit}.png`
       >
         <ChevronLeft :size="22" />
       </button>
-      <div v-else class="size-11 shrink-0" />
+      <div v-else class="flex size-11 shrink-0 items-center justify-center">
+        <img
+          :src="`${BASE}favicon-128.png`"
+          alt="怪物猎人 Wiki"
+          class="size-8 rounded-md object-contain"
+        />
+      </div>
 
       <h1 class="min-w-0 flex-1 truncate text-[17px] font-semibold tracking-wide text-parch">
         {{ pageTitle }}

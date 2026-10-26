@@ -18,85 +18,95 @@ const stateLabel = (s) => {
 }
 
 const stateClass = (s) => {
-  if (s === '伤口') return 'bg-rose-500/15 text-rose-300'
-  if (s === '弱点') return 'bg-emerald-500/15 text-emerald-300'
-  if (s === '可破坏') return 'bg-amber-500/15 text-amber-300'
-  return 'bg-ink-line text-parch-dim'
-}
-
-const stateTextClass = (s) => {
   if (s === '伤口') return 'text-rose-300'
   if (s === '弱点') return 'text-emerald-300'
   if (s === '可破坏') return 'text-amber-300'
   return 'text-parch-dim/70'
 }
 
-function val(row, key) {
-  const v = row[key]
-  return typeof v === 'number' ? v : null
+const COLS = ['slash', 'strike', 'shell', ...ELEMENTS.map((e) => e.key), 'stun']
+
+function v(row, key) {
+  const x = row[key]
+  return typeof x === 'number' ? x : null
 }
 
-function heat(v) {
-  if (v === null) return ''
-  if (v >= 60) return 'text-emerald-400 font-bold'
-  if (v >= 45) return 'text-emerald-300 font-semibold'
-  if (v <= 5) return 'text-parch-dim/50'
-  if (v <= 20) return 'text-rose-400/70'
+function heatClass(n) {
+  if (n === null) return 'text-parch-dim/40'
+  if (n >= 60) return 'text-emerald-400 font-bold'
+  if (n >= 45) return 'text-emerald-300 font-semibold'
+  if (n <= 5) return 'text-parch-dim/45'
+  if (n <= 20) return 'text-rose-400/75'
   return 'text-parch'
 }
+
+/** 展平成表格行：每个部位 × 每个 state 一行 */
+const flatRows = computed(() => {
+  const out = []
+  for (const g of props.groups) {
+    g.rows.forEach((r, i) => {
+      out.push({
+        part: g.part,
+        isFirstOfGroup: i === 0,
+        groupSize: g.rows.length,
+        state: r.state,
+        row: r,
+      })
+    })
+  }
+  return out
+})
 </script>
 
 <template>
-  <div class="space-y-2.5">
-    <div
-      v-for="g in groups"
-      :key="g.part"
-      class="overflow-hidden rounded-xl border border-ink-line bg-ink-card"
-    >
-      <div class="flex items-center justify-between gap-2 border-b border-ink-line px-3 py-2">
-        <span class="text-sm font-semibold text-parch">{{ g.part }}</span>
-        <div v-if="g.rows.length > 1" class="flex flex-wrap justify-end gap-1">
-          <span
-            v-for="(r, i) in g.rows"
-            :key="i"
-            class="rounded px-1.5 py-0.5 text-[10px] font-medium"
-            :class="stateClass(r.state)"
+  <div class="overflow-hidden rounded-xl border border-ink-line bg-ink-card">
+    <div class="overflow-x-auto">
+      <table class="w-full border-collapse text-[10.5px]">
+        <thead>
+          <tr class="border-b border-ink-line bg-ink-soft/60">
+            <th class="sticky left-0 z-10 bg-ink-soft px-1.5 py-2 text-left font-medium text-parch-dim">
+              部位
+            </th>
+            <th class="whitespace-nowrap px-1 py-2 text-center font-medium text-parch-dim">状态</th>
+            <th v-for="c in ['slash', 'strike', 'shell']" :key="c" class="px-1 py-2 text-center">
+              <img :src="icon(`hit_${c}`)" alt="" class="mx-auto size-3.5 opacity-80" />
+            </th>
+            <th v-for="e in ELEMENTS" :key="e.key" class="px-1 py-2 text-center" :title="e.label">
+              <img :src="icon(e.icon)" alt="" class="mx-auto size-3.5 opacity-80" />
+            </th>
+            <th class="px-1 py-2 text-center">
+              <img :src="icon('element_stun')" alt="" class="mx-auto size-3.5 opacity-80" />
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr
+            v-for="(r, idx) in flatRows"
+            :key="idx"
+            class="border-b border-ink-line/40 last:border-0"
+            :class="r.isFirstOfGroup && r.groupSize > 1 ? 'border-t-ink-line' : ''"
           >
-            {{ stateLabel(r.state) }}
-          </span>
-        </div>
-      </div>
-
-      <div class="divide-y divide-ink-line/60">
-        <div v-for="(r, i) in g.rows" :key="i" class="px-3 py-2">
-          <!-- 攻击类型 -->
-          <div class="mb-1.5 flex items-center gap-3">
-            <span class="w-9 shrink-0 text-[10px]" :class="stateTextClass(r.state)">
+            <td class="sticky left-0 z-10 whitespace-nowrap bg-ink-card px-1.5 py-1.5 font-medium text-parch">
+              <template v-if="r.isFirstOfGroup">{{ r.part }}</template>
+              <span v-else class="text-parch-dim/40">〃</span>
+            </td>
+            <td
+              class="whitespace-nowrap px-1 py-1.5 text-center text-[9.5px]"
+              :class="stateClass(r.state)"
+            >
               {{ stateLabel(r.state) }}
-            </span>
-            <div v-for="t in ['slash', 'strike', 'shell']" :key="t" class="flex items-center gap-1">
-              <img :src="icon(`hit_${t}`)" alt="" class="size-3.5 opacity-80" />
-              <span class="text-xs tabular-nums" :class="heat(val(r, t))">{{ val(r, t) ?? '—' }}</span>
-            </div>
-          </div>
-
-          <!-- 属性 -->
-          <div class="flex flex-wrap items-center gap-x-2.5 gap-y-1 pl-11">
-            <div v-for="e in ELEMENTS" :key="e.key" class="flex items-center gap-1">
-              <img :src="icon(e.icon)" alt="" class="size-3.5 opacity-80" />
-              <span class="text-xs tabular-nums" :class="heat(val(r, e.key))">
-                {{ val(r, e.key) ?? '—' }}
-              </span>
-            </div>
-            <div class="flex items-center gap-1 border-l border-ink-line pl-2.5">
-              <img :src="icon('element_stun')" alt="" class="size-3.5 opacity-80" />
-              <span class="text-xs tabular-nums" :class="heat(val(r, 'stun'))">
-                {{ val(r, 'stun') ?? '—' }}
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
+            </td>
+            <td
+              v-for="c in COLS"
+              :key="c"
+              class="px-1 py-1.5 text-center tabular-nums"
+              :class="heatClass(v(r.row, c))"
+            >
+              {{ v(r.row, c) ?? '—' }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
