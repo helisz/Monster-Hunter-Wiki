@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #12100E;
+  --color-ink-soft: #1B1815;
+  --color-ink-card: #211D19;
+  --color-ink-line: #332C25;
+  --color-gold: #E8A33D;
+  --color-gold-dim: #B87C24;
+  --color-parch: #EFE6D8;
+  --color-parch-dim: #A99B88;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  background-color: var(--color-ink);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-ink);
+  color: var(--color-parch);
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior-y: none;
+}
+
+#app {
+  min-height: 100dvh;
+}
+
+/* 图标是黑底不透明 webp，用 screen 混合让黑底融进深色卡片 */
+.icon-blend {
+  mix-blend-mode: screen;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-ink-line);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  scrollbar-width: none;
+}
