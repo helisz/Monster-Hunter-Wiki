@@ -12,10 +12,29 @@ const showConfig = ref(false)
 
 const pageTitle = computed(() => route.meta?.title || '')
 const canGoBack = computed(() => route.name && route.name !== 'games')
+const BASE_PATH = import.meta.env.BASE_URL.replace(/\/$/, '')
+
+/** 应用内可回退判定：history.state.back 必须是本站路径 */
+function hasInAppBack() {
+  const back = window.history.state?.back
+  if (typeof back !== 'string') return false
+  // 站外（含空白页 / 其他站点）一律不算
+  if (!back.startsWith(BASE_PATH || '/')) return false
+  return true
+}
+
+/** 无站内历史时的兜底目标：按路由层级上退一级 */
+function fallbackTarget() {
+  const name = route.name
+  if (name === 'monster-detail') return '/wilds/monsters'
+  if (name === 'monsters') return '/wilds'
+  if (name === 'hub') return '/'
+  return '/'
+}
 
 function goBack() {
-  if (window.history.length > 1) router.back()
-  else router.push('/')
+  if (hasInAppBack()) router.back()
+  else router.push(fallbackTarget())
 }
 
 function chooseWeapon(key) {
