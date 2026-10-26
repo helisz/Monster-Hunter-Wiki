@@ -42,8 +42,18 @@ const showBackToTop = ref(false)
 const onScroll = () => {
   showBackToTop.value = window.scrollY > 300
 }
-onMounted(() => window.addEventListener('scroll', onScroll, { passive: true }))
-onUnmounted(() => window.removeEventListener('scroll', onScroll))
+onMounted(() => {
+  window.addEventListener('scroll', onScroll, { passive: true })
+  window.addEventListener('mhw:open-config', openConfigDrawer)
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', onScroll)
+  window.removeEventListener('mhw:open-config', openConfigDrawer)
+})
+
+function openConfigDrawer() {
+  showConfig.value = true
+}
 
 function backToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -84,31 +94,15 @@ const BASE = import.meta.env.BASE_URL
         {{ pageTitle }}
       </h1>
 
-      <!-- 当前武器类型指示 + 配置齿轮 -->
-      <div class="flex shrink-0 items-center gap-1.5">
-        <div
-          v-if="settings.weaponType"
-          class="flex items-center gap-1 rounded-full border border-gold/40 bg-gold/10 px-2 py-1"
-        >
-          <img
-            :src="weaponIcon(WEAPON_TYPES.find((w) => w.key === settings.weaponType)?.hit)"
-            alt=""
-            class="size-4 opacity-90"
-          />
-          <span class="text-xs font-medium text-gold">
-            {{ WEAPON_TYPES.find((w) => w.key === settings.weaponType)?.label }}
-          </span>
-        </div>
-
-        <button
-          type="button"
-          class="-mr-1 flex size-10 items-center justify-center rounded-lg text-gold active:bg-ink-card"
-          aria-label="打开配置"
-          @click="showConfig = true"
-        >
-          <Settings :size="20" />
-        </button>
-      </div>
+      <!-- 配置齿轮 -->
+      <button
+        type="button"
+        class="-mr-1 flex size-10 shrink-0 items-center justify-center rounded-lg text-gold active:bg-ink-card"
+        aria-label="打开配置"
+        @click="showConfig = true"
+      >
+        <Settings :size="20" />
+      </button>
     </header>
 
     <main class="flex-1 pb-24">

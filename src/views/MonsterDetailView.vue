@@ -44,6 +44,11 @@ const iconSrc = computed(() => {
 
 const severColor = (s) => SEVER_COLORS[s] || '#8A8071'
 
+/** 打开顶部配置抽屉（事件冒泡到 App 的 provide 或直接派发） */
+function openConfig() {
+  window.dispatchEvent(new CustomEvent('mhw:open-config'))
+}
+
 /** 详情页小节锚点：只列出当前怪物实际存在的小节 */
 const guide = computed(() =>
   monster.value ? getGuide(monster.value.slug) : null
@@ -182,7 +187,7 @@ const stateBadge = (s) => {
 
     <!-- 出战建议（未配置武器类型则不渲染） -->
     <div v-if="advice && !advice.empty" id="sec-advice" class="mb-4 scroll-mt-16">
-      <AdvicePanel :advice="advice" />
+      <AdvicePanel :advice="advice" @open-config="openConfig" />
     </div>
 
     <!-- 狩猎攻略（试点怪物才有） -->

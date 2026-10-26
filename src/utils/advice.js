@@ -85,9 +85,19 @@ export function buildAdvice(monster, weaponType) {
     ),
   ]
 
+  // 推荐武器类型：按三列（斩/打/弹）的可打部位覆盖度与平均肉质打分
+  const weaponScore = ['slash', 'strike', 'shell'].map((w) => {
+    const vals = rows.map((r) => r[w] ?? 0)
+    const goodCount = vals.filter((v) => v >= GOOD_THRESHOLD).length
+    const avg = vals.length ? vals.reduce((a, b) => a + b, 0) / vals.length : 0
+    return { key: w, score: goodCount * 10 + avg }
+  })
+  weaponScore.sort((a, b) => b.score - a.score)
+
   return {
     empty: false,
     weaponType,
+    suggestedWeapon: weaponScore[0]?.key || 'slash',
     elementRank,
     good,
     bad,

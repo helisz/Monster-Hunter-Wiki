@@ -1,16 +1,19 @@
 <script setup>
 import { ref, computed } from 'vue'
-import { Sword, Crosshair, ShieldAlert, Sparkles, AlertTriangle, HelpCircle } from '@lucide/vue'
+import { Sword, Crosshair, ShieldAlert, Sparkles, AlertTriangle, HelpCircle, Settings } from '@lucide/vue'
 import { WEAPON_TYPES } from '../composables/useSettings'
 
 const props = defineProps({
   advice: { type: Object, required: true },
 })
 
+const emit = defineEmits(['open-config'])
+
 // 帮助提示：点击切换；用全屏遮罩层关闭，避开事件冒泡/捕获的顺序坑
 const showHelp = ref(false)
 
 const weapon = computed(() => WEAPON_TYPES.find((w) => w.key === props.advice.weaponType))
+const suggested = computed(() => WEAPON_TYPES.find((w) => w.key === props.advice.suggestedWeapon))
 
 const icon = (name) => `${import.meta.env.BASE_URL}ui-icons/${name}.png`
 </script>
@@ -18,18 +21,32 @@ const icon = (name) => `${import.meta.env.BASE_URL}ui-icons/${name}.png`
 <template>
   <section class="rounded-2xl border border-gold/30 bg-gradient-to-b from-gold/8 to-transparent p-3.5">
     <div class="mb-3 flex items-center gap-2">
-      <Sword :size="16" class="text-gold" />
-      <h3 class="text-sm font-semibold text-gold">出战建议</h3>
-      <span
-        v-if="weapon"
-        class="inline-flex items-center gap-1 rounded bg-gold/15 px-1.5 py-0.5 text-[10px] font-medium text-gold"
-      >
-        <img :src="icon(weapon.hit)" alt="" class="size-3" />
-        {{ weapon.label }}
-      </span>
+      <Sword :size="16" class="shrink-0 text-gold" />
+      <h3 class="shrink-0 text-sm font-semibold text-gold">出战建议</h3>
 
-      <!-- 帮助问号：右上角 -->
-      <div class="relative ml-auto">
+      <!-- 右侧：当前武器类型 → 建议武器类型 -->
+      <div class="ml-auto flex shrink-0 items-center gap-1 text-[10px]">
+        <span
+          v-if="weapon"
+          class="inline-flex items-center gap-0.5 rounded bg-ink-soft px-1.5 py-0.5 font-medium text-parch-dim"
+          title="当前武器类型"
+        >
+          <img :src="icon(weapon.hit)" alt="" class="size-3 opacity-80" />
+          {{ weapon.label }}
+        </span>
+        <span v-if="suggested && suggested.key !== weapon?.key" class="text-parch-dim/50">→</span>
+        <span
+          v-if="suggested && suggested.key !== weapon?.key"
+          class="inline-flex items-center gap-0.5 rounded bg-gold/15 px-1.5 py-0.5 font-medium text-gold"
+          title="建议武器类型"
+        >
+          <img :src="icon(suggested.hit)" alt="" class="size-3" />
+          {{ suggested.label }}
+        </span>
+      </div>
+
+      <!-- 帮助问号 + 齿轮 -->
+      <div class="relative flex shrink-0 items-center">
         <button
           type="button"
           class="relative z-30 -m-1.5 flex size-7 items-center justify-center rounded-full text-parch-dim/70 active:bg-ink-card"
@@ -39,6 +56,15 @@ const icon = (name) => `${import.meta.env.BASE_URL}ui-icons/${name}.png`
           @click="showHelp = !showHelp"
         >
           <HelpCircle :size="15" />
+        </button>
+
+        <button
+          type="button"
+          class="-mr-1 flex size-7 items-center justify-center rounded-full text-gold active:bg-ink-card"
+          aria-label="打开配置"
+          @click="emit('open-config')"
+        >
+          <Settings :size="15" />
         </button>
 
         <!-- 遮罩：点任意处关闭 -->
