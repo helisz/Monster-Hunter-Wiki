@@ -29,18 +29,18 @@ const features = [
   {
     id: 'armor',
     title: '防具',
-    desc: '剑士/射手/共通套装 353 套',
+    desc: '剑士/射手/共通套装 336 套',
     icon: Shield,
     to: '/mh3g/armor',
-    ready: false,
+    ready: true,
   },
   {
     id: 'skills',
     title: '技能',
-    desc: '技能效果、装饰珠、护石',
+    desc: '技能 238 / 装饰珠 194 / 护石 120',
     icon: Sparkles,
     to: '/mh3g/skills',
-    ready: false,
+    ready: true,
   },
   {
     id: 'quests',
