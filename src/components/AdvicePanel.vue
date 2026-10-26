@@ -1,11 +1,14 @@
 <script setup>
-import { computed } from 'vue'
-import { Sword, Crosshair, ShieldAlert, Sparkles, AlertTriangle } from '@lucide/vue'
+import { ref, computed } from 'vue'
+import { Sword, Crosshair, ShieldAlert, Sparkles, AlertTriangle, HelpCircle } from '@lucide/vue'
 import { WEAPON_TYPES } from '../composables/useSettings'
 
 const props = defineProps({
   advice: { type: Object, required: true },
 })
+
+// 帮助提示：点击切换；用全屏遮罩层关闭，避开事件冒泡/捕获的顺序坑
+const showHelp = ref(false)
 
 const weapon = computed(() => WEAPON_TYPES.find((w) => w.key === props.advice.weaponType))
 
@@ -16,10 +19,55 @@ const icon = (name) => `${import.meta.env.BASE_URL}ui-icons/${name}.png`
   <section class="rounded-2xl border border-gold/30 bg-gradient-to-b from-gold/8 to-transparent p-3.5">
     <div class="mb-3 flex items-center gap-2">
       <Sword :size="16" class="text-gold" />
-      <h3 class="text-sm font-semibold text-gold">打击建议</h3>
-      <span class="rounded bg-gold/15 px-1.5 py-0.5 text-[10px] font-medium text-gold">
-        {{ weapon?.label }}
+      <h3 class="text-sm font-semibold text-gold">出战建议</h3>
+      <span
+        v-if="weapon"
+        class="inline-flex items-center gap-1 rounded bg-gold/15 px-1.5 py-0.5 text-[10px] font-medium text-gold"
+      >
+        <img :src="icon(weapon.hit)" alt="" class="size-3" />
+        {{ weapon.label }}
       </span>
+
+      <!-- 帮助问号：右上角 -->
+      <div class="relative ml-auto">
+        <button
+          type="button"
+          class="relative z-30 -m-1.5 flex size-7 items-center justify-center rounded-full text-parch-dim/70 active:bg-ink-card"
+          :class="showHelp ? 'text-gold' : ''"
+          aria-label="出战建议说明"
+          :aria-expanded="showHelp"
+          @click="showHelp = !showHelp"
+        >
+          <HelpCircle :size="15" />
+        </button>
+
+        <!-- 遮罩：点任意处关闭 -->
+        <div
+          v-if="showHelp"
+          class="fixed inset-0 z-20"
+          @click="showHelp = false"
+        />
+
+        <Transition
+          enter-active-class="transition duration-150"
+          enter-from-class="opacity-0 -translate-y-1"
+          leave-active-class="transition duration-100"
+          leave-to-class="opacity-0 -translate-y-1"
+        >
+          <div
+            v-if="showHelp"
+            class="absolute right-0 top-full z-30 mt-1.5 w-60 rounded-xl border border-ink-line bg-ink-soft p-3 text-[11px] leading-relaxed text-parch-dim shadow-xl shadow-black/60"
+          >
+            <p class="mb-1.5 font-medium text-parch">怎么用？</p>
+            <p>
+              点击右下角的
+              <span class="inline-flex items-center gap-0.5 rounded bg-gold/15 px-1 py-0.5 font-medium text-gold">⚙ 齿轮</span>
+              按钮，切换你当前使用的武器类型（斩 / 打 / 弹）。
+            </p>
+            <p class="mt-1.5">切换后，这里会根据该武器的肉质数值给出建议属性、优先攻击部位与应避开的低效部位。</p>
+          </div>
+        </Transition>
+      </div>
     </div>
 
     <div v-if="advice.empty" class="rounded-lg bg-ink-card/60 px-3 py-4 text-center text-xs text-parch-dim">

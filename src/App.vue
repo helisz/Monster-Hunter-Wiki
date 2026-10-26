@@ -126,7 +126,7 @@ const BASE = import.meta.env.BASE_URL
       <button
         type="button"
         class="flex size-14 items-center justify-center rounded-full border border-gold/40 bg-ink-card text-gold shadow-lg shadow-black/60 active:scale-95 transition-transform"
-        aria-label="配置"
+        aria-label="打开配置"
         @click="showConfig = true"
       >
         <Settings :size="22" />
@@ -146,7 +146,7 @@ const BASE = import.meta.env.BASE_URL
         >
           <div class="mx-auto mb-4 h-1 w-10 rounded-full bg-ink-line" />
           <h2 class="mb-1 text-lg font-semibold text-parch">配置</h2>
-          <p class="mb-5 text-xs text-parch-dim">选择你使用的武器类型，怪物详情会给出对应打击建议</p>
+          <p class="mb-5 text-xs text-parch-dim">选择你使用的武器类型，怪物详情会给出对应出战建议</p>
 
           <div class="mb-2 text-xs font-medium tracking-wider text-parch-dim">武器类型</div>
           <div class="grid grid-cols-3 gap-2">
@@ -168,7 +168,7 @@ const BASE = import.meta.env.BASE_URL
           </div>
 
           <p class="mt-4 text-[11px] leading-relaxed text-parch-dim/80">
-            再次点击同一武器类型可取消选择。未选择时，详情页不显示打击建议。
+            再次点击同一武器类型可取消选择。未选择时，详情页不显示出战建议。
           </p>
 
           <button

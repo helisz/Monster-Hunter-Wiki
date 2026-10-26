@@ -172,7 +172,7 @@ const stateBadge = (s) => {
       </div>
     </div>
 
-    <!-- 打击建议（未配置武器类型则不渲染） -->
+    <!-- 出战建议（未配置武器类型则不渲染） -->
     <div v-if="advice" class="mb-4">
       <AdvicePanel :advice="advice" />
     </div>
