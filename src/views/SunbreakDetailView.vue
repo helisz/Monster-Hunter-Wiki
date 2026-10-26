@@ -7,6 +7,7 @@ import { useFavorites } from '../composables/useFavorites'
 import { useToast } from '../composables/useToast'
 import { buildSunbreakAdvice } from '../utils/sunbreakAdvice'
 import { useSettings } from '../composables/useSettings'
+import { parseBreak } from '../utils/breakParse'
 import SunbreakAdvicePanel from '../components/SunbreakAdvicePanel.vue'
 import SunbreakHitzoneTable from '../components/SunbreakHitzoneTable.vue'
 import SunbreakRewards from '../components/SunbreakRewards.vue'
@@ -43,6 +44,14 @@ const advice = computed(() => {
   if (!monster.value) return null
   return buildSunbreakAdvice(monster.value, weaponType.value)
 })
+
+/** 部位耐久：预先把 Break 原始串解析好 */
+const partRows = computed(() =>
+  (monster.value?.parts || []).map((p) => ({
+    ...p,
+    breakSegs: parseBreak(p.woundRaw),
+  }))
+)
 
 /** 按部位分组的肉质 */
 const hitzonesByPart = computed(() => {
@@ -188,11 +197,26 @@ function jumpTo(id) {
               </tr>
             </thead>
             <tbody>
-              <tr v-for="(p, i) in monster.parts" :key="i" class="border-t border-ink-line/60">
-                <td class="px-2 py-1.5 text-parch">{{ p.part }}</td>
-                <td class="px-2 py-1.5 text-right text-parch">{{ p.hp ?? '—' }}</td>
-                <td class="px-2 py-1.5 text-[10px] leading-tight text-parch-dim">
-                  {{ p.woundRaw || '—' }}
+              <tr v-for="(p, i) in partRows" :key="i" class="border-t border-ink-line/60">
+                <td class="px-2 py-1.5 align-top text-parch">{{ p.part }}</td>
+                <td class="px-2 py-1.5 align-top text-right tabular-nums text-parch">
+                  {{ p.hp ?? '—' }}
+                </td>
+                <td class="px-2 py-1.5 text-[10px] leading-relaxed">
+                  <template v-if="p.breakSegs.length">
+                    <div
+                      v-for="(seg, si) in p.breakSegs"
+                      :key="si"
+                      class="flex flex-wrap items-baseline gap-x-1"
+                    >
+                      <span v-if="si > 0" class="text-parch-dim/40">→</span>
+                      <span class="font-medium tabular-nums text-parch">{{ seg.value }}</span>
+                      <span v-if="seg.hints.length" class="text-parch-dim/80">
+                        {{ seg.hints.join('，') }}
+                      </span>
+                    </div>
+                  </template>
+                  <span v-else class="text-parch-dim">—</span>
                 </td>
               </tr>
             </tbody>
