@@ -8,7 +8,9 @@ import { buildAdvice, groupHitzones, ELEMENTS, SEVER_COLORS } from '../utils/adv
 import AdvicePanel from '../components/AdvicePanel.vue'
 import HitzoneTable from '../components/HitzoneTable.vue'
 import GuidePanel from '../components/GuidePanel.vue'
+import RelatedMonsters from '../components/RelatedMonsters.vue'
 import { getGuide } from '../data/guides'
+import { getRelatedMonsters } from '../data/families'
 import { Star } from '@lucide/vue'
 import { useFavorites } from '../composables/useFavorites'
 import { useToast } from '../composables/useToast'
@@ -58,6 +60,10 @@ function onStar() {
 /** 详情页小节锚点：只列出当前怪物实际存在的小节 */
 const guide = computed(() =>
   monster.value ? getGuide(monster.value.slug) : null
+)
+
+const related = computed(() =>
+  monster.value ? getRelatedMonsters(monster.value, monsters.value) : []
 )
 
 const sections = computed(() => {
@@ -118,7 +124,19 @@ const stateBadge = (s) => {
     </nav>
 
     <!-- 头部 -->
-    <div class="mb-3 flex gap-3 rounded-2xl border border-ink-line bg-ink-card p-3">
+    <div class="relative mb-3 flex gap-3 rounded-2xl border border-ink-line bg-ink-card p-3">
+      <button
+        type="button"
+        class="absolute right-1.5 top-1.5 z-10 flex size-9 items-center justify-center rounded-full active:scale-90"
+        :aria-label="isFav(monster.slug) ? '取消收藏' : '收藏'"
+        :aria-pressed="isFav(monster.slug)"
+        @click="onStar"
+      >
+        <Star
+          :size="19"
+          :class="isFav(monster.slug) ? 'fill-gold text-gold' : 'text-parch-dim/40'"
+        />
+      </button>
       <div class="size-24 shrink-0 overflow-hidden rounded-xl bg-black">
         <img
           v-if="!imgError"
@@ -132,21 +150,7 @@ const stateBadge = (s) => {
         </div>
       </div>
       <div class="min-w-0 flex-1">
-        <div class="flex items-start gap-2">
-          <h2 class="text-lg font-bold leading-tight text-parch">{{ monster.name }}</h2>
-          <button
-            type="button"
-            class="-mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full active:scale-90"
-            :aria-label="isFav(monster.slug) ? '取消收藏' : '收藏'"
-            :aria-pressed="isFav(monster.slug)"
-            @click="onStar"
-          >
-            <Star
-              :size="18"
-              :class="isFav(monster.slug) ? 'fill-gold text-gold' : 'text-parch-dim/40'"
-            />
-          </button>
-        </div>
+        <h2 class="text-lg font-bold leading-tight text-parch">{{ monster.name }}</h2>
         <div class="mt-1.5 flex flex-wrap items-center gap-1.5">
           <span
             v-if="monster.species"
@@ -214,6 +218,9 @@ const stateBadge = (s) => {
     <div v-if="guide" id="sec-guide" class="mb-4 scroll-mt-16">
       <GuidePanel :text="guide" />
     </div>
+
+    <!-- 同系怪物 -->
+    <RelatedMonsters :monsters="related" />
 
     <!-- 肉质 -->
     <section id="sec-hitzone" class="mb-4 scroll-mt-16">
