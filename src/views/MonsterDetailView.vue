@@ -94,7 +94,7 @@ const stateBadge = (s) => {
             v-if="monster.hunterRankPoint"
             class="rounded bg-ink-soft px-1.5 py-0.5 text-[11px] tabular-nums text-parch-dim"
           >
-            HR {{ monster.hunterRankPoint }}
+            可获HR点数{{ monster.hunterRankPoint }}
           </span>
         </div>
         <p v-if="monster.summary" class="mt-2 line-clamp-4 text-xs leading-relaxed text-parch-dim">
@@ -121,7 +121,7 @@ const stateBadge = (s) => {
         v-if="monster.info.HunterRankPoint"
         class="rounded-xl border border-ink-line bg-ink-card px-2 py-2.5 text-center"
       >
-        <div class="text-[10px] text-parch-dim">HR 点数</div>
+        <div class="text-[10px] text-parch-dim">可获HR点数</div>
         <div class="mt-0.5 text-sm font-bold tabular-nums text-parch">
           {{ monster.info.HunterRankPoint }}
         </div>

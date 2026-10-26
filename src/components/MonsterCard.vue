@@ -41,7 +41,7 @@ defineProps({
       <div class="truncate text-[11px] text-parch-dim">
         {{ monster.species || '—' }}
         <span v-if="monster.hunterRankPoint" class="text-parch-dim/70">
-          · HR {{ monster.hunterRankPoint }}
+          · 可获HR点数{{ monster.hunterRankPoint }}
         </span>
       </div>
     </div>

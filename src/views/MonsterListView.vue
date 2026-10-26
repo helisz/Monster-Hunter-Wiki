@@ -81,8 +81,8 @@ const sizes = [
 ]
 const sorts = [
   { key: 'default', label: '默认' },
-  { key: 'hr-desc', label: 'HR 降序' },
-  { key: 'hr-asc', label: 'HR 升序' },
+  { key: 'hr-desc', label: 'HR点数降序' },
+  { key: 'hr-asc', label: 'HR点数升序' },
 ]
 </script>
 
