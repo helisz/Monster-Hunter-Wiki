@@ -20,6 +20,8 @@ const CURRENT_GAME = {
   hub: 'wilds',
   monsters: 'wilds',
   'monster-detail': 'wilds',
+  drops: 'wilds',
+  'sunbreak-drops': 'sunbreak',
   sunbreak: 'sunbreak',
   'sunbreak-hub': 'sunbreak',
   'sunbreak-monsters': 'sunbreak',
@@ -31,7 +33,7 @@ const gameName = computed(() => {
 })
 
 // 列表 / 详情页在标题里带上游戏名，如「荒野 · 怪物图鉴」
-const SUB_PAGES = ['monsters', 'monster-detail', 'sunbreak-monsters', 'sunbreak-detail']
+const SUB_PAGES = ['monsters', 'monster-detail', 'drops', 'sunbreak-monsters', 'sunbreak-detail', 'sunbreak-drops']
 const pageTitle = computed(() => {
   const base = route.meta?.title || ''
   if (SUB_PAGES.includes(route.name) && gameName.value) {
@@ -59,6 +61,7 @@ function hasInAppBack() {
 function fallbackTarget() {
   const name = route.name
   if (name === 'monster-detail') return '/wilds/monsters'
+  if (name === 'drops') return '/wilds/monsters'
   if (name === 'monsters') return '/wilds'
   if (name === 'hub') return '/'
   if (name === 'sunbreak-detail') return '/sunbreak/monsters'

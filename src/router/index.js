@@ -16,6 +16,12 @@ const routes = [
     meta: { title: '怪物详情' },
   },
   {
+    path: '/wilds/drops',
+    name: 'drops',
+    component: () => import('../views/DropQueryView.vue'),
+    meta: { title: '掉落查询' },
+  },
+  {
     path: '/sunbreak',
     name: 'sunbreak-hub',
     component: () => import('../views/SunbreakHubView.vue'),
@@ -32,6 +38,13 @@ const routes = [
     name: 'sunbreak-detail',
     component: () => import('../views/SunbreakDetailView.vue'),
     meta: { title: '怪物详情' },
+  },
+  {
+    path: '/sunbreak/drops',
+    name: 'sunbreak-drops',
+    component: () => import('../views/DropQueryView.vue'),
+    props: { game: 'sunbreak' },
+    meta: { title: '掉落查询' },
   },
   { path: '/:pathMatch(.*)*', redirect: '/' },
 ]
