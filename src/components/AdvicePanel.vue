@@ -60,9 +60,9 @@ const icon = (name) => `${import.meta.env.BASE_URL}ui-icons/${name}.png`
           >
             <p class="mb-1.5 font-medium text-parch">怎么用？</p>
             <p>
-              点击右下角的
-              <span class="inline-flex items-center gap-0.5 rounded bg-gold/15 px-1 py-0.5 font-medium text-gold">⚙ 齿轮</span>
-              按钮，切换你当前使用的武器类型（斩 / 打 / 弹）。
+              点击右上角的
+              <span class="inline-flex items-center gap-0.5 rounded bg-gold/15 px-1 py-0.5 font-medium text-gold">⚙</span>
+              齿轮按钮，切换你当前使用的武器类型（斩 / 打 / 弹）。
             </p>
             <p class="mt-1.5">切换后，这里会根据该武器的肉质数值给出建议属性、优先攻击部位与应避开的低效部位。</p>
           </div>
