@@ -23,6 +23,14 @@ const games = [
     hub: '/sunbreak',
     available: true,
   },
+  {
+    id: 'mh3g',
+    title: '怪物猎人 3G',
+    subtitle: 'Monster Hunter 3G',
+    cover: `${import.meta.env.BASE_URL}mh3g-cover.jpg`,
+    hub: '/mh3g',
+    available: false,
+  },
 ]
 
 function enter(game) {
