@@ -15,6 +15,24 @@ const routes = [
     component: () => import('../views/MonsterDetailView.vue'),
     meta: { title: '怪物详情' },
   },
+  {
+    path: '/sunbreak',
+    name: 'sunbreak-hub',
+    component: () => import('../views/SunbreakHubView.vue'),
+    meta: { title: '怪物猎人：崛起 曙光' },
+  },
+  {
+    path: '/sunbreak/monsters',
+    name: 'sunbreak-monsters',
+    component: () => import('../views/SunbreakListView.vue'),
+    meta: { title: '怪物图鉴' },
+  },
+  {
+    path: '/sunbreak/monsters/:slug',
+    name: 'sunbreak-detail',
+    component: () => import('../views/SunbreakDetailView.vue'),
+    meta: { title: '怪物详情' },
+  },
   { path: '/:pathMatch(.*)*', redirect: '/' },
 ]
 

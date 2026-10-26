@@ -11,12 +11,27 @@ const { settings, setWeaponType } = useSettings()
 
 const showConfig = ref(false)
 
-// 游戏名：目前只有荒野，后续可扩展
-const GAME_NAMES = { wilds: '荒野' }
-const gameName = computed(() => GAME_NAMES[settings.game] || '')
+// 游戏名映射
+const GAME_NAMES = { wilds: '荒野', sunbreak: '曙光' }
+
+// 游戏从路由推断（比 localStorage 更可靠，外链直入也对）
+const CURRENT_GAME = {
+  wilds: 'wilds',
+  hub: 'wilds',
+  monsters: 'wilds',
+  'monster-detail': 'wilds',
+  sunbreak: 'sunbreak',
+  'sunbreak-hub': 'sunbreak',
+  'sunbreak-monsters': 'sunbreak',
+  'sunbreak-detail': 'sunbreak',
+}
+const gameName = computed(() => {
+  const g = CURRENT_GAME[route.name] || settings.game
+  return GAME_NAMES[g] || ''
+})
 
 // 列表 / 详情页在标题里带上游戏名，如「荒野 · 怪物图鉴」
-const SUB_PAGES = ['monsters', 'monster-detail']
+const SUB_PAGES = ['monsters', 'monster-detail', 'sunbreak-monsters', 'sunbreak-detail']
 const pageTitle = computed(() => {
   const base = route.meta?.title || ''
   if (SUB_PAGES.includes(route.name) && gameName.value) {
@@ -46,6 +61,9 @@ function fallbackTarget() {
   if (name === 'monster-detail') return '/wilds/monsters'
   if (name === 'monsters') return '/wilds'
   if (name === 'hub') return '/'
+  if (name === 'sunbreak-detail') return '/sunbreak/monsters'
+  if (name === 'sunbreak-monsters') return '/sunbreak'
+  if (name === 'sunbreak-hub') return '/'
   return '/'
 }
 
@@ -121,7 +139,7 @@ const BASE = import.meta.env.BASE_URL
 
       <!-- 详情页显示配置齿轮 -->
       <button
-        v-if="route.name === 'monster-detail'"
+        v-if="route.name === 'monster-detail' || route.name === 'sunbreak-detail'"
         type="button"
         class="-mr-1 flex size-10 shrink-0 items-center justify-center rounded-lg text-gold active:bg-ink-card"
         aria-label="打开配置"

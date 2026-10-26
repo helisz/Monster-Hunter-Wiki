@@ -12,6 +12,15 @@ const games = [
     title: '怪物猎人：荒野',
     subtitle: 'Monster Hunter Wilds',
     cover: `${import.meta.env.BASE_URL}wilds-cover.jpg`,
+    hub: '/wilds',
+    available: true,
+  },
+  {
+    id: 'sunbreak',
+    title: '怪物猎人：崛起 曙光',
+    subtitle: 'Monster Hunter Rise: Sunbreak',
+    cover: `${import.meta.env.BASE_URL}sunbreak-cover.jpg`,
+    hub: '/sunbreak',
     available: true,
   },
 ]
@@ -19,7 +28,7 @@ const games = [
 function enter(game) {
   if (!game.available) return
   setGame(game.id)
-  router.push('/wilds')
+  router.push(game.hub || '/wilds')
 }
 </script>
 
@@ -28,7 +37,7 @@ function enter(game) {
     <div class="mb-8">
       <div class="mb-2 text-xs font-medium tracking-[0.2em] text-gold">MONSTER HUNTER</div>
       <h2 class="text-2xl font-bold leading-tight text-parch">选择游戏</h2>
-      <p class="mt-2 text-sm text-parch-dim">数据仍在完善中，目前仅开放荒野</p>
+      <p class="mt-2 text-sm text-parch-dim">选择作品查看怪物图鉴</p>
     </div>
 
     <div class="space-y-3">
@@ -46,6 +55,12 @@ function enter(game) {
             :class="g.available ? 'bg-black/60 text-gold' : 'bg-black/60 text-parch-dim'"
           >
             {{ g.available ? '已开放' : '敬请期待' }}
+          </span>
+          <span
+            v-if="g.coverFallback"
+            class="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-ink-soft to-ink"
+          >
+            <span class="text-lg font-semibold tracking-wider text-gold/80">{{ g.title }}</span>
           </span>
         </div>
         <div class="flex items-center gap-3 px-3 py-3">

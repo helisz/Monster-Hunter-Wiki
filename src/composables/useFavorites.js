@@ -1,10 +1,19 @@
 import { ref, computed } from 'vue'
 
-const KEY = 'mhw.favorites'
+/**
+ * 收藏，按游戏分库
+ * - 荒野：mhw.favorites
+ * - Sunbreak：mhw.favorites.sunbreak
+ */
+const DEFAULTS = 'mhw.favorites'
 
-function read() {
+function storageKey(game) {
+  return game && game !== 'wilds' ? `${DEFAULTS}.${game}` : DEFAULTS
+}
+
+function read(key) {
   try {
-    const raw = localStorage.getItem(KEY)
+    const raw = localStorage.getItem(key)
     const arr = raw ? JSON.parse(raw) : []
     return Array.isArray(arr) ? arr : []
   } catch {
@@ -12,14 +21,25 @@ function read() {
   }
 }
 
-// 单例状态，所有组件共享
-const favorites = ref(read())
+const stores = new Map()
+const counts = new Map()
 
-function persist() {
-  localStorage.setItem(KEY, JSON.stringify(favorites.value))
+function storeFor(game) {
+  const key = storageKey(game)
+  if (!stores.has(key)) {
+    stores.set(key, ref(read(key)))
+  }
+  return stores.get(key)
 }
 
-export function useFavorites() {
+export function useFavorites(game = 'wilds') {
+  const KEY = storageKey(game)
+  const favorites = storeFor(game)
+
+  function persist() {
+    localStorage.setItem(KEY, JSON.stringify(favorites.value))
+  }
+
   const isFav = (slug) => favorites.value.includes(slug)
 
   function toggle(slug) {
@@ -34,9 +54,11 @@ export function useFavorites() {
     return true
   }
 
+  if (!counts.has(KEY)) counts.set(KEY, computed(() => favorites.value.length))
+
   return {
     favorites,
-    count: computed(() => favorites.value.length),
+    count: counts.get(KEY),
     isFav,
     toggle,
   }
