@@ -29,7 +29,7 @@ const games = [
     subtitle: 'Monster Hunter 3G',
     cover: `${import.meta.env.BASE_URL}mh3g-cover.jpg`,
     hub: '/mh3g',
-    available: false,
+    available: true,
   },
 ]
 

@@ -46,6 +46,25 @@ const routes = [
     props: { game: 'sunbreak' },
     meta: { title: '掉落查询' },
   },
+  // ── MH3G ──────────────────────────────────────────
+  {
+    path: '/mh3g',
+    name: 'mh3g-hub',
+    component: () => import('../views/Mh3gHubView.vue'),
+    meta: { title: '怪物猎人 3G' },
+  },
+  {
+    path: '/mh3g/monsters',
+    name: 'mh3g-monsters',
+    component: () => import('../views/Mh3gListView.vue'),
+    meta: { title: '怪物图鉴' },
+  },
+  {
+    path: '/mh3g/monsters/:slug',
+    name: 'mh3g-detail',
+    component: () => import('../views/Mh3gDetailView.vue'),
+    meta: { title: '怪物详情' },
+  },
   { path: '/:pathMatch(.*)*', redirect: '/' },
 ]
 
