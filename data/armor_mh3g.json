@@ -1,0 +1,9617 @@
+{
+"剑士防具": {
+"count": 165,
+"rows": [
+{
+"n": "ハンター",
+"def": 30,
+"defMax": 500,
+"res": {
+"fire": 0,
+"water": 5,
+"ice": 0,
+"thunder": -15,
+"dragon": 0
+},
+"skills": [
+"探知",
+"猎人生活"
+],
+"negSkills": [
+"毒倍加"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "アロイ",
+"def": 30,
+"defMax": 500,
+"res": {
+"fire": -5,
+"water": 5,
+"ice": -5,
+"thunder": -10,
+"dragon": 0
+},
+"skills": [
+"砥石使用高速化",
+"看破+1",
+"风压【小】无效",
+"胴系统倍化"
+],
+"negSkills": [
+"采集-1"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": "村★5緊急「ラギアクルスを仕留めろ！」\n Clear后开卖"
+},
+{
+"n": "ボーン",
+"def": 35,
+"defMax": 495,
+"res": {
+"fire": 5,
+"water": 0,
+"ice": -10,
+"thunder": -5,
+"dragon": 0
+},
+"skills": [
+"捕获的极致",
+"吹笛名人",
+"KO术"
+],
+"negSkills": [
+"睡眠倍加"
+],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ブナハ",
+"def": 40,
+"defMax": 495,
+"res": {
+"fire": -20,
+"water": -5,
+"ice": -5,
+"thunder": 10,
+"dragon": 10
+},
+"skills": [
+"收刀术",
+"异常状态攻击+1",
+"麻痹无效"
+],
+"negSkills": [
+"攻击力DOWN【小】"
+],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 0
+},
+"note": ""
+},
+{
+"n": "リノプロ",
+"def": 45,
+"defMax": 505,
+"res": {
+"fire": 5,
+"water": -5,
+"ice": -5,
+"thunder": -5,
+"dragon": 5
+},
+"skills": [
+"泥＆雪无效",
+"KO术",
+"砲术師"
+],
+"negSkills": [
+"冰耐性弱化"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ジャギィ",
+"def": 50,
+"defMax": 500,
+"res": {
+"fire": -10,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"攻击力UP【小】",
+"气绝几率减半",
+"满腹"
+],
+"negSkills": [
+"攻击力UP【中】",
+"道具使用弱化"
+],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 0,
+"leg": 1,
+"total": 3
+},
+"note": ""
+},
+{
+"n": "アシラ",
+"def": 55,
+"defMax": 505,
+"res": {
+"fire": -10,
+"water": 5,
+"ice": -5,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"防御力UP【小】",
+"体力回复量UP",
+"偷盗无效",
+"麻痹倍加",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "フロギィ",
+"def": 60,
+"defMax": 500,
+"res": {
+"fire": 5,
+"water": -5,
+"ice": -10,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"業物",
+"奇面王的指令",
+"毒无效"
+],
+"negSkills": [
+"气绝倍加"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ペッコ",
+"def": 70,
+"defMax": 500,
+"res": {
+"fire": 10,
+"water": -5,
+"ice": -15,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"广域化+1",
+"吹笛名人",
+"风压【小】无效"
+],
+"negSkills": [
+"慢食者"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ルドロス",
+"def": 70,
+"defMax": 500,
+"res": {
+"fire": -15,
+"water": 10,
+"ice": -5,
+"thunder": -5,
+"dragon": 5
+},
+"skills": [
+"水属性攻击强化+1",
+"飞人",
+"暑气无效"
+],
+"negSkills": [
+"氧气无限",
+"雷耐性弱化"
+],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "バギィ",
+"def": 75,
+"defMax": 505,
+"res": {
+"fire": -10,
+"water": 0,
+"ice": 5,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"回复速度+1",
+"奇面王的呼声",
+"睡眠无效"
+],
+"negSkills": [
+"火属性攻击弱化"
+],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": ""
+},
+{
+"n": "ウルク",
+"def": 75,
+"defMax": 505,
+"res": {
+"fire": -10,
+"water": 0,
+"ice": 5,
+"thunder": -5,
+"dragon": 0
+},
+"skills": [
+"道具使用强化",
+"回避距离UP",
+"寒气无效",
+"暑气倍加"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ボロス",
+"def": 80,
+"defMax": 500,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": -10,
+"thunder": 5,
+"dragon": 0
+},
+"skills": [
+"攻击力UP【小】",
+"防御性能+1",
+"防御力UP【小】",
+"饥饿倍加【小】"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ラングロ",
+"def": 80,
+"defMax": 500,
+"res": {
+"fire": 5,
+"water": -15,
+"ice": -5,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"耐震",
+"攻击力UP【小】",
+"回避性能+1",
+"寒气倍加",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ガブル",
+"def": 85,
+"defMax": 505,
+"res": {
+"fire": -10,
+"water": 10,
+"ice": 0,
+"thunder": -15,
+"dragon": 5
+},
+"skills": [
+"速食者+1",
+"水魔",
+"看破+1",
+"回复速度-1"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 0,
+"arm": 1,
+"waist": 0,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "レイア",
+"def": 90,
+"defMax": 500,
+"res": {
+"fire": 10,
+"water": 0,
+"ice": 0,
+"thunder": -10,
+"dragon": -15
+},
+"skills": [
+"体力+20",
+"火属性攻击强化+1",
+"体力回复量UP",
+"回复速度-1"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ネブラ",
+"def": 90,
+"defMax": 500,
+"res": {
+"fire": -20,
+"water": 0,
+"ice": 5,
+"thunder": 5,
+"dragon": -5
+},
+"skills": [
+"异常状态攻击+1",
+"砥石使用高速化",
+"耳栓",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": ""
+},
+{
+"n": "インゴット",
+"def": 95,
+"defMax": 495,
+"res": {
+"fire": -10,
+"water": -10,
+"ice": 0,
+"thunder": 10,
+"dragon": 0
+},
+"skills": [
+"收刀术",
+"防御强化",
+"雷属性攻击强化+1",
+"恶灵的反复无常"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 0,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ハプル",
+"def": 105,
+"defMax": 495,
+"res": {
+"fire": 10,
+"water": 0,
+"ice": -20,
+"thunder": -10,
+"dragon": 5
+},
+"skills": [
+"速食者+1",
+"收刀术",
+"泥＆雪无效",
+"饥饿倍加【小】"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 0,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ベリオ",
+"def": 100,
+"defMax": 500,
+"res": {
+"fire": -20,
+"water": 0,
+"ice": 10,
+"thunder": -5,
+"dragon": 0
+},
+"skills": [
+"回避性能+1",
+"冰属性攻击强化+1",
+"耐力回复遅延"
+],
+"negSkills": [
+"体术+1"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 2,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ギルドバード",
+"def": 105,
+"defMax": 495,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"体力+20",
+"幸运",
+"自动标记",
+"挑衅"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 2
+},
+"note": "男性专用"
+},
+{
+"n": "スカラー",
+"def": 105,
+"defMax": 495,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"体力+20",
+"幸运",
+"自动标记",
+"挑衅"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 2
+},
+"note": "女性专用"
+},
+{
+"n": "ラギア",
+"def": 110,
+"defMax": 500,
+"res": {
+"fire": -20,
+"water": 5,
+"ice": -5,
+"thunder": 10,
+"dragon": -5
+},
+"skills": [
+"集中",
+"弱点特効",
+"水流【小】无效",
+"异常状态攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "レウス",
+"def": 110,
+"defMax": 500,
+"res": {
+"fire": 10,
+"water": 0,
+"ice": 0,
+"thunder": -10,
+"dragon": -15
+},
+"skills": [
+"攻击力UP【中】",
+"砥石使用高速化",
+"体力回复量DOWN"
+],
+"negSkills": [
+"火属性攻击强化+1"
+],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 3
+},
+"note": ""
+},
+{
+"n": "ドボル",
+"def": 120,
+"defMax": 510,
+"res": {
+"fire": -20,
+"water": 10,
+"ice": -10,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"回复速度+1",
+"攻击力UP【小】",
+"不屈",
+"看破-1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ディアブロ",
+"def": 120,
+"defMax": 510,
+"res": {
+"fire": 10,
+"water": 0,
+"ice": -20,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"集中",
+"看破+1",
+"耐震",
+"砥石使用低速化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 2,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ガンキン",
+"def": 120,
+"defMax": 510,
+"res": {
+"fire": 10,
+"water": -20,
+"ice": -5,
+"thunder": 5,
+"dragon": -10
+},
+"skills": [
+"防御力UP【中】",
+"耐力夺取",
+"炸弹人",
+"旱鸭子",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 0,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "アグナ",
+"def": 120,
+"defMax": 510,
+"res": {
+"fire": 10,
+"water": -20,
+"ice": -5,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"防御性能+1",
+"火属性攻击强化+1",
+"燃鳞",
+"業物"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ヘリオス",
+"def": 130,
+"defMax": 510,
+"res": {
+"fire": 0,
+"water": 15,
+"ice": 5,
+"thunder": -10,
+"dragon": -25
+},
+"skills": [
+"破坏王",
+"水属性攻击强化+1",
+"耳栓",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 0,
+"waist": 2,
+"leg": 2,
+"total": 6
+},
+"note": "男性专用"
+},
+{
+"n": "セレネ",
+"def": 130,
+"defMax": 510,
+"res": {
+"fire": 0,
+"water": 15,
+"ice": 5,
+"thunder": -10,
+"dragon": -25
+},
+"skills": [
+"破坏王",
+"水属性攻击强化+1",
+"耳栓",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 0,
+"waist": 2,
+"leg": 2,
+"total": 6
+},
+"note": "女性专用"
+},
+{
+"n": "レザーS",
+"def": 80,
+"defMax": 505,
+"res": {
+"fire": -10,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 10
+},
+"skills": [
+"精灵的反复无常",
+"高速収集",
+"采集+1"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ユクモノ天",
+"def": 90,
+"defMax": 505,
+"res": {
+"fire": -5,
+"water": 0,
+"ice": 0,
+"thunder": 10,
+"dragon": 0
+},
+"skills": [
+"精灵的加护",
+"隠密",
+"砥石使用高速化",
+"广域化+1"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "チェーンS",
+"def": 110,
+"defMax": 505,
+"res": {
+"fire": 10,
+"water": 10,
+"ice": 5,
+"thunder": -15,
+"dragon": 0
+},
+"skills": [
+"体力+50",
+"調合成功率+45%",
+"最大数生産"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ロックラックS",
+"def": 54,
+"defMax": 303,
+"res": {
+"fire": 6,
+"water": -9,
+"ice": 0,
+"thunder": 3,
+"dragon": 0
+},
+"skills": [
+"运搬の達人",
+"探知",
+"肥料弹名人"
+],
+"negSkills": [
+"自动标记"
+],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 1,
+"total": 3
+},
+"note": "只有身腰脚"
+},
+{
+"n": "ハンターS",
+"def": 120,
+"defMax": 505,
+"res": {
+"fire": 0,
+"water": 10,
+"ice": 0,
+"thunder": -20,
+"dragon": 0
+},
+"skills": [
+"探知",
+"猎人生活",
+"陷阱师",
+"毒倍加"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "モガピスカS",
+"def": 72,
+"defMax": 303,
+"res": {
+"fire": -9,
+"water": 12,
+"ice": 9,
+"thunder": -12,
+"dragon": 3
+},
+"skills": [
+"氧气无限",
+"水魔",
+"水流【大】无效"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 1,
+"total": 2
+},
+"note": "只有头腰脚"
+},
+{
+"n": "ボーンS",
+"def": 130,
+"defMax": 505,
+"res": {
+"fire": 10,
+"water": 0,
+"ice": -15,
+"thunder": -5,
+"dragon": 0
+},
+"skills": [
+"捕获的极致",
+"道具使用强化",
+"吹笛名人",
+"KO术",
+"睡眠倍加"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "アロイS",
+"def": 140,
+"defMax": 505,
+"res": {
+"fire": -5,
+"water": 10,
+"ice": -10,
+"thunder": -15,
+"dragon": 0
+},
+"skills": [
+"看破+1",
+"砥石使用高速化",
+"风压【小】无效",
+"采集-1",
+"胴系统倍化"
+],
+"negSkills": [
+"看破+2"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ブナハS",
+"def": 160,
+"defMax": 505,
+"res": {
+"fire": -25,
+"water": -5,
+"ice": -5,
+"thunder": 10,
+"dragon": 15
+},
+"skills": [
+"异常状态攻击+1",
+"麻痹无效",
+"收刀术",
+"攻击力DOWN【小】"
+],
+"negSkills": [
+"异常状态攻击+2"
+],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 1,
+"total": 2
+},
+"note": ""
+},
+{
+"n": "リノプロS",
+"def": 160,
+"defMax": 505,
+"res": {
+"fire": 10,
+"water": -5,
+"ice": -5,
+"thunder": -5,
+"dragon": 5
+},
+"skills": [
+"砲术師",
+"KO术",
+"集中",
+"泥＆雪无效",
+"气绝倍加"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ズワロ",
+"def": 70,
+"defMax": 204,
+"res": {
+"fire": -4,
+"water": 6,
+"ice": -2,
+"thunder": 0,
+"dragon": 2
+},
+"skills": [
+"水耐性【小】",
+"水属性攻击强化+1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 1
+},
+"note": "只有头身"
+},
+{
+"n": "ジャギィS",
+"def": 180,
+"defMax": 505,
+"res": {
+"fire": -20,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 10
+},
+"skills": [
+"气绝无效",
+"攻击力UP【中】",
+"满腹",
+"道具使用弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "アシラS",
+"def": 185,
+"defMax": 510,
+"res": {
+"fire": -15,
+"water": 10,
+"ice": -10,
+"thunder": 0,
+"dragon": 10
+},
+"skills": [
+"防御力UP【中】",
+"偷盗无效",
+"体力回复UP",
+"耐力夺取",
+"麻痹倍加",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 2,
+"waist": 2,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "フロギィS",
+"def": 190,
+"defMax": 505,
+"res": {
+"fire": 10,
+"water": -10,
+"ice": -15,
+"thunder": 0,
+"dragon": 10
+},
+"skills": [
+"奇面王的指令",
+"速食者+1",
+"業物",
+"毒无效",
+"防御力DOWN【小】"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "バギィS",
+"def": 200,
+"defMax": 515,
+"res": {
+"fire": -20,
+"water": 0,
+"ice": 10,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"奇面王的呼声",
+"回复速度+1",
+"冰属性攻击强化+1",
+"睡眠无效",
+"火属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 0,
+"arm": 1,
+"waist": 2,
+"leg": 0,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ウルクS",
+"def": 200,
+"defMax": 515,
+"res": {
+"fire": -15,
+"water": 0,
+"ice": 10,
+"thunder": -5,
+"dragon": 0
+},
+"skills": [
+"道具使用强化",
+"回避距离UP",
+"寒气无效",
+"看破+1",
+"暑气倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ラングロS",
+"def": 220,
+"defMax": 515,
+"res": {
+"fire": 10,
+"water": -20,
+"ice": -5,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"攻击力UP【中】",
+"耐震",
+"回避性能+1",
+"寒气倍加",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "撫子",
+"def": 175,
+"defMax": 510,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"广域化+1",
+"捕获的极致",
+"自动标记",
+"毒倍加"
+],
+"negSkills": [
+"广域化+2"
+],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": "女性专用"
+},
+{
+"n": "ペッコS",
+"def": 205,
+"defMax": 510,
+"res": {
+"fire": 15,
+"water": -5,
+"ice": -20,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"广域化+2",
+"探知",
+"吹笛名人",
+"冰耐性弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ルドロスS",
+"def": 210,
+"defMax": 515,
+"res": {
+"fire": -20,
+"water": 15,
+"ice": -5,
+"thunder": -5,
+"dragon": 5
+},
+"skills": [
+"飞人",
+"水属性攻击强化+1",
+"氧气无限",
+"雷属性攻击弱化"
+],
+"negSkills": [
+"耳栓"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ロワーガ",
+"def": 230,
+"defMax": 505,
+"res": {
+"fire": -20,
+"water": 0,
+"ice": -5,
+"thunder": 15,
+"dragon": 5
+},
+"skills": [
+"高級耳栓",
+"龍属性攻击强化+1",
+"抗菌",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 6
+},
+"note": "男性专用"
+},
+{
+"n": "ファルメル",
+"def": 230,
+"defMax": 505,
+"res": {
+"fire": -20,
+"water": 0,
+"ice": -5,
+"thunder": 15,
+"dragon": 5
+},
+"skills": [
+"高級耳栓",
+"龍属性攻击强化+1",
+"抗菌",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 6
+},
+"note": "女性专用"
+},
+{
+"n": "ボロスS",
+"def": 230,
+"defMax": 525,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": -10,
+"thunder": 5,
+"dragon": 0
+},
+"skills": [
+"攻击力UP【中】",
+"防御性能+1",
+"防御力UP【小】",
+"饥饿倍加【小】"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 2,
+"arm": 2,
+"waist": 2,
+"leg": 0,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "アーティア",
+"def": 138,
+"defMax": 315,
+"res": {
+"fire": 0,
+"water": -9,
+"ice": 6,
+"thunder": -9,
+"dragon": 9
+},
+"skills": [
+"耐力急速回复",
+"防御強化"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": "只有身腕脚"
+},
+{
+"n": "ガブルS",
+"def": 235,
+"defMax": 510,
+"res": {
+"fire": -10,
+"water": 15,
+"ice": 0,
+"thunder": -20,
+"dragon": 5
+},
+"skills": [
+"速食者+1",
+"看破+2",
+"水魔"
+],
+"negSkills": [
+"回复速度-1"
+],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 3,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "マギュル",
+"def": 240,
+"defMax": 525,
+"res": {
+"fire": -20,
+"water": 5,
+"ice": 10,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"回复速度+1",
+"集中",
+"調合成功率+20%",
+"陷阱师",
+"防御性能-1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ギルドバードS",
+"def": 240,
+"defMax": 525,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"体力+20",
+"幸运",
+"自动标记",
+"挑衅"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": "男性专用"
+},
+{
+"n": "スカラーS",
+"def": 240,
+"defMax": 525,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"体力+20",
+"幸运",
+"自动标记",
+"挑衅"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": "女性专用"
+},
+{
+"n": "インゴットS",
+"def": 240,
+"defMax": 515,
+"res": {
+"fire": -10,
+"water": -15,
+"ice": 0,
+"thunder": 15,
+"dragon": 5
+},
+"skills": [
+"雷属性攻击强化+1",
+"防御强化",
+"收刀术",
+"恶灵的反复无常"
+],
+"negSkills": [
+"雷属性攻击强化+2"
+],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "レイアS",
+"def": 245,
+"defMax": 520,
+"res": {
+"fire": 15,
+"water": 0,
+"ice": 0,
+"thunder": -10,
+"dragon": -20
+},
+"skills": [
+"体力+50",
+"火属性攻击强化+1",
+"体力回复量UP",
+"水属性攻击弱化-1"
+],
+"negSkills": [
+"火属性攻击强化+2"
+],
+"slots": {
+"head": 3,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ネブラS",
+"def": 245,
+"defMax": 520,
+"res": {
+"fire": -25,
+"water": 0,
+"ice": 10,
+"thunder": 10,
+"dragon": -5
+},
+"skills": [
+"异常状态攻击+2",
+"砥石使用高速化",
+"耳栓",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 2,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ガノス",
+"def": 245,
+"defMax": 416,
+"res": {
+"fire": -16,
+"water": 12,
+"ice": 8,
+"thunder": -20,
+"dragon": 8
+},
+"skills": [
+"暑气无效",
+"飞人",
+"捕獲達人",
+"陷阱师"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 0,
+"leg": 1,
+"total": 4
+},
+"note": "无腰"
+},
+{
+"n": "ベリオS",
+"def": 250,
+"defMax": 525,
+"res": {
+"fire": -25,
+"water": 0,
+"ice": 15,
+"thunder": -5,
+"dragon": 0
+},
+"skills": [
+"体术+2",
+"回避性能+1",
+"冰属性攻击强化+1",
+"耐力回复遅延"
+],
+"negSkills": [
+"冰属性攻击强化+2"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 0,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ハプルS",
+"def": 255,
+"defMax": 530,
+"res": {
+"fire": 15,
+"water": 0,
+"ice": -25,
+"thunder": -10,
+"dragon": 5
+},
+"skills": [
+"速食者+2",
+"收刀术",
+"泥＆雪无效",
+"雷属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ナルガ",
+"def": 255,
+"defMax": 530,
+"res": {
+"fire": -10,
+"water": 5,
+"ice": 5,
+"thunder": -25,
+"dragon": 5
+},
+"skills": [
+"回避性能+1",
+"隠密",
+"回避距离UP",
+"鈍足"
+],
+"negSkills": [
+"回避性能+2"
+],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 2,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ラギアS",
+"def": 265,
+"defMax": 540,
+"res": {
+"fire": -25,
+"water": 5,
+"ice": -5,
+"thunder": 15,
+"dragon": -5
+},
+"skills": [
+"集中",
+"弱点特効",
+"砥石使用高速化",
+"异常状态攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 0,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "レウスS",
+"def": 265,
+"defMax": 540,
+"res": {
+"fire": 15,
+"water": 0,
+"ice": 0,
+"thunder": -10,
+"dragon": -20
+},
+"skills": [
+"攻击力UP【中】",
+"砥石使用高速化",
+"体力回复量DOWN"
+],
+"negSkills": [
+"攻击力UP【大】",
+"火属性攻击强化+1"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 0,
+"waist": 2,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ジンオウ",
+"def": 265,
+"defMax": 540,
+"res": {
+"fire": 0,
+"water": -10,
+"ice": -20,
+"thunder": 15,
+"dragon": 5
+},
+"skills": [
+"雷属性攻击强化+1",
+"業物",
+"力解放+1",
+"挑衅"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ブラキ",
+"def": 265,
+"defMax": 540,
+"res": {
+"fire": 15,
+"water": -20,
+"ice": -10,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"炸弹人",
+"火事场力+1",
+"挑战者+1",
+"回避性能DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ドボルS",
+"def": 270,
+"defMax": 535,
+"res": {
+"fire": -25,
+"water": 15,
+"ice": -10,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"攻击力UP【小】",
+"回复速度+2",
+"不屈",
+"看破-1"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "城塞遊撃隊",
+"def": 275,
+"defMax": 550,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"看破+1",
+"体力回复量UP",
+"剥取铁人",
+"不运"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 0,
+"waist": 2,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ディアブロS",
+"def": 280,
+"defMax": 545,
+"res": {
+"fire": 15,
+"water": 0,
+"ice": -25,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"集中",
+"看破+2",
+"耐震",
+"砥石使用低速化"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "アグナS",
+"def": 280,
+"defMax": 555,
+"res": {
+"fire": 15,
+"water": -25,
+"ice": -5,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"体术+1",
+"火属性攻击强化+1",
+"業物",
+"燃鳞"
+],
+"negSkills": [
+"体术+2",
+"火属性攻击强化+2"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ガンキンS",
+"def": 285,
+"defMax": 550,
+"res": {
+"fire": 15,
+"water": -25,
+"ice": -5,
+"thunder": 5,
+"dragon": -10
+},
+"skills": [
+"防御力UP【大】",
+"耐力夺取",
+"炸弹人",
+"旱鸭子",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 0,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ペッコU",
+"def": 205,
+"defMax": 510,
+"res": {
+"fire": -5,
+"water": 0,
+"ice": -20,
+"thunder": 15,
+"dragon": 0
+},
+"skills": [
+"风压【大】无效",
+"鉄面皮",
+"看破+1",
+"冰属性攻击弱化"
+],
+"negSkills": [
+"看破+2",
+"广域化+1"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ルドロスU",
+"def": 210,
+"defMax": 515,
+"res": {
+"fire": -20,
+"water": 15,
+"ice": 0,
+"thunder": -10,
+"dragon": 5
+},
+"skills": [
+"饥饿无效",
+"异常状态攻击+1",
+"飞人",
+"雷耐性弱化"
+],
+"negSkills": [
+"异常状态攻击+2"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 0,
+"waist": 2,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ボロスU",
+"def": 240,
+"defMax": 525,
+"res": {
+"fire": -20,
+"water": 5,
+"ice": 15,
+"thunder": -10,
+"dragon": 0
+},
+"skills": [
+"火事场力+1",
+"防御力UP【小】",
+"冰属性攻击强化+1",
+"火属性攻击弱化"
+],
+"negSkills": [
+"火事场力+2",
+"防御力UP【中】",
+"冰属性攻击强化+2"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 3,
+"waist": 0,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "リオハート",
+"def": 245,
+"defMax": 530,
+"res": {
+"fire": 15,
+"water": 0,
+"ice": 0,
+"thunder": -10,
+"dragon": -20
+},
+"skills": [
+"火属性强化+1",
+"风压【大】无效",
+"火事场力+1"
+],
+"negSkills": [
+"火属性强化+2"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ネブラU",
+"def": 245,
+"defMax": 520,
+"res": {
+"fire": 0,
+"water": -25,
+"ice": 5,
+"thunder": 15,
+"dragon": -5
+},
+"skills": [
+"耐力夺取",
+"集中",
+"雷属性攻击强化+1",
+"冰属性攻击弱化"
+],
+"negSkills": [
+"雷属性攻击强化+2"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ベリオU",
+"def": 245,
+"defMax": 545,
+"res": {
+"fire": 15,
+"water": 0,
+"ice": -25,
+"thunder": -5,
+"dragon": 0
+},
+"skills": [
+"攻击力UP【中】",
+"暑气无效",
+"回避距离UP",
+"回避性能DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 2,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ラギアU",
+"def": 300,
+"defMax": 555,
+"res": {
+"fire": -20,
+"water": 10,
+"ice": 0,
+"thunder": 15,
+"dragon": -20
+},
+"skills": [
+"攻击力UP【小】",
+"破坏王",
+"属性异常无效",
+"鈍足"
+],
+"negSkills": [
+"攻击力UP【中】"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "リオソウル",
+"def": 275,
+"defMax": 550,
+"res": {
+"fire": 15,
+"water": 0,
+"ice": -10,
+"thunder": 0,
+"dragon": -20
+},
+"skills": [
+"看破+2",
+"業物",
+"耳栓",
+"体力-10"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ドーベル",
+"def": 275,
+"defMax": 550,
+"res": {
+"fire": -10,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 15
+},
+"skills": [
+"耐震",
+"耐力急速回复",
+"龍属性攻击强化+1",
+"饥饿倍加【小】"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 3,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ディアブロU",
+"def": 285,
+"defMax": 560,
+"res": {
+"fire": 15,
+"water": 0,
+"ice": -25,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"KO术",
+"耐力夺取",
+"耳栓",
+"龍属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 3,
+"leg": 0,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "アグナU",
+"def": 290,
+"defMax": 555,
+"res": {
+"fire": -25,
+"water": 10,
+"ice": 15,
+"thunder": -5,
+"dragon": -5
+},
+"skills": [
+"防御性能+2",
+"防御强化",
+"砥石使用高速化",
+"体术-1"
+],
+"negSkills": [
+"体术-2"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 0,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ガンキンU",
+"def": 295,
+"defMax": 560,
+"res": {
+"fire": 15,
+"water": -25,
+"ice": -5,
+"thunder": 5,
+"dragon": -10
+},
+"skills": [
+"防御性能+1",
+"砲术師",
+"耐力急速回复",
+"旱鸭子"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ダマスク",
+"def": 285,
+"defMax": 560,
+"res": {
+"fire": -10,
+"water": 10,
+"ice": 10,
+"thunder": -15,
+"dragon": -5
+},
+"skills": [
+"雷属性攻击强化+1",
+"精灵的加护",
+"砥石使用高速化",
+"慢食者"
+],
+"negSkills": [
+"雷属性攻击强化+2"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "大和",
+"def": 300,
+"defMax": 535,
+"res": {
+"fire": 15,
+"water": 5,
+"ice": -20,
+"thunder": 0,
+"dragon": -20
+},
+"skills": [
+"集中",
+"看破+2",
+"防御UP【中】",
+"心配性"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 0,
+"total": 6
+},
+"note": "男性专用"
+},
+{
+"n": "日向",
+"def": 300,
+"defMax": 535,
+"res": {
+"fire": 15,
+"water": 5,
+"ice": -20,
+"thunder": 0,
+"dragon": -20
+},
+"skills": [
+"集中",
+"看破+2",
+"防御UP【中】",
+"心配性"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 0,
+"total": 6
+},
+"note": "女性专用"
+},
+{
+"n": "バンギス",
+"def": 310,
+"defMax": 565,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 5,
+"thunder": -20,
+"dragon": -20
+},
+"skills": [
+"攻击力UP【中】",
+"業物",
+"速食者+2",
+"饥饿倍化【小】",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 3,
+"total": 3
+},
+"note": ""
+},
+{
+"n": "エスカドラ",
+"def": 340,
+"defMax": 565,
+"res": {
+"fire": 0,
+"water": -10,
+"ice": 0,
+"thunder": 0,
+"dragon": -10
+},
+"skills": [
+"力解放+1",
+"回避距离UP",
+"属性异常无效",
+"属性攻击强化",
+"气绝倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 0
+},
+"note": ""
+},
+{
+"n": "大海賊J",
+"def": 200,
+"defMax": 515,
+"res": {
+"fire": -10,
+"water": -10,
+"ice": -10,
+"thunder": -10,
+"dragon": -10
+},
+"skills": [
+"幸运",
+"剥取达人",
+"捕獲達人",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 1
+},
+"note": "配信任务"
+},
+{
+"n": "坊屋",
+"def": 159,
+"defMax": 324,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"攻击力UP【中】",
+"耐力急速回复",
+"挑衅"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 0
+},
+"note": "只有身脚\n配信任务"
+},
+{
+"n": "ブナハX",
+"def": 340,
+"defMax": 560,
+"res": {
+"fire": -30,
+"water": -5,
+"ice": -5,
+"thunder": 10,
+"dragon": 20
+},
+"skills": [
+"异常状态攻击+2",
+"收刀术",
+"麻痹无效",
+"攻击力DOWN【小】"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "リノプロX",
+"def": 340,
+"defMax": 560,
+"res": {
+"fire": 15,
+"water": -10,
+"ice": -10,
+"thunder": -10,
+"dragon": 10
+},
+"skills": [
+"水流【小】无效",
+"砲术師",
+"KO术",
+"集中"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ズワロX",
+"def": 136,
+"defMax": 224,
+"res": {
+"fire": -8,
+"water": 8,
+"ice": -4,
+"thunder": 0,
+"dragon": 4
+},
+"skills": [
+"調合成功率+45%"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 1,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 4
+},
+"note": "只有头身"
+},
+{
+"n": "ジャギィX",
+"def": 360,
+"defMax": 570,
+"res": {
+"fire": -25,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 15
+},
+"skills": [
+"气绝几率减半",
+"回复速度+1",
+"攻击力UP【小】",
+"最喜欢肉"
+],
+"negSkills": [
+"气绝无效"
+],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "バギィX",
+"def": 360,
+"defMax": 570,
+"res": {
+"fire": -25,
+"water": 0,
+"ice": 15,
+"thunder": 0,
+"dragon": 10
+},
+"skills": [
+"奇面王的呼声",
+"冰属性攻击强化+1",
+"寒气无效",
+"回复速度+1"
+],
+"negSkills": [
+"冰属性攻击强化+2",
+"回复速度+2"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "フロギィX",
+"def": 360,
+"defMax": 570,
+"res": {
+"fire": 15,
+"water": -15,
+"ice": -25,
+"thunder": 0,
+"dragon": 15
+},
+"skills": [
+"奇面王的指令",
+"速食者+1",
+"業物",
+"鉄面皮"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "アシラX",
+"def": 360,
+"defMax": 570,
+"res": {
+"fire": -20,
+"water": 15,
+"ice": -15,
+"thunder": 0,
+"dragon": 15
+},
+"skills": [
+"甜心猎人",
+"高速収集",
+"满腹",
+"胴系统倍化"
+],
+"negSkills": [
+"护符猎人",
+"精灵的反复无常"
+],
+"slots": {
+"head": 2,
+"body": 2,
+"arm": 1,
+"waist": 3,
+"leg": 0,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ウルクX",
+"def": 360,
+"defMax": 570,
+"res": {
+"fire": -20,
+"water": 0,
+"ice": 15,
+"thunder": -5,
+"dragon": 0
+},
+"skills": [
+"飞距离",
+"耐力急速回复",
+"收刀术",
+"泥&雪无效"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ラングロX",
+"def": 360,
+"defMax": 570,
+"res": {
+"fire": 15,
+"water": -25,
+"ice": -5,
+"thunder": 0,
+"dragon": 10
+},
+"skills": [
+"回避性能+1",
+"耐震",
+"生物博士",
+"胴系统倍化"
+],
+"negSkills": [
+"水耐性弱化"
+],
+"slots": {
+"head": 3,
+"body": 1,
+"arm": 0,
+"waist": 2,
+"leg": 0,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "インゴットX",
+"def": 380,
+"defMax": 560,
+"res": {
+"fire": -15,
+"water": -15,
+"ice": 0,
+"thunder": 15,
+"dragon": 10
+},
+"skills": [
+"雷属性攻击强化+2",
+"防御强化",
+"收刀术",
+"恶灵的反复无常"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ペッコX",
+"def": 380,
+"defMax": 575,
+"res": {
+"fire": 20,
+"water": -5,
+"ice": -25,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"广域化+2",
+"捕获的极致",
+"冰耐性弱化"
+],
+"negSkills": [
+"吹笛名人"
+],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 3,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ルドロスX",
+"def": 390,
+"defMax": 575,
+"res": {
+"fire": -25,
+"water": 20,
+"ice": -5,
+"thunder": -5,
+"dragon": 5
+},
+"skills": [
+"飞人",
+"水属性攻击强化+2",
+"雷属性攻击弱化"
+],
+"negSkills": [
+"耳栓"
+],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ガノスX",
+"def": 350,
+"defMax": 460,
+"res": {
+"fire": -20,
+"water": 16,
+"ice": -24,
+"thunder": 8,
+"dragon": 8
+},
+"skills": [
+"捕獲名人",
+"陷阱师",
+"心眼"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 0,
+"leg": 2,
+"total": 5
+},
+"note": "无腰"
+},
+{
+"n": "レイアX",
+"def": 400,
+"defMax": 575,
+"res": {
+"fire": 20,
+"water": 0,
+"ice": 0,
+"thunder": -10,
+"dragon": -25
+},
+"skills": [
+"体力+50",
+"火属性攻击强化+1",
+"体力回复量UP",
+"水属性攻击弱化"
+],
+"negSkills": [
+"火属性攻击强化+2"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ベリオX",
+"def": 405,
+"defMax": 570,
+"res": {
+"fire": -30,
+"water": 0,
+"ice": 20,
+"thunder": -10,
+"dragon": 0
+},
+"skills": [
+"体术+2",
+"冰属性攻击强化+1",
+"回避性能+1",
+"耐力回复遅延"
+],
+"negSkills": [
+"冰属性攻击强化+2"
+],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 1,
+"waist": 0,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ボロスX",
+"def": 410,
+"defMax": 575,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": -15,
+"thunder": 10,
+"dragon": 0
+},
+"skills": [
+"攻击力UP【小】",
+"体术+1",
+"防御性能+1",
+"饥饿倍加【小】"
+],
+"negSkills": [
+"攻击力UP【中】"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 2,
+"waist": 1,
+"leg": 0,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ガブルX",
+"def": 410,
+"defMax": 575,
+"res": {
+"fire": -15,
+"water": 20,
+"ice": 0,
+"thunder": -25,
+"dragon": 5
+},
+"skills": [
+"速食者+1",
+"看破+2",
+"水魔",
+"回复速度-1"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 0
+},
+"note": ""
+},
+{
+"n": "ネブラX",
+"def": 415,
+"defMax": 580,
+"res": {
+"fire": -30,
+"water": 0,
+"ice": 10,
+"thunder": 10,
+"dragon": -5
+},
+"skills": [
+"异常状态攻击+2",
+"觉醒",
+"業物",
+"属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 3,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ハプルX",
+"def": 415,
+"defMax": 580,
+"res": {
+"fire": 15,
+"water": 0,
+"ice": -30,
+"thunder": -10,
+"dragon": 5
+},
+"skills": [
+"速食者+2",
+"抜刀术【力】",
+"收刀术",
+"雷属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 2,
+"waist": 3,
+"leg": 0,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ドボルX",
+"def": 420,
+"defMax": 585,
+"res": {
+"fire": -30,
+"water": 15,
+"ice": -10,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"抜刀术【力】",
+"不屈",
+"耐力夺取",
+"看破-1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 0,
+"waist": 3,
+"leg": 2,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ナルガX",
+"def": 425,
+"defMax": 565,
+"res": {
+"fire": -10,
+"water": 10,
+"ice": 5,
+"thunder": -30,
+"dragon": 5
+},
+"skills": [
+"回避距离UP",
+"回避性能+2",
+"隠密",
+"鈍足"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 3,
+"leg": 0,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ヘリオスX",
+"def": 425,
+"defMax": 585,
+"res": {
+"fire": 0,
+"water": 20,
+"ice": 5,
+"thunder": -10,
+"dragon": -35
+},
+"skills": [
+"高級耳栓",
+"觉醒",
+"破坏王",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": "男性专用"
+},
+{
+"n": "セレネX",
+"def": 425,
+"defMax": 585,
+"res": {
+"fire": 0,
+"water": 20,
+"ice": 5,
+"thunder": -10,
+"dragon": -35
+},
+"skills": [
+"高級耳栓",
+"觉醒",
+"破坏王",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": "女性专用"
+},
+{
+"n": "レウスX",
+"def": 440,
+"defMax": 580,
+"res": {
+"fire": 20,
+"water": 0,
+"ice": 0,
+"thunder": -10,
+"dragon": -30
+},
+"skills": [
+"火属性攻击强化+1",
+"攻击力UP【中】",
+"砥石使用高速化",
+"体力回复量DOWN"
+],
+"negSkills": [
+"攻击力UP【大】"
+],
+"slots": {
+"head": 0,
+"body": 2,
+"arm": 0,
+"waist": 0,
+"leg": 3,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ディアブロX",
+"def": 445,
+"defMax": 585,
+"res": {
+"fire": 20,
+"water": 0,
+"ice": -30,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"抜刀术【技】",
+"收刀术",
+"耐震",
+"砥石使用低速化"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 0,
+"waist": 0,
+"leg": 3,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "アグナX",
+"def": 450,
+"defMax": 580,
+"res": {
+"fire": 20,
+"water": -30,
+"ice": -5,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"体术+1",
+"火属性攻击强化+1",
+"業物",
+"燃鳞"
+],
+"negSkills": [
+"火属性攻击强化+2"
+],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 3,
+"waist": 3,
+"leg": 2,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ラギアX",
+"def": 450,
+"defMax": 580,
+"res": {
+"fire": -30,
+"water": 5,
+"ice": -5,
+"thunder": 20,
+"dragon": -5
+},
+"skills": [
+"觉醒",
+"弱点特効",
+"集中",
+"异常状态攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 3,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ブラキX",
+"def": 450,
+"defMax": 580,
+"res": {
+"fire": 20,
+"water": -30,
+"ice": -10,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"挑战者+2",
+"火事场力+1",
+"炸弹人",
+"回避性能DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 2,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ガンキンX",
+"def": 455,
+"defMax": 585,
+"res": {
+"fire": 20,
+"water": -30,
+"ice": -5,
+"thunder": 5,
+"dragon": -10
+},
+"skills": [
+"防御力UP【大】",
+"抜刀术【力】",
+"集中",
+"旱鸭子",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ジンオウX",
+"def": 460,
+"defMax": 580,
+"res": {
+"fire": 0,
+"water": -15,
+"ice": -30,
+"thunder": 20,
+"dragon": 5
+},
+"skills": [
+"力解放+2",
+"業物",
+"雷属性攻击强化+1",
+"挑衅"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 3,
+"arm": 0,
+"waist": 3,
+"leg": 0,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "マギュルX",
+"def": 360,
+"defMax": 570,
+"res": {
+"fire": -25,
+"water": 5,
+"ice": 20,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"集中",
+"最大数生産",
+"調合成功率+20%",
+"回复速度+1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 2,
+"leg": 2,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "撫子・華",
+"def": 380,
+"defMax": 550,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"广域化+2",
+"捕获的极致",
+"自动标记",
+"毒倍加"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "セイラー",
+"def": 380,
+"defMax": 550,
+"res": {
+"fire": 0,
+"water": 10,
+"ice": -10,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"广域化+2",
+"氧气无限",
+"幸运",
+"挑衅",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 0,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ペッコZ",
+"def": 380,
+"defMax": 575,
+"res": {
+"fire": -5,
+"water": 0,
+"ice": -25,
+"thunder": 20,
+"dragon": 0
+},
+"skills": [
+"风压【大】无效",
+"鉄面皮",
+"广域化+1",
+"看破+1"
+],
+"negSkills": [
+"睡眠倍加"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 2,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ルドロスZ",
+"def": 390,
+"defMax": 575,
+"res": {
+"fire": -20,
+"water": 20,
+"ice": 0,
+"thunder": -10,
+"dragon": 5
+},
+"skills": [
+"异常状态攻击+1",
+"饥饿无效",
+"飞人",
+"毒无效"
+],
+"negSkills": [
+"异常状态攻击+2"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 2,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "アーティアX",
+"def": 240,
+"defMax": 342,
+"res": {
+"fire": 0,
+"water": -9,
+"ice": 6,
+"thunder": -9,
+"dragon": 12
+},
+"skills": [
+"觉醒",
+"防御强化"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 2,
+"arm": 2,
+"waist": 0,
+"leg": 1,
+"total": 5
+},
+"note": "只有身腕脚"
+},
+{
+"n": "ガノスZ",
+"def": 410,
+"defMax": 460,
+"res": {
+"fire": -16,
+"water": 16,
+"ice": 8,
+"thunder": -24,
+"dragon": 8
+},
+"skills": [
+"飞人",
+"水神の加護",
+"弱点特効",
+"体术-1"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 3,
+"waist": 0,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "リオハートZ",
+"def": 400,
+"defMax": 575,
+"res": {
+"fire": 20,
+"water": 0,
+"ice": 0,
+"thunder": -10,
+"dragon": -25
+},
+"skills": [
+"风压【大】无效",
+"火属性攻击强化+1",
+"道具使用强化",
+"根性"
+],
+"negSkills": [
+"火属性攻击强化+2"
+],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ギルドバードX",
+"def": 400,
+"defMax": 570,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"护符猎人",
+"幸运",
+"体力+20",
+"探知",
+"挑衅",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": "男性专用"
+},
+{
+"n": "スカラーX",
+"def": 400,
+"defMax": 570,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"护符猎人",
+"幸运",
+"体力+20",
+"探知",
+"挑衅",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": "女性专用"
+},
+{
+"n": "城塞特攻隊",
+"def": 400,
+"defMax": 570,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"剥取达人",
+"根性",
+"体力回复量UP",
+"挑衅"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 0,
+"arm": 0,
+"waist": 2,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ベリオZ",
+"def": 430,
+"defMax": 570,
+"res": {
+"fire": 20,
+"water": 0,
+"ice": -30,
+"thunder": -10,
+"dragon": 0
+},
+"skills": [
+"攻击力UP【中】",
+"回避距离UP",
+"暑气无效",
+"回避性能DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 2,
+"leg": 3,
+"total": 9
+},
+"note": ""
+},
+{
+"n": "ボロスZ",
+"def": 410,
+"defMax": 575,
+"res": {
+"fire": -20,
+"water": 10,
+"ice": 15,
+"thunder": -10,
+"dragon": 0
+},
+"skills": [
+"冰属性攻击强化+2",
+"防御力UP【小】",
+"火事场力+1",
+"耳栓"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ネブラZ",
+"def": 415,
+"defMax": 580,
+"res": {
+"fire": 0,
+"water": -30,
+"ice": 10,
+"thunder": 20,
+"dragon": -5
+},
+"skills": [
+"雷属性攻击强化+2",
+"耐力夺取",
+"集中",
+"冰属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 2,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ドボルZ",
+"def": 430,
+"defMax": 585,
+"res": {
+"fire": 15,
+"water": -20,
+"ice": -20,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"觉醒",
+"攻击力UP【小】",
+"根性",
+"回避性能DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 1,
+"arm": 1,
+"waist": 3,
+"leg": 1,
+"total": 9
+},
+"note": ""
+},
+{
+"n": "ナルガZ",
+"def": 435,
+"defMax": 575,
+"res": {
+"fire": -10,
+"water": 10,
+"ice": 5,
+"thunder": -30,
+"dragon": 5
+},
+"skills": [
+"回避性能+2",
+"耐力急速回复",
+"集中",
+"体术-1"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 2,
+"total": 9
+},
+"note": ""
+},
+{
+"n": "ヘリオスZ",
+"def": 430,
+"defMax": 590,
+"res": {
+"fire": 0,
+"water": 20,
+"ice": 5,
+"thunder": -10,
+"dragon": -35
+},
+"skills": [
+"斩味等级+1",
+"高級耳栓",
+"水属性攻击强化+1",
+"钝刀"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 0,
+"arm": 1,
+"waist": 3,
+"leg": 1,
+"total": 8
+},
+"note": "男性专用"
+},
+{
+"n": "セレネZ",
+"def": 430,
+"defMax": 590,
+"res": {
+"fire": 0,
+"water": 20,
+"ice": 5,
+"thunder": -10,
+"dragon": -35
+},
+"skills": [
+"斩味等级+1",
+"高級耳栓",
+"水属性攻击强化+1",
+"钝刀"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 0,
+"arm": 1,
+"waist": 3,
+"leg": 1,
+"total": 8
+},
+"note": "女性专用"
+},
+{
+"n": "ロワーガX",
+"def": 430,
+"defMax": 570,
+"res": {
+"fire": -25,
+"water": 0,
+"ice": -5,
+"thunder": 20,
+"dragon": 5
+},
+"skills": [
+"高級耳栓",
+"龍属性攻击强化+1",
+"甜心猎人",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 3,
+"waist": 2,
+"leg": 0,
+"total": 6
+},
+"note": "男性专用"
+},
+{
+"n": "ファルメルX",
+"def": 430,
+"defMax": 570,
+"res": {
+"fire": -25,
+"water": 0,
+"ice": -5,
+"thunder": 20,
+"dragon": 5
+},
+"skills": [
+"高級耳栓",
+"龍属性攻击强化+1",
+"甜心猎人",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 3,
+"waist": 2,
+"leg": 0,
+"total": 6
+},
+"note": "女性专用"
+},
+{
+"n": "リオソウルZ",
+"def": 450,
+"defMax": 580,
+"res": {
+"fire": 20,
+"water": 0,
+"ice": -10,
+"thunder": 0,
+"dragon": -30
+},
+"skills": [
+"看破+3",
+"耳栓",
+"心眼",
+"体力-10"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 2,
+"arm": 1,
+"waist": 0,
+"leg": 2,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ディアブロZ",
+"def": 445,
+"defMax": 585,
+"res": {
+"fire": 20,
+"water": 0,
+"ice": -30,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"KO术",
+"耐力夺取",
+"弱点特効",
+"龍属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 2,
+"leg": 3,
+"total": 9
+},
+"note": ""
+},
+{
+"n": "アグナZ",
+"def": 450,
+"defMax": 580,
+"res": {
+"fire": -30,
+"water": 15,
+"ice": 20,
+"thunder": -10,
+"dragon": -10
+},
+"skills": [
+"防御性能+2",
+"防御强化",
+"心眼",
+"体术-1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 2,
+"waist": 2,
+"leg": 0,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ラギアZ",
+"def": 460,
+"defMax": 580,
+"res": {
+"fire": -25,
+"water": 10,
+"ice": 0,
+"thunder": 20,
+"dragon": -20
+},
+"skills": [
+"攻击力UP【中】",
+"属性异常无效",
+"破坏王",
+"鈍足"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 3,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ガンキンZ",
+"def": 455,
+"defMax": 585,
+"res": {
+"fire": 20,
+"water": -30,
+"ice": -5,
+"thunder": 5,
+"dragon": -10
+},
+"skills": [
+"砲术王",
+"防御性能+1",
+"心眼",
+"生物博士",
+"旱鸭子"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 3,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ジンオウZ",
+"def": 470,
+"defMax": 580,
+"res": {
+"fire": 0,
+"water": -10,
+"ice": 0,
+"thunder": -30,
+"dragon": 20
+},
+"skills": [
+"集中",
+"充满",
+"龍属性攻击强化+1",
+"回避性能+1",
+"体力回复量DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ドーベルX",
+"def": 460,
+"defMax": 570,
+"res": {
+"fire": -15,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 20
+},
+"skills": [
+"龍属性攻击强化+2",
+"回避性能+1",
+"耐震",
+"饥饿倍化【小】"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 3,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "バンギスX",
+"def": 504,
+"defMax": 600,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 5,
+"thunder": -20,
+"dragon": -20
+},
+"skills": [
+"斩味等级+1",
+"逆鱗",
+"速食者+2",
+"钝刀"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 3,
+"leg": 2,
+"total": 10
+},
+"note": ""
+},
+{
+"n": "ダマスクX",
+"def": 475,
+"defMax": 585,
+"res": {
+"fire": -15,
+"water": 10,
+"ice": 20,
+"thunder": 15,
+"dragon": -5
+},
+"skills": [
+"斩味等级+1",
+"砥石使用高速化",
+"雷属性攻击强化+1",
+"钝刀"
+],
+"negSkills": [
+"雷属性攻击强化+2"
+],
+"slots": {
+"head": 2,
+"body": 2,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "月光",
+"def": 500,
+"defMax": 590,
+"res": {
+"fire": 5,
+"water": 0,
+"ice": -35,
+"thunder": 10,
+"dragon": -5
+},
+"skills": [
+"斩味等级+1",
+"剥取达人",
+"挑战者+1",
+"护法",
+"不运"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 2,
+"waist": 3,
+"leg": 0,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "シルバーソル",
+"def": 500,
+"defMax": 590,
+"res": {
+"fire": 10,
+"water": -35,
+"ice": 0,
+"thunder": -20,
+"dragon": 20
+},
+"skills": [
+"弱点特効",
+"業物",
+"火属性攻击强化+2",
+"体力回复量DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 3,
+"arm": 2,
+"waist": 2,
+"leg": 0,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ゴールドルナ",
+"def": 500,
+"defMax": 590,
+"res": {
+"fire": 10,
+"water": -20,
+"ice": 0,
+"thunder": -35,
+"dragon": 20
+},
+"skills": [
+"激运",
+"精灵的加护",
+"破坏王",
+"雷耐性弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 2,
+"arm": 1,
+"waist": 3,
+"leg": 1,
+"total": 10
+},
+"note": ""
+},
+{
+"n": "大和・極",
+"def": 520,
+"defMax": 600,
+"res": {
+"fire": -35,
+"water": 15,
+"ice": 15,
+"thunder": -10,
+"dragon": -10
+},
+"skills": [
+"斩味等级+1",
+"業物",
+"体力+50",
+"鈍足"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 3,
+"arm": 0,
+"waist": 3,
+"leg": 2,
+"total": 8
+},
+"note": "男性专用"
+},
+{
+"n": "日向・極",
+"def": 520,
+"defMax": 600,
+"res": {
+"fire": -35,
+"water": 15,
+"ice": 15,
+"thunder": -10,
+"dragon": -10
+},
+"skills": [
+"斩味等级+1",
+"業物",
+"体力+50",
+"鈍足"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 3,
+"arm": 0,
+"waist": 3,
+"leg": 2,
+"total": 8
+},
+"note": "女性专用"
+},
+{
+"n": "アビス",
+"def": 530,
+"defMax": 600,
+"res": {
+"fire": -20,
+"water": 15,
+"ice": 0,
+"thunder": 20,
+"dragon": -35
+},
+"skills": [
+"耐力急速回复",
+"水流【大】无效",
+"真打",
+"看破-2"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 3,
+"waist": 0,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ミラアルマ",
+"def": 530,
+"defMax": 600,
+"res": {
+"fire": 20,
+"water": 0,
+"ice": -15,
+"thunder": 5,
+"dragon": -35
+},
+"skills": [
+"攻击力上升【大】",
+"金刚体",
+"力解放+1",
+"鈍足"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 2,
+"arm": 2,
+"waist": 1,
+"leg": 1,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "訓練兵団",
+"def": 279,
+"defMax": 357,
+"res": {
+"fire": 0,
+"water": 9,
+"ice": 9,
+"thunder": 9,
+"dragon": -12
+},
+"skills": [
+"体术+1",
+"飞距离",
+"業物"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 0
+},
+"note": "配信任务"
+},
+{
+"n": "キャプテンJ",
+"def": 440,
+"defMax": 580,
+"res": {
+"fire": -15,
+"water": -15,
+"ice": -15,
+"thunder": -15,
+"dragon": -15
+},
+"skills": [
+"激运",
+"剥取达人",
+"捕獲名人",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 1
+},
+"note": "配信任务"
+},
+{
+"n": "大和・真",
+"def": 520,
+"defMax": 600,
+"res": {
+"fire": 20,
+"water": 5,
+"ice": -25,
+"thunder": 0,
+"dragon": -25
+},
+"skills": [
+"集中",
+"心眼",
+"金刚体",
+"心配性"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 3,
+"total": 9
+},
+"note": "男性专用\n配信任务"
+},
+{
+"n": "日向・真",
+"def": 520,
+"defMax": 600,
+"res": {
+"fire": 20,
+"water": 5,
+"ice": -25,
+"thunder": 0,
+"dragon": -25
+},
+"skills": [
+"集中",
+"心眼",
+"金刚体",
+"心配性"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 3,
+"total": 9
+},
+"note": "女性专用\n配信任务"
+},
+{
+"n": "エスカドラX",
+"def": 540,
+"defMax": 600,
+"res": {
+"fire": 0,
+"water": -10,
+"ice": 0,
+"thunder": 0,
+"dragon": -10
+},
+"skills": [
+"觉醒",
+"充满",
+"回避距离UP",
+"属性攻击强化",
+"气绝倍加"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": "配信任务"
+},
+{
+"n": "ブルースター",
+"def": 465,
+"defMax": 595,
+"res": {
+"fire": 5,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"龍属性攻击强化+2",
+"挑战者+1",
+"水神的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 7
+},
+"note": "配信任务"
+}
+]
+},
+"射手防具": {
+"count": 165,
+"rows": [
+{
+"n": "ハンター",
+"def": 15,
+"defMax": 275,
+"res": {
+"fire": 5,
+"water": 10,
+"ice": 5,
+"thunder": -10,
+"dragon": 5
+},
+"skills": [
+"探知",
+"猎人生活"
+],
+"negSkills": [
+"自动标记",
+"毒倍加"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "アロイ",
+"def": 15,
+"defMax": 275,
+"res": {
+"fire": 0,
+"water": 10,
+"ice": 0,
+"thunder": -5,
+"dragon": 5
+},
+"skills": [
+"散弹LV1追加",
+"散弹・扩散箭UP",
+"装填速度+1",
+"胴系统倍化"
+],
+"negSkills": [
+"采集-1"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": "村★5紧急「ラギアクルスを仕留めろ！」Clear后开始发售"
+},
+{
+"n": "ボーン",
+"def": 20,
+"defMax": 275,
+"res": {
+"fire": 10,
+"water": 5,
+"ice": -5,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"吹笛名人",
+"KO术",
+"捕获的极致"
+],
+"negSkills": [
+"睡眠倍加"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ブナハ",
+"def": 25,
+"defMax": 285,
+"res": {
+"fire": -15,
+"water": 0,
+"ice": 0,
+"thunder": 15,
+"dragon": 15
+},
+"skills": [
+"麻痹无效",
+"收刀术",
+"异常状态攻击+1"
+],
+"negSkills": [
+"攻击力DOWN【小】"
+],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 0
+},
+"note": ""
+},
+{
+"n": "リノプロ",
+"def": 25,
+"defMax": 285,
+"res": {
+"fire": 10,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 10
+},
+"skills": [
+"泥＆雪无效",
+"KO术",
+"炮术师"
+],
+"negSkills": [
+"冰耐性弱化"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ジャギィ",
+"def": 25,
+"defMax": 280,
+"res": {
+"fire": -5,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 10
+},
+"skills": [
+"攻击力UP【小】",
+"满腹",
+"气绝几率减半"
+],
+"negSkills": [
+"攻击力UP【中】",
+"道具使用弱化"
+],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 0,
+"leg": 1,
+"total": 3
+},
+"note": ""
+},
+{
+"n": "アシラ",
+"def": 30,
+"defMax": 280,
+"res": {
+"fire": -5,
+"water": 10,
+"ice": 0,
+"thunder": 5,
+"dragon": 10
+},
+"skills": [
+"防御力UP【小】",
+"体力回复量UP",
+"偷盗无效",
+"麻痹倍化",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "フロギィ",
+"def": 30,
+"defMax": 285,
+"res": {
+"fire": 10,
+"water": 0,
+"ice": -5,
+"thunder": 5,
+"dragon": 10
+},
+"skills": [
+"毒无效",
+"通常弹・连射箭UP",
+"奇面王的指令"
+],
+"negSkills": [
+"气绝倍化"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ペッコ",
+"def": 35,
+"defMax": 285,
+"res": {
+"fire": 15,
+"water": 0,
+"ice": -10,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"风圧【小】无效",
+"散弹・扩散箭UP",
+"广域化＋１"
+],
+"negSkills": [
+"慢食者"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ルドロス",
+"def": 35,
+"defMax": 285,
+"res": {
+"fire": -10,
+"water": 15,
+"ice": 0,
+"thunder": 0,
+"dragon": 10
+},
+"skills": [
+"水属性攻击强化+1",
+"飞人",
+"暑气无效"
+],
+"negSkills": [
+"氧气无限",
+"雷耐性-10"
+],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "バギィ",
+"def": 40,
+"defMax": 285,
+"res": {
+"fire": -5,
+"water": 5,
+"ice": 10,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"奇面王的呼声",
+"回复速度+1",
+"睡眠无效"
+],
+"negSkills": [
+"火属性攻击弱化"
+],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": ""
+},
+{
+"n": "ウルク",
+"def": 40,
+"defMax": 285,
+"res": {
+"fire": -5,
+"water": 5,
+"ice": 0,
+"thunder": 10,
+"dragon": 5
+},
+"skills": [
+"道具使用强化",
+"回避距离UP",
+"寒气无效",
+"暑气倍加"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ボロス",
+"def": 40,
+"defMax": 285,
+"res": {
+"fire": 5,
+"water": 5,
+"ice": -5,
+"thunder": 10,
+"dragon": 5
+},
+"skills": [
+"摇晃抑制+1",
+"防御力UP【小】",
+"攻击力UP【小】",
+"饥饿倍加【小】"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ラングロ",
+"def": 40,
+"defMax": 280,
+"res": {
+"fire": 10,
+"water": -10,
+"ice": 0,
+"thunder": 5,
+"dragon": 10
+},
+"skills": [
+"通常弹・连射箭UP",
+"回避性能+1",
+"攻击力UP【小】",
+"寒气倍加",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ガブル",
+"def": 45,
+"defMax": 290,
+"res": {
+"fire": -5,
+"water": 15,
+"ice": 5,
+"thunder": -10,
+"dragon": 10
+},
+"skills": [
+"看破+1",
+"速食者+1",
+"水魔",
+"回复速度-1"
+],
+"negSkills": [
+"看破+2"
+],
+"slots": {
+"head": 2,
+"body": 0,
+"arm": 1,
+"waist": 0,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "レイア",
+"def": 45,
+"defMax": 285,
+"res": {
+"fire": 15,
+"water": 5,
+"ice": 5,
+"thunder": -5,
+"dragon": -10
+},
+"skills": [
+"体力回复量UP",
+"火属性攻击强化+1",
+"体力+20",
+"回复速度-1"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ネブラ",
+"def": 45,
+"defMax": 285,
+"res": {
+"fire": -15,
+"water": 5,
+"ice": 10,
+"thunder": 10,
+"dragon": 0
+},
+"skills": [
+"耳栓",
+"装填速度+1",
+"异常状态攻击+1",
+"恶灵的加护"
+],
+"negSkills": [
+"高级耳栓"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": ""
+},
+{
+"n": "インゴット",
+"def": 50,
+"defMax": 285,
+"res": {
+"fire": -5,
+"water": -5,
+"ice": 5,
+"thunder": 15,
+"dragon": 5
+},
+"skills": [
+"后坐力减轻+1",
+"雷属性攻击强化+1",
+"散弹・扩散箭UP",
+"恶灵的反复无常"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 0,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ハプル",
+"def": 55,
+"defMax": 285,
+"res": {
+"fire": 15,
+"water": 5,
+"ice": -15,
+"thunder": -5,
+"dragon": 10
+},
+"skills": [
+"泥＆雪无效",
+"收刀术",
+"速食者+1",
+"饥饿倍加【小】"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 0,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ベリオ",
+"def": 50,
+"defMax": 280,
+"res": {
+"fire": -15,
+"water": 5,
+"ice": 15,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"冰属性攻击强化+1",
+"回避性能+1",
+"耐力回复延迟"
+],
+"negSkills": [
+"体术+1"
+],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ギルドバード",
+"def": 55,
+"defMax": 285,
+"res": {
+"fire": 5,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"自动标记",
+"体力+20",
+"幸运",
+"挑衅"
+],
+"negSkills": [
+"体力+50"
+],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 1,
+"leg": 0,
+"total": 1
+},
+"note": "男性专用"
+},
+{
+"n": "スカラー",
+"def": 55,
+"defMax": 285,
+"res": {
+"fire": 5,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"自动标记",
+"体力+20",
+"幸运",
+"挑衅"
+],
+"negSkills": [
+"体力+50"
+],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 1,
+"leg": 0,
+"total": 1
+},
+"note": "女性专用"
+},
+{
+"n": "ラギア",
+"def": 55,
+"defMax": 285,
+"res": {
+"fire": -15,
+"water": 10,
+"ice": 0,
+"thunder": 15,
+"dragon": 0
+},
+"skills": [
+"弱点特效",
+"通常弹・连射箭UP",
+"水流【小】无效",
+"异常状态攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "レウス",
+"def": 55,
+"defMax": 285,
+"res": {
+"fire": 15,
+"water": 5,
+"ice": 5,
+"thunder": -5,
+"dragon": -10
+},
+"skills": [
+"攻击力UP【中】",
+"贯通弹・贯通箭UP",
+"体力回复DOWN"
+],
+"negSkills": [
+"火属性攻击强化+1"
+],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 3
+},
+"note": ""
+},
+{
+"n": "ドボル",
+"def": 60,
+"defMax": 290,
+"res": {
+"fire": -15,
+"water": 15,
+"ice": -5,
+"thunder": 10,
+"dragon": 10
+},
+"skills": [
+"攻击力UP【小】",
+"回复速度+1",
+"不屈",
+"看破-1"
+],
+"negSkills": [
+"回复速度+2"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ディアブロ",
+"def": 60,
+"defMax": 290,
+"res": {
+"fire": 15,
+"water": 5,
+"ice": -15,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"看破+1",
+"耐震",
+"贯通弹・贯通箭UP",
+"摇晃抑制-1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 2,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ガンキン",
+"def": 60,
+"defMax": 290,
+"res": {
+"fire": 15,
+"water": -15,
+"ice": 0,
+"thunder": 10,
+"dragon": -5
+},
+"skills": [
+"防御力UP【中】",
+"炸弹人",
+"通常弹・连射箭UP",
+"旱鸭子",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 0,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "アグナ",
+"def": 60,
+"defMax": 290,
+"res": {
+"fire": 15,
+"water": -15,
+"ice": 0,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"火属性攻击强化+1",
+"摇晃抑制+1",
+"通常弹・连射箭UP",
+"燃鳞"
+],
+"negSkills": [
+"摇晃抑制+2"
+],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ヘリオス",
+"def": 65,
+"defMax": 290,
+"res": {
+"fire": 5,
+"water": 20,
+"ice": 10,
+"thunder": -5,
+"dragon": -20
+},
+"skills": [
+"水属性攻击强化+1",
+"耳栓",
+"破坏王",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 2,
+"total": 6
+},
+"note": "男性专用"
+},
+{
+"n": "セレネ",
+"def": 65,
+"defMax": 290,
+"res": {
+"fire": 5,
+"water": 20,
+"ice": 10,
+"thunder": -5,
+"dragon": -20
+},
+"skills": [
+"水属性攻击强化+1",
+"耳栓",
+"破坏王",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 2,
+"total": 6
+},
+"note": "女性专用"
+},
+{
+"n": "レザーS",
+"def": 40,
+"defMax": 285,
+"res": {
+"fire": -5,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 15
+},
+"skills": [
+"精灵的反复无常",
+"高速収集",
+"采集+1"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ユクモノ地",
+"def": 45,
+"defMax": 285,
+"res": {
+"fire": 0,
+"water": 5,
+"ice": 5,
+"thunder": 15,
+"dragon": 5
+},
+"skills": [
+"广域化+1",
+"摇晃抑制+1",
+"隐秘",
+"精灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "チェーンS",
+"def": 55,
+"defMax": 285,
+"res": {
+"fire": 15,
+"water": 15,
+"ice": 10,
+"thunder": -10,
+"dragon": 5
+},
+"skills": [
+"调合成功率+45%",
+"体力+50",
+"最大数生产"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ロックラックS",
+"def": 27,
+"defMax": 171,
+"res": {
+"fire": 9,
+"water": -6,
+"ice": 3,
+"thunder": 6,
+"dragon": 3
+},
+"skills": [
+"肥料弹名人",
+"探知",
+"搬运达人"
+],
+"negSkills": [
+"自动标记"
+],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 1,
+"total": 3
+},
+"note": "只有腕腰脚"
+},
+{
+"n": "ハンターS",
+"def": 60,
+"defMax": 285,
+"res": {
+"fire": 5,
+"water": 15,
+"ice": 5,
+"thunder": -15,
+"dragon": 5
+},
+"skills": [
+"陷阱师",
+"猎人生活",
+"探知",
+"毒倍加"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "モガピスカS",
+"def": 36,
+"defMax": 171,
+"res": {
+"fire": -6,
+"water": 15,
+"ice": 12,
+"thunder": -9,
+"dragon": 6
+},
+"skills": [
+"水流【大】无效",
+"水魔",
+"氧气无限"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 1,
+"leg": 1,
+"total": 2
+},
+"note": "只有头腰脚"
+},
+{
+"n": "ボーンS",
+"def": 65,
+"defMax": 285,
+"res": {
+"fire": 15,
+"water": 5,
+"ice": -10,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"捕获的极致",
+"道具使用强化",
+"吹笛名人",
+"KO术",
+"睡眠倍加"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "アロイS",
+"def": 70,
+"defMax": 285,
+"res": {
+"fire": 0,
+"water": 15,
+"ice": -5,
+"thunder": -10,
+"dragon": 5
+},
+"skills": [
+"装填速度+2",
+"散弹LV1追加",
+"散弹・扩散箭UP",
+"采集-1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ブナハS",
+"def": 80,
+"defMax": 285,
+"res": {
+"fire": -20,
+"water": 0,
+"ice": 0,
+"thunder": 15,
+"dragon": 20
+},
+"skills": [
+"麻痹无效",
+"收刀术",
+"异常状态攻击+1",
+"攻击力DOWN【小】"
+],
+"negSkills": [
+"异常状态攻击+2"
+],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 1,
+"total": 2
+},
+"note": ""
+},
+{
+"n": "リノプロS",
+"def": 80,
+"defMax": 285,
+"res": {
+"fire": 15,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 10
+},
+"skills": [
+"泥&雪无效",
+"集中",
+"KO术",
+"炮术师",
+"气绝倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ズワロ",
+"def": 36,
+"defMax": 116,
+"res": {
+"fire": -2,
+"water": 8,
+"ice": 0,
+"thunder": 2,
+"dragon": 4
+},
+"skills": [
+"水耐性【小】",
+"水属性攻击+1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 1
+},
+"note": "只有头身"
+},
+{
+"n": "ジャギィS",
+"def": 90,
+"defMax": 285,
+"res": {
+"fire": -15,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 15
+},
+"skills": [
+"攻击力UP【中】",
+"气绝无效",
+"满腹",
+"道具使用弱化"
+],
+"negSkills": [
+"乞丐"
+],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "アシラS",
+"def": 95,
+"defMax": 290,
+"res": {
+"fire": -10,
+"water": 15,
+"ice": -5,
+"thunder": 5,
+"dragon": 15
+},
+"skills": [
+"防御力UP【中】",
+"偷盗无效",
+"体力回复量UP",
+"耐力夺取",
+"麻痹倍加",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 2,
+"waist": 2,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "フロギィS",
+"def": 95,
+"defMax": 285,
+"res": {
+"fire": 15,
+"water": -5,
+"ice": -10,
+"thunder": 5,
+"dragon": 15
+},
+"skills": [
+"毒无效",
+"奇面王的指令",
+"速食者+1",
+"通常弹・连射箭UP",
+"防御力DOWN【小】"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "バギィS",
+"def": 100,
+"defMax": 290,
+"res": {
+"fire": -15,
+"water": 5,
+"ice": 15,
+"thunder": 5,
+"dragon": 10
+},
+"skills": [
+"睡眠无效",
+"回复速度+1",
+"冰属性攻击强化+1",
+"号令",
+"火属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 0,
+"arm": 1,
+"waist": 2,
+"leg": 0,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ウルクS",
+"def": 100,
+"defMax": 290,
+"res": {
+"fire": -10,
+"water": 5,
+"ice": 15,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"道具使用强化",
+"回避距离UP",
+"寒气无效",
+"看破+1",
+"暑气倍加"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ラングロS",
+"def": 110,
+"defMax": 290,
+"res": {
+"fire": 15,
+"water": -15,
+"ice": 0,
+"thunder": 5,
+"dragon": 10
+},
+"skills": [
+"攻击力UP【中】",
+"耐震",
+"回避性能+1",
+"寒气倍加",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "桔梗",
+"def": 90,
+"defMax": 290,
+"res": {
+"fire": 5,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"广域化+1",
+"捕获的极致",
+"自动标记",
+"毒倍加"
+],
+"negSkills": [
+"广域化+2"
+],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": "女性专用"
+},
+{
+"n": "ペッコS",
+"def": 105,
+"defMax": 290,
+"res": {
+"fire": 20,
+"water": 0,
+"ice": -15,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"广域化",
+"探知",
+"冰耐性弱化"
+],
+"negSkills": [
+"散弹・扩散箭UP"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ルドロスS",
+"def": 105,
+"defMax": 290,
+"res": {
+"fire": -15,
+"water": 20,
+"ice": 0,
+"thunder": 0,
+"dragon": 10
+},
+"skills": [
+"氧气无限",
+"水属性攻击强化+1",
+"飞人",
+"雷属性攻击弱化"
+],
+"negSkills": [
+"耳栓"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ロワーガ",
+"def": 115,
+"defMax": 285,
+"res": {
+"fire": -15,
+"water": 5,
+"ice": 0,
+"thunder": 20,
+"dragon": 10
+},
+"skills": [
+"高级耳栓",
+"龍属性攻击强化+1",
+"抗菌",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 6
+},
+"note": "男性专用"
+},
+{
+"n": "ファルメル",
+"def": 115,
+"defMax": 285,
+"res": {
+"fire": -15,
+"water": 5,
+"ice": 0,
+"thunder": 20,
+"dragon": 10
+},
+"skills": [
+"高级耳栓",
+"龍属性攻击强化+1",
+"抗菌",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 6
+},
+"note": "女性专用"
+},
+{
+"n": "ボロスS",
+"def": 130,
+"defMax": 295,
+"res": {
+"fire": 5,
+"water": 5,
+"ice": -5,
+"thunder": 10,
+"dragon": 5
+},
+"skills": [
+"攻击力UP【中】",
+"摇晃抑制+1",
+"防御力UP【小】",
+"饥饿倍加【小】"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 2,
+"arm": 2,
+"waist": 2,
+"leg": 0,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "アーティア",
+"def": 69,
+"defMax": 177,
+"res": {
+"fire": 3,
+"water": -6,
+"ice": 9,
+"thunder": -6,
+"dragon": 12
+},
+"skills": [],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 0,
+"leg": 0,
+"total": 0
+},
+"note": "只有身腕脚"
+},
+{
+"n": "ガブルS",
+"def": 120,
+"defMax": 290,
+"res": {
+"fire": -5,
+"water": 20,
+"ice": 5,
+"thunder": -15,
+"dragon": 10
+},
+"skills": [
+"看破+2",
+"速食者+1",
+"水魔",
+"回复速度-1"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 3,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "マギュル",
+"def": 120,
+"defMax": 295,
+"res": {
+"fire": -15,
+"water": 10,
+"ice": 15,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"回复速度+1",
+"集中",
+"调合成功率+20%",
+"陷阱师",
+"摇晃抑制-1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ギルドバードS",
+"def": 120,
+"defMax": 295,
+"res": {
+"fire": 5,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"体力+20",
+"幸运",
+"自动标记",
+"挑衅"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": "男性专用"
+},
+{
+"n": "スカラーS",
+"def": 120,
+"defMax": 295,
+"res": {
+"fire": 5,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"体力+20",
+"幸运",
+"自动标记",
+"挑衅"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": "女性专用"
+},
+{
+"n": "インゴットS",
+"def": 120,
+"defMax": 290,
+"res": {
+"fire": -5,
+"water": -10,
+"ice": 5,
+"thunder": 20,
+"dragon": 10
+},
+"skills": [
+"雷属性攻击强化+1",
+"后坐力减轻+1",
+"散弹・扩散箭UP",
+"恶灵的反复无常"
+],
+"negSkills": [
+"雷属性攻击强化+2"
+],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "レイアS",
+"def": 125,
+"defMax": 300,
+"res": {
+"fire": 20,
+"water": 5,
+"ice": 5,
+"thunder": -5,
+"dragon": -15
+},
+"skills": [
+"体力+50",
+"火属性攻击+1",
+"体力回复量UP",
+"水属性攻击弱化"
+],
+"negSkills": [
+"火属性攻击强化+2"
+],
+"slots": {
+"head": 3,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ネブラS",
+"def": 125,
+"defMax": 295,
+"res": {
+"fire": -20,
+"water": 5,
+"ice": 15,
+"thunder": 15,
+"dragon": 0
+},
+"skills": [
+"异常状态攻击+2",
+"装填速度+1",
+"耳栓",
+"恶灵的加护"
+],
+"negSkills": [
+"装填速度+2"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 2,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ガノス",
+"def": 109,
+"defMax": 236,
+"res": {
+"fire": -12,
+"water": 16,
+"ice": 12,
+"thunder": -16,
+"dragon": 12
+},
+"skills": [
+"暑气无效",
+"飞人",
+"捕获达人",
+"陷阱师"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 0,
+"leg": 1,
+"total": 4
+},
+"note": "无腰"
+},
+{
+"n": "ベリオS",
+"def": 125,
+"defMax": 295,
+"res": {
+"fire": -20,
+"water": 5,
+"ice": 20,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"体术+2",
+"回避性能+1",
+"冰属性攻击强化+1",
+"耐力回复延迟"
+],
+"negSkills": [
+"冰属性攻击强化+2"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 0,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ハプルS",
+"def": 130,
+"defMax": 300,
+"res": {
+"fire": 20,
+"water": 5,
+"ice": -20,
+"thunder": -5,
+"dragon": 10
+},
+"skills": [
+"泥&雪无效",
+"收刀术",
+"速食者+2",
+"雷属性攻击弱化-1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ナルガ",
+"def": 130,
+"defMax": 300,
+"res": {
+"fire": -5,
+"water": 10,
+"ice": 10,
+"thunder": -20,
+"dragon": 10
+},
+"skills": [
+"回避性能+1",
+"回避距离UP",
+"隐秘",
+"钝足"
+],
+"negSkills": [
+"回避性能+2"
+],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 2,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ラギアS",
+"def": 135,
+"defMax": 305,
+"res": {
+"fire": -20,
+"water": 10,
+"ice": 0,
+"thunder": 20,
+"dragon": 0
+},
+"skills": [
+"弱点特效",
+"通常弹・连射箭UP",
+"后坐力减轻+1",
+"异常状态攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 0,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "レウスS",
+"def": 135,
+"defMax": 305,
+"res": {
+"fire": 20,
+"water": 5,
+"ice": 5,
+"thunder": -5,
+"dragon": -15
+},
+"skills": [
+"攻击力UP【中】",
+"贯通弹・贯通箭UP",
+"体力回复量DOWN"
+],
+"negSkills": [
+"攻击力UP【大】",
+"火属性攻击强化+1"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 0,
+"waist": 2,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ジンオウ",
+"def": 135,
+"defMax": 305,
+"res": {
+"fire": 5,
+"water": -5,
+"ice": -15,
+"thunder": 20,
+"dragon": 10
+},
+"skills": [
+"雷属性攻击强化+1",
+"装填速度+1",
+"力解放+1",
+"挑衅"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ブラキ",
+"def": 135,
+"defMax": 305,
+"res": {
+"fire": 20,
+"water": -15,
+"ice": -5,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"炸弹人",
+"火事場力+1",
+"挑战者+1",
+"回避性能DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ドボルS",
+"def": 135,
+"defMax": 300,
+"res": {
+"fire": -20,
+"water": 20,
+"ice": -5,
+"thunder": 10,
+"dragon": 10
+},
+"skills": [
+"攻击力UP【小】",
+"回复速度+2",
+"不屈",
+"看破-1"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "城塞弓撃隊",
+"def": 140,
+"defMax": 310,
+"res": {
+"fire": 1,
+"water": 1,
+"ice": 1,
+"thunder": 1,
+"dragon": 1
+},
+"skills": [
+"看破+1",
+"体力回复量UP",
+"剥取铁人",
+"不运"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 0,
+"waist": 2,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ディアブロS",
+"def": 140,
+"defMax": 305,
+"res": {
+"fire": 20,
+"water": 5,
+"ice": -20,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"看破+2",
+"耐震",
+"贯通弹・贯通箭UP",
+"摇晃抑制-1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "アグナS",
+"def": 140,
+"defMax": 310,
+"res": {
+"fire": 20,
+"water": -20,
+"ice": 0,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"火属性攻击强化+1",
+"摇晃抑制+1",
+"通常弹・连射箭UP",
+"燃鳞"
+],
+"negSkills": [
+"火属性攻击+2",
+"摇晃抑制+2"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ガンキンS",
+"def": 145,
+"defMax": 310,
+"res": {
+"fire": 20,
+"water": -20,
+"ice": 0,
+"thunder": 10,
+"dragon": -5
+},
+"skills": [
+"防御力UP【大】",
+"通常弹・连射箭UP",
+"炸弹人",
+"旱鸭子",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 0,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ペッコU",
+"def": 105,
+"defMax": 290,
+"res": {
+"fire": 0,
+"water": 5,
+"ice": -15,
+"thunder": 20,
+"dragon": 5
+},
+"skills": [
+"铁面皮",
+"看破+1",
+"风圧【大】无效",
+"冰属性弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ルドロスU",
+"def": 105,
+"defMax": 290,
+"res": {
+"fire": -15,
+"water": 20,
+"ice": 5,
+"thunder": -5,
+"dragon": 10
+},
+"skills": [
+"饥饿无效",
+"异常状态攻击+1",
+"飞人",
+"雷耐性弱化"
+],
+"negSkills": [
+"异常状态攻击+2"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 0,
+"waist": 2,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ボロスU",
+"def": 120,
+"defMax": 295,
+"res": {
+"fire": -15,
+"water": 10,
+"ice": 20,
+"thunder": -5,
+"dragon": 5
+},
+"skills": [
+"防御力UP【小】",
+"冰属性攻击强化+1",
+"火事場力+1",
+"火属性攻击力强化-1"
+],
+"negSkills": [
+"防御力UP【中】",
+"火事場力+2"
+],
+"slots": {
+"head": 2,
+"body": 0,
+"arm": 3,
+"waist": 1,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "リオハート",
+"def": 125,
+"defMax": 300,
+"res": {
+"fire": 20,
+"water": 5,
+"ice": 5,
+"thunder": -5,
+"dragon": -15
+},
+"skills": [
+"风圧【大】无效",
+"火属性攻击强化+1",
+"火事場力+1"
+],
+"negSkills": [
+"火属性攻击强化+2"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ネブラU",
+"def": 125,
+"defMax": 295,
+"res": {
+"fire": 5,
+"water": -20,
+"ice": 10,
+"thunder": 20,
+"dragon": 0
+},
+"skills": [
+"雷属性攻击强化+1",
+"耐力夺取",
+"集中",
+"冰属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ベリオU",
+"def": 135,
+"defMax": 305,
+"res": {
+"fire": 20,
+"water": 5,
+"ice": -20,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"攻击力UP【中】",
+"暑气无效",
+"回避距离UP",
+"回避性能DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 2,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ラギアU",
+"def": 150,
+"defMax": 310,
+"res": {
+"fire": -15,
+"water": 15,
+"ice": 5,
+"thunder": 20,
+"dragon": -15
+},
+"skills": [
+"攻击力UP【小】",
+"破坏王",
+"属性异常无效",
+"钝足"
+],
+"negSkills": [
+"攻击力UP【中】"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "リオソウル",
+"def": 140,
+"defMax": 310,
+"res": {
+"fire": 20,
+"water": 5,
+"ice": -5,
+"thunder": 5,
+"dragon": -15
+},
+"skills": [
+"看破+2",
+"通常弹・连射箭UP",
+"耳栓",
+"体力-10"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ドーベル",
+"def": 140,
+"defMax": 310,
+"res": {
+"fire": -5,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 20
+},
+"skills": [
+"耐力急速回复",
+"龍属性攻击强化+1",
+"装填速度+1",
+"饥饿倍加【小】"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 3,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ディアブロU",
+"def": 145,
+"defMax": 315,
+"res": {
+"fire": 20,
+"water": 5,
+"ice": -20,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"耳栓",
+"装填速度+2",
+"后坐力减轻+1",
+"龍属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 3,
+"leg": 0,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "アグナU",
+"def": 145,
+"defMax": 310,
+"res": {
+"fire": -20,
+"water": 15,
+"ice": 20,
+"thunder": 0,
+"dragon": 0
+},
+"skills": [
+"看破+1",
+"装填速度+1",
+"贯通弹・贯通箭UP",
+"体术-1"
+],
+"negSkills": [
+"看破+2",
+"装填速度+2",
+"体术-2"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 0,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ガンキンU",
+"def": 150,
+"defMax": 315,
+"res": {
+"fire": 20,
+"water": -20,
+"ice": 0,
+"thunder": 10,
+"dragon": -5
+},
+"skills": [
+"KO术",
+"后坐力减轻+1",
+"炮术师",
+"旱鸭子"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ダマスク",
+"def": 145,
+"defMax": 315,
+"res": {
+"fire": -5,
+"water": 15,
+"ice": 15,
+"thunder": -10,
+"dragon": 0
+},
+"skills": [
+"精灵的加护",
+"雷属性攻击强化+1",
+"装填速度+1",
+"慢食者"
+],
+"negSkills": [
+"雷属性攻击强化+2"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "陸奥",
+"def": 150,
+"defMax": 300,
+"res": {
+"fire": 20,
+"water": 10,
+"ice": -15,
+"thunder": 5,
+"dragon": -15
+},
+"skills": [
+"防御力UP【中】",
+"后坐力减轻+1",
+"贯通弹・贯通箭UP",
+"装填速度-1"
+],
+"negSkills": [
+"防御力UP【大】",
+"后坐力减轻+2"
+],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 0,
+"total": 6
+},
+"note": "男性专用"
+},
+{
+"n": "天城",
+"def": 150,
+"defMax": 300,
+"res": {
+"fire": 20,
+"water": 10,
+"ice": -15,
+"thunder": 5,
+"dragon": -15
+},
+"skills": [
+"防御力UP【中】",
+"后坐力减轻+1",
+"贯通弹・贯通箭UP",
+"装填速度-1"
+],
+"negSkills": [
+"防御力UP【大】",
+"后坐力减轻+2"
+],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 0,
+"total": 6
+},
+"note": "女性专用"
+},
+{
+"n": "バンギス",
+"def": 155,
+"defMax": 315,
+"res": {
+"fire": 5,
+"water": 5,
+"ice": 10,
+"thunder": -15,
+"dragon": -15
+},
+"skills": [
+"攻击力UP【中】",
+"后坐力减轻+1",
+"速食者+2",
+"饥饿倍加【小】",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 3,
+"total": 3
+},
+"note": ""
+},
+{
+"n": "エスカドラ",
+"def": 170,
+"defMax": 315,
+"res": {
+"fire": 5,
+"water": -5,
+"ice": 5,
+"thunder": 5,
+"dragon": -5
+},
+"skills": [
+"回避距离UP",
+"属性攻击强化",
+"力解放+1",
+"属性异常无效",
+"气绝倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 0
+},
+"note": ""
+},
+{
+"n": "大海賊J",
+"def": 100,
+"defMax": 290,
+"res": {
+"fire": -5,
+"water": -5,
+"ice": -5,
+"thunder": -5,
+"dragon": -5
+},
+"skills": [
+"幸运",
+"剥取达人",
+"捕获达人",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 1
+},
+"note": "配信任务"
+},
+{
+"n": "坊屋",
+"def": 81,
+"defMax": 183,
+"res": {
+"fire": 3,
+"water": 3,
+"ice": 3,
+"thunder": 3,
+"dragon": 3
+},
+"skills": [
+"攻击力UP【中】",
+"耐力急速回复",
+"挑衅"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 0
+},
+"note": "只有身腰脚\n配信任务"
+},
+{
+"n": "ブナハX",
+"def": 200,
+"defMax": 315,
+"res": {
+"fire": -25,
+"water": 0,
+"ice": 0,
+"thunder": 15,
+"dragon": 25
+},
+"skills": [
+"异常状态攻击+2",
+"收刀术",
+"麻痹无效",
+"攻击力DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "リノプロX",
+"def": 200,
+"defMax": 315,
+"res": {
+"fire": 20,
+"water": -5,
+"ice": -5,
+"thunder": -5,
+"dragon": 15
+},
+"skills": [
+"水流【小】无效",
+"炮术师",
+"KO术",
+"集中"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ズワロX",
+"def": 80,
+"defMax": 126,
+"res": {
+"fire": -6,
+"water": 10,
+"ice": -2,
+"thunder": 2,
+"dragon": 6
+},
+"skills": [
+"调合成功率+45％"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 1,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ジャギィX",
+"def": 210,
+"defMax": 320,
+"res": {
+"fire": -20,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 20
+},
+"skills": [
+"气绝几率减半",
+"最喜欢肉",
+"回复速度+1",
+"攻击力UP【小】"
+],
+"negSkills": [
+"气绝无效"
+],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "バギィX",
+"def": 210,
+"defMax": 320,
+"res": {
+"fire": -20,
+"water": 5,
+"ice": 20,
+"thunder": 5,
+"dragon": 15
+},
+"skills": [
+"奇面王的呼声",
+"冰属性攻击强化+1",
+"寒气无效",
+"回复速度+1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "フロギィX",
+"def": 210,
+"defMax": 320,
+"res": {
+"fire": 20,
+"water": -10,
+"ice": -20,
+"thunder": 5,
+"dragon": 20
+},
+"skills": [
+"奇面王的指令",
+"速食者+1",
+"通常弹・连射箭UP",
+"铁面皮"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "アシラX",
+"def": 210,
+"defMax": 320,
+"res": {
+"fire": -20,
+"water": 20,
+"ice": -10,
+"thunder": 5,
+"dragon": 20
+},
+"skills": [
+"甜心猎人",
+"高速収集",
+"满腹",
+"胴系统倍化"
+],
+"negSkills": [
+"护符猎人",
+"精灵的反复无常"
+],
+"slots": {
+"head": 2,
+"body": 2,
+"arm": 1,
+"waist": 3,
+"leg": 0,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ウルクX",
+"def": 210,
+"defMax": 320,
+"res": {
+"fire": -20,
+"water": 5,
+"ice": 20,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"飞距离强化",
+"耐力急速回复",
+"收刀术",
+"泥＆雪无效"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ラングロX",
+"def": 210,
+"defMax": 320,
+"res": {
+"fire": 20,
+"water": -20,
+"ice": 0,
+"thunder": 5,
+"dragon": 15
+},
+"skills": [
+"回避性能+1",
+"耐震",
+"生物博士",
+"胴系统倍化"
+],
+"negSkills": [
+"水耐性弱化"
+],
+"slots": {
+"head": 3,
+"body": 1,
+"arm": 0,
+"waist": 2,
+"leg": 0,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "インゴットX",
+"def": 220,
+"defMax": 310,
+"res": {
+"fire": -10,
+"water": -10,
+"ice": 5,
+"thunder": 20,
+"dragon": 15
+},
+"skills": [
+"雷属性攻击强化+2",
+"散弹・扩散箭UP",
+"后坐力减轻+1",
+"恶灵的反复无常"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ペッコX",
+"def": 220,
+"defMax": 320,
+"res": {
+"fire": 25,
+"water": 0,
+"ice": -20,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"广域化+2",
+"捕获的极致",
+"冰耐性弱体化"
+],
+"negSkills": [
+"散弹・扩散箭UP"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 0,
+"waist": 1,
+"leg": 3,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ルドロスX",
+"def": 225,
+"defMax": 320,
+"res": {
+"fire": -20,
+"water": 25,
+"ice": 0,
+"thunder": 0,
+"dragon": 10
+},
+"skills": [
+"水属性攻击强化+2",
+"飞人",
+"雷属性攻击弱化"
+],
+"negSkills": [
+"听觉保护"
+],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 2,
+"waist": 1,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ガノスX",
+"def": 184,
+"defMax": 256,
+"res": {
+"fire": -16,
+"water": 20,
+"ice": 12,
+"thunder": -20,
+"dragon": 12
+},
+"skills": [
+"捕獲名人",
+"陷阱师",
+"连射数+1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 0,
+"leg": 2,
+"total": 5
+},
+"note": "无腰"
+},
+{
+"n": "レイアX",
+"def": 230,
+"defMax": 320,
+"res": {
+"fire": 25,
+"water": 5,
+"ice": 5,
+"thunder": -5,
+"dragon": -25
+},
+"skills": [
+"体力+50",
+"火属性攻击强化+1",
+"体力回复量UP",
+"冰属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 1,
+"leg": 1,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ベリオX",
+"def": 235,
+"defMax": 320,
+"res": {
+"fire": -25,
+"water": 5,
+"ice": 25,
+"thunder": -5,
+"dragon": 5
+},
+"skills": [
+"体术+2",
+"冰属性攻击强化+1",
+"回避性能+1",
+"耐力回复延迟"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 1,
+"waist": 0,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ボロスX",
+"def": 235,
+"defMax": 320,
+"res": {
+"fire": 5,
+"water": 5,
+"ice": -10,
+"thunder": 15,
+"dragon": 5
+},
+"skills": [
+"攻击力UP【小】",
+"摇晃抑制+1",
+"体术+1",
+"饥饿倍加【小】"
+],
+"negSkills": [
+"攻击力UP【中】"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 2,
+"waist": 1,
+"leg": 0,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ガブルX",
+"def": 235,
+"defMax": 320,
+"res": {
+"fire": -10,
+"water": 25,
+"ice": 5,
+"thunder": -20,
+"dragon": 10
+},
+"skills": [
+"看破+2",
+"水魔",
+"速食者+1",
+"回复速度-1"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 3,
+"leg": 2,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ネブラX",
+"def": 240,
+"defMax": 325,
+"res": {
+"fire": -25,
+"water": 5,
+"ice": 15,
+"thunder": 15,
+"dragon": 0
+},
+"skills": [
+"异常状态攻击+2",
+"觉醒",
+"装填数UP",
+"属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 3,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ハプルX",
+"def": 240,
+"defMax": 325,
+"res": {
+"fire": 20,
+"water": 5,
+"ice": -25,
+"thunder": -5,
+"dragon": 10
+},
+"skills": [
+"装填速度+2",
+"收刀术",
+"贯通弹・贯通箭UP",
+"雷属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 2,
+"waist": 3,
+"leg": 0,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ドボルX",
+"def": 240,
+"defMax": 325,
+"res": {
+"fire": -25,
+"water": 20,
+"ice": -5,
+"thunder": 10,
+"dragon": 10
+},
+"skills": [
+"不屈",
+"耐力夺取",
+"集中",
+"看破-1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 0,
+"waist": 3,
+"leg": 2,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ナルガX",
+"def": 245,
+"defMax": 320,
+"res": {
+"fire": -5,
+"water": 15,
+"ice": 10,
+"thunder": -25,
+"dragon": 10
+},
+"skills": [
+"回避性能+2",
+"隐秘",
+"回避距离",
+"钝足"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 3,
+"leg": 0,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ヘリオスX",
+"def": 245,
+"defMax": 325,
+"res": {
+"fire": 5,
+"water": 25,
+"ice": 10,
+"thunder": -5,
+"dragon": -30
+},
+"skills": [
+"高级耳栓",
+"觉醒",
+"破坏王",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": "男性专用"
+},
+{
+"n": "セレネX",
+"def": 245,
+"defMax": 325,
+"res": {
+"fire": 5,
+"water": 25,
+"ice": 10,
+"thunder": -5,
+"dragon": -30
+},
+"skills": [
+"高级耳栓",
+"觉醒",
+"破坏王",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": "女性专用"
+},
+{
+"n": "レウスX",
+"def": 250,
+"defMax": 320,
+"res": {
+"fire": 25,
+"water": 5,
+"ice": 5,
+"thunder": -5,
+"dragon": -25
+},
+"skills": [
+"攻击力UP【中】",
+"连射数+1",
+"火属性攻击强化+1",
+"体力回复量DOWN"
+],
+"negSkills": [
+"攻击力UP【大】"
+],
+"slots": {
+"head": 0,
+"body": 2,
+"arm": 0,
+"waist": 0,
+"leg": 3,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ディアブロX",
+"def": 255,
+"defMax": 325,
+"res": {
+"fire": 25,
+"water": 5,
+"ice": -25,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"贯通弹・贯通箭UP",
+"装填速度+1",
+"收刀术",
+"摇晃抑制-1"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 0,
+"waist": 0,
+"leg": 3,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "アグナX",
+"def": 255,
+"defMax": 320,
+"res": {
+"fire": 25,
+"water": -25,
+"ice": 0,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"火属性攻击强化+1",
+"燃鳞",
+"通常弹・连射箭UP",
+"摇晃抑制+1"
+],
+"negSkills": [
+"火属性攻击强化+2"
+],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 3,
+"waist": 3,
+"leg": 2,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ラギアX",
+"def": 255,
+"defMax": 325,
+"res": {
+"fire": -25,
+"water": 10,
+"ice": 0,
+"thunder": 25,
+"dragon": 0
+},
+"skills": [
+"集中",
+"弱点特效",
+"觉醒",
+"异常状态攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 3,
+"leg": 2,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ブラキX",
+"def": 255,
+"defMax": 325,
+"res": {
+"fire": 25,
+"water": -25,
+"ice": -5,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"挑战者+2",
+"火事場力+1",
+"炸弹人",
+"回避性能DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 2,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ガンキンX",
+"def": 260,
+"defMax": 325,
+"res": {
+"fire": 25,
+"water": -25,
+"ice": 0,
+"thunder": 10,
+"dragon": -5
+},
+"skills": [
+"防御力UP【大】",
+"装填数UP",
+"通常弹・连射箭UP",
+"旱鸭子",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "ジンオウX",
+"def": 260,
+"defMax": 320,
+"res": {
+"fire": 5,
+"water": -10,
+"ice": -25,
+"thunder": 25,
+"dragon": 10
+},
+"skills": [
+"力解放+2",
+"装填速度+1",
+"雷属性攻击强化+1",
+"挑衅"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 3,
+"arm": 0,
+"waist": 3,
+"leg": 0,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "マギュルX",
+"def": 210,
+"defMax": 320,
+"res": {
+"fire": -20,
+"water": 10,
+"ice": 25,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"最大生产数",
+"调合成功率+20%",
+"集中",
+"回复速度+1"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 2,
+"leg": 2,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "桔梗・華",
+"def": 220,
+"defMax": 305,
+"res": {
+"fire": 5,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"广域化+2",
+"自动标记",
+"捕获的极致",
+"毒倍加"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 0,
+"total": 4
+},
+"note": "女性专用"
+},
+{
+"n": "セイラー",
+"def": 220,
+"defMax": 305,
+"res": {
+"fire": 5,
+"water": 15,
+"ice": -5,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"广域化+2",
+"氧气无限",
+"幸运",
+"挑衅",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 0,
+"total": 5
+},
+"note": "女性专用"
+},
+{
+"n": "ペッコZ",
+"def": 220,
+"defMax": 320,
+"res": {
+"fire": 0,
+"water": 5,
+"ice": -20,
+"thunder": 25,
+"dragon": 5
+},
+"skills": [
+"看破+2",
+"广域化+1",
+"风圧【小】无效",
+"铁面皮",
+"睡眠倍加"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 2,
+"waist": 1,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ルドロスZ",
+"def": 225,
+"defMax": 320,
+"res": {
+"fire": -20,
+"water": 25,
+"ice": 5,
+"thunder": -5,
+"dragon": 10
+},
+"skills": [
+"饥饿无效",
+"异常状态攻击+1",
+"飞人",
+"毒无效"
+],
+"negSkills": [
+"异常状态攻击+2"
+],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 2,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "アーティアX",
+"def": 138,
+"defMax": 189,
+"res": {
+"fire": 3,
+"water": -6,
+"ice": 9,
+"thunder": -6,
+"dragon": 15
+},
+"skills": [
+"后坐力减轻+1",
+"连射数+1"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 2,
+"arm": 2,
+"waist": 0,
+"leg": 1,
+"total": 5
+},
+"note": "只有身腕脚"
+},
+{
+"n": "ガノスZ",
+"def": 188,
+"defMax": 256,
+"res": {
+"fire": -16,
+"water": 20,
+"ice": 12,
+"thunder": -20,
+"dragon": 12
+},
+"skills": [
+"飞人",
+"水神的加护",
+"弱点特攻",
+"体术-1"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 3,
+"waist": 0,
+"leg": 1,
+"total": 7
+},
+"note": "无腰"
+},
+{
+"n": "リオハートZ",
+"def": 230,
+"defMax": 320,
+"res": {
+"fire": 25,
+"water": 5,
+"ice": 5,
+"thunder": -5,
+"dragon": -20
+},
+"skills": [
+"风圧【大】无效",
+"火属性攻击强化+1",
+"道具使用强化",
+"火事場力+1"
+],
+"negSkills": [
+"火属性攻击强化+2"
+],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ギルドバードX",
+"def": 230,
+"defMax": 315,
+"res": {
+"fire": 5,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"护符猎人",
+"幸运",
+"体力+20",
+"探知",
+"挑衅",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": "男性专用"
+},
+{
+"n": "スカラーX",
+"def": 230,
+"defMax": 315,
+"res": {
+"fire": 5,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"护符猎人",
+"幸运",
+"体力+20",
+"探知",
+"挑衅",
+"胴系统倍化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": "女性专用"
+},
+{
+"n": "城塞隐秘隊",
+"def": 230,
+"defMax": 315,
+"res": {
+"fire": 5,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"剥取达人",
+"隐秘",
+"根性",
+"体力回复量UP"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 0,
+"arm": 0,
+"waist": 2,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ベリオZ",
+"def": 245,
+"defMax": 315,
+"res": {
+"fire": 25,
+"water": 5,
+"ice": -25,
+"thunder": -5,
+"dragon": 5
+},
+"skills": [
+"攻击力UP【中】",
+"回避距离UP",
+"暑气无效",
+"回避性能DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 2,
+"leg": 3,
+"total": 9
+},
+"note": ""
+},
+{
+"n": "ボロスZ",
+"def": 235,
+"defMax": 320,
+"res": {
+"fire": -25,
+"water": 10,
+"ice": 25,
+"thunder": -5,
+"dragon": 5
+},
+"skills": [
+"冰属性攻击强化+2",
+"火事場力+1",
+"防御力UP【小】",
+"耳栓",
+"火属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 0,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ネブラZ",
+"def": 240,
+"defMax": 325,
+"res": {
+"fire": 5,
+"water": -25,
+"ice": 15,
+"thunder": 25,
+"dragon": 0
+},
+"skills": [
+"雷属性攻击强化+2",
+"耐力夺取",
+"集中",
+"冰属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 2,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ドボルZ",
+"def": 245,
+"defMax": 325,
+"res": {
+"fire": 20,
+"water": -15,
+"ice": -15,
+"thunder": 10,
+"dragon": 10
+},
+"skills": [
+"攻击力UP【小】",
+"装填数UP",
+"根性",
+"回避性能DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 1,
+"arm": 1,
+"waist": 3,
+"leg": 1,
+"total": 10
+},
+"note": ""
+},
+{
+"n": "ナルガZ",
+"def": 250,
+"defMax": 320,
+"res": {
+"fire": -5,
+"water": 15,
+"ice": 10,
+"thunder": -25,
+"dragon": 10
+},
+"skills": [
+"回避性能+2",
+"集中",
+"耐力急速回复",
+"体术-1"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 2,
+"leg": 2,
+"total": 9
+},
+"note": ""
+},
+{
+"n": "ヘリオスZ",
+"def": 245,
+"defMax": 325,
+"res": {
+"fire": 5,
+"water": 25,
+"ice": 10,
+"thunder": -5,
+"dragon": -30
+},
+"skills": [
+"高级耳栓",
+"水属性攻击+1",
+"装填数UP",
+"后坐力减轻-1"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 0,
+"arm": 1,
+"waist": 3,
+"leg": 1,
+"total": 8
+},
+"note": "男性专用"
+},
+{
+"n": "セレネZ",
+"def": 245,
+"defMax": 325,
+"res": {
+"fire": 5,
+"water": 25,
+"ice": 10,
+"thunder": -5,
+"dragon": -30
+},
+"skills": [
+"高级耳栓",
+"水属性攻击+1",
+"装填数UP",
+"后坐力减轻-1"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 0,
+"arm": 1,
+"waist": 3,
+"leg": 1,
+"total": 8
+},
+"note": "女性专用"
+},
+{
+"n": "ロワーガX",
+"def": 245,
+"defMax": 315,
+"res": {
+"fire": -20,
+"water": 5,
+"ice": 0,
+"thunder": 25,
+"dragon": 10
+},
+"skills": [
+"高级耳栓",
+"甜心猎人",
+"龍属性攻击强化+1",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 3,
+"waist": 2,
+"leg": 0,
+"total": 6
+},
+"note": "男性专用"
+},
+{
+"n": "ファルメルX",
+"def": 245,
+"defMax": 315,
+"res": {
+"fire": -20,
+"water": 5,
+"ice": 0,
+"thunder": 25,
+"dragon": 10
+},
+"skills": [
+"高级耳栓",
+"甜心猎人",
+"龍属性攻击强化+1",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 3,
+"waist": 2,
+"leg": 0,
+"total": 6
+},
+"note": "女性专用"
+},
+{
+"n": "リオソウルZ",
+"def": 255,
+"defMax": 320,
+"res": {
+"fire": 25,
+"water": 5,
+"ice": -5,
+"thunder": 5,
+"dragon": -25
+},
+"skills": [
+"看破+3",
+"耳栓",
+"装填数UP",
+"体力-10"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 2,
+"arm": 1,
+"waist": 0,
+"leg": 2,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ディアブロZ",
+"def": 255,
+"defMax": 325,
+"res": {
+"fire": 25,
+"water": 5,
+"ice": -25,
+"thunder": 5,
+"dragon": 5
+},
+"skills": [
+"装填速度+2",
+"后坐力减轻+1",
+"弱点特效",
+"龍属性攻击弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 2,
+"leg": 3,
+"total": 9
+},
+"note": ""
+},
+{
+"n": "アグナZ",
+"def": 255,
+"defMax": 320,
+"res": {
+"fire": -25,
+"water": 20,
+"ice": 25,
+"thunder": -5,
+"dragon": -5
+},
+"skills": [
+"装填速度+2",
+"贯通弹・贯通箭UP",
+"连射数+1",
+"体术-1"
+],
+"negSkills": [
+"体术-2"
+],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 2,
+"waist": 2,
+"leg": 0,
+"total": 7
+},
+"note": ""
+},
+{
+"n": "ラギアZ",
+"def": 260,
+"defMax": 320,
+"res": {
+"fire": -20,
+"water": 15,
+"ice": 5,
+"thunder": 25,
+"dragon": -20
+},
+"skills": [
+"攻击UP【中】",
+"破坏王",
+"属性异常无效",
+"钝足"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 3,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ガンキンZ",
+"def": 260,
+"defMax": 325,
+"res": {
+"fire": 25,
+"water": -25,
+"ice": 0,
+"thunder": 10,
+"dragon": -5
+},
+"skills": [
+"生物博士",
+"KO术",
+"后坐力减轻+1",
+"砲术王",
+"旱鸭子"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 3,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ジンオウZ",
+"def": 265,
+"defMax": 320,
+"res": {
+"fire": 5,
+"water": -5,
+"ice": 5,
+"thunder": -25,
+"dragon": 25
+},
+"skills": [
+"回避性能+1",
+"龍属性攻击强化+1",
+"装填数UP",
+"充满",
+"体力回复量DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 1,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ドーベルX",
+"def": 260,
+"defMax": 315,
+"res": {
+"fire": -10,
+"water": 5,
+"ice": 5,
+"thunder": 5,
+"dragon": 25
+},
+"skills": [
+"回避性能+1",
+"龍属性攻击强化+2",
+"装填速度+1",
+"饥饿倍化【小】"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 3,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "バンギスX",
+"def": 270,
+"defMax": 330,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 15,
+"thunder": -10,
+"dragon": -10
+},
+"skills": [
+"装填数UP",
+"速食者+2",
+"逆鳞",
+"后坐力减轻-1"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 3,
+"leg": 2,
+"total": 10
+},
+"note": ""
+},
+{
+"n": "ダマスクX",
+"def": 270,
+"defMax": 320,
+"res": {
+"fire": -10,
+"water": 15,
+"ice": 20,
+"thunder": -15,
+"dragon": 0
+},
+"skills": [
+"雷属性攻击强化+1",
+"装填数UP",
+"装填速度+1",
+"后坐力减轻-1"
+],
+"negSkills": [
+"雷属性攻击强化+2"
+],
+"slots": {
+"head": 2,
+"body": 2,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "白影",
+"def": 280,
+"defMax": 325,
+"res": {
+"fire": 10,
+"water": 5,
+"ice": -30,
+"thunder": 15,
+"dragon": 0
+},
+"skills": [
+"装填数UP",
+"剥取达人",
+"挑战者+1",
+"护法",
+"不运"
+],
+"negSkills": [
+"灾难"
+],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 2,
+"waist": 3,
+"leg": 0,
+"total": 5
+},
+"note": ""
+},
+{
+"n": "シルバーソル",
+"def": 280,
+"defMax": 325,
+"res": {
+"fire": 15,
+"water": -30,
+"ice": 5,
+"thunder": -15,
+"dragon": 25
+},
+"skills": [
+"弱点特效",
+"火属性攻击强化+2",
+"贯通弹・贯通箭UP",
+"体力回复量DOWN"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 3,
+"arm": 2,
+"waist": 2,
+"leg": 0,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "ゴールドルナ",
+"def": 280,
+"defMax": 325,
+"res": {
+"fire": 15,
+"water": -15,
+"ice": 5,
+"thunder": -30,
+"dragon": 25
+},
+"skills": [
+"精灵的加护",
+"破坏王",
+"激运",
+"雷耐性弱化"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 2,
+"arm": 1,
+"waist": 3,
+"leg": 1,
+"total": 10
+},
+"note": ""
+},
+{
+"n": "陸奥・極",
+"def": 290,
+"defMax": 330,
+"res": {
+"fire": -30,
+"water": 20,
+"ice": 20,
+"thunder": -5,
+"dragon": -5
+},
+"skills": [
+"攻击力UP【中】",
+"体力+50",
+"连射数+1",
+"钝足"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 3,
+"arm": 0,
+"waist": 3,
+"leg": 2,
+"total": 8
+},
+"note": "男性专用"
+},
+{
+"n": "天城・極",
+"def": 290,
+"defMax": 330,
+"res": {
+"fire": -30,
+"water": 20,
+"ice": 20,
+"thunder": -5,
+"dragon": -5
+},
+"skills": [
+"攻击力UP【中】",
+"体力+50",
+"连射数+1",
+"钝足"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 3,
+"arm": 0,
+"waist": 3,
+"leg": 2,
+"total": 8
+},
+"note": "女性专用"
+},
+{
+"n": "アビス",
+"def": 295,
+"defMax": 320,
+"res": {
+"fire": -20,
+"water": 20,
+"ice": 5,
+"thunder": 25,
+"dragon": -30
+},
+"skills": [
+"水流【大】无效",
+"钢弹",
+"耐力急速回复",
+"看破-2"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 3,
+"waist": 0,
+"leg": 2,
+"total": 6
+},
+"note": ""
+},
+{
+"n": "ミラアルマ",
+"def": 295,
+"defMax": 320,
+"res": {
+"fire": 25,
+"water": 5,
+"ice": -10,
+"thunder": 10,
+"dragon": -30
+},
+"skills": [
+"攻击力UP【大】",
+"力解放+1",
+"金刚体",
+"钝足"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 2,
+"arm": 2,
+"waist": 1,
+"leg": 1,
+"total": 8
+},
+"note": ""
+},
+{
+"n": "訓練兵団",
+"def": 159,
+"defMax": 198,
+"res": {
+"fire": 3,
+"water": 12,
+"ice": 12,
+"thunder": 12,
+"dragon": -9
+},
+"skills": [
+"体术+1",
+"飞距离强化",
+"装填速度+1"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 0
+},
+"note": "配信任务\n只有身腰脚"
+},
+{
+"n": "キャプテンJ",
+"def": 250,
+"defMax": 320,
+"res": {
+"fire": -10,
+"water": -10,
+"ice": -10,
+"thunder": -10,
+"dragon": -10
+},
+"skills": [
+"激运",
+"剥取达人",
+"捕獲名人",
+"恶灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 1
+},
+"note": "配信任务"
+},
+{
+"n": "陸奥・真",
+"def": 290,
+"defMax": 330,
+"res": {
+"fire": 25,
+"water": 10,
+"ice": -20,
+"thunder": 5,
+"dragon": -20
+},
+"skills": [
+"后坐力减轻+1",
+"贯通强化",
+"金刚体",
+"装填速度-1"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 3,
+"total": 8
+},
+"note": "男性专用\n配信任务"
+},
+{
+"n": "天城・真",
+"def": 290,
+"defMax": 330,
+"res": {
+"fire": 25,
+"water": 10,
+"ice": -20,
+"thunder": 5,
+"dragon": -20
+},
+"skills": [
+"后坐力减轻+1",
+"贯通强化",
+"金刚体",
+"装填速度-1"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 2,
+"waist": 0,
+"leg": 3,
+"total": 8
+},
+"note": "女性专用\n配信任务"
+},
+{
+"n": "エスカドラX",
+"def": 300,
+"defMax": 330,
+"res": {
+"fire": 5,
+"water": -5,
+"ice": 5,
+"thunder": 5,
+"dragon": -5
+},
+"skills": [
+"属性异常无效",
+"充满",
+"回避距离UP",
+"属性攻击强化",
+"气绝倍加"
+],
+"negSkills": [],
+"slots": {
+"head": 2,
+"body": 1,
+"arm": 1,
+"waist": 2,
+"leg": 1,
+"total": 7
+},
+"note": "配信任务"
+},
+{
+"n": "ブルースター",
+"def": 265,
+"defMax": 330,
+"res": {
+"fire": 10,
+"water": 10,
+"ice": 10,
+"thunder": 10,
+"dragon": 10
+},
+"skills": [
+"龍属性攻击强化+2",
+"挑战者+1",
+"水神的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 2,
+"arm": 1,
+"waist": 1,
+"leg": 2,
+"total": 7
+},
+"note": "配信任务"
+}
+]
+},
+"共通防具": {
+"count": 6,
+"rows": [
+{
+"n": "レザー",
+"def": 5,
+"defMax": 265,
+"res": {
+"fire": -5,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"采集+1",
+"高速收集",
+"精灵的反复无常"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 0,
+"leg": 0,
+"total": 2
+},
+"note": "初期装备"
+},
+{
+"n": "モガピスカ",
+"def": 9,
+"defMax": 165,
+"res": {
+"fire": -6,
+"water": 9,
+"ice": 6,
+"thunder": -9,
+"dragon": 0
+},
+"skills": [
+"水流无效",
+"水魔",
+"呼吸减半"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 0,
+"arm": 0,
+"waist": 0,
+"leg": 1,
+"total": 1
+},
+"note": "只有头腰脚"
+},
+{
+"n": "ユクモノ",
+"def": 10,
+"defMax": 270,
+"res": {
+"fire": -5,
+"water": 0,
+"ice": 0,
+"thunder": 5,
+"dragon": 0
+},
+"skills": [
+"广域化+1",
+"隐秘",
+"精灵的加护"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 1,
+"waist": 1,
+"leg": 0,
+"total": 3
+},
+"note": ""
+},
+{
+"n": "チェーン",
+"def": 20,
+"defMax": 280,
+"res": {
+"fire": 10,
+"water": 5,
+"ice": 5,
+"thunder": -10,
+"dragon": 0
+},
+"skills": [
+"调和成功率+20%",
+"饥饿减半",
+"体力+20"
+],
+"negSkills": [],
+"slots": {
+"head": 1,
+"body": 0,
+"arm": 1,
+"waist": 1,
+"leg": 1,
+"total": 4
+},
+"note": ""
+},
+{
+"n": "ロックラック",
+"def": 15,
+"defMax": 171,
+"res": {
+"fire": 6,
+"water": -9,
+"ice": 0,
+"thunder": 3,
+"dragon": 0
+},
+"skills": [
+"饥饿减半",
+"肥料弹名人",
+"搬运达人"
+],
+"negSkills": [],
+"slots": {
+"head": 0,
+"body": 1,
+"arm": 0,
+"waist": 0,
+"leg": 0,
+"total": 1
+},
+"note": "只有身腰脚"
+},
+{
+"n": "三眼",
+"def": 200,
+"defMax": 325,
+"res": {
+"fire": 0,
+"water": 0,
+"ice": 0,
+"thunder": 0,
+"dragon": 5
+},
+"skills": [
+"无"
+],
+"negSkills": [],
+"slots": {
+"head": 3,
+"body": 3,
+"arm": 3,
+"waist": 3,
+"leg": 3,
+"total": 15
+},
+"note": ""
+}
+]
+}
+}
