@@ -9,6 +9,9 @@ import AdvicePanel from '../components/AdvicePanel.vue'
 import HitzoneTable from '../components/HitzoneTable.vue'
 import GuidePanel from '../components/GuidePanel.vue'
 import { getGuide } from '../data/guides'
+import { Star } from '@lucide/vue'
+import { useFavorites } from '../composables/useFavorites'
+import { useToast } from '../composables/useToast'
 
 const route = useRoute()
 const { monsters, loading, load } = useMonsters()
@@ -43,6 +46,14 @@ const iconSrc = computed(() => {
 })
 
 const severColor = (s) => SEVER_COLORS[s] || '#8A8071'
+
+const { isFav, toggle: toggleFav } = useFavorites()
+const toast = useToast()
+
+function onStar() {
+  const added = toggleFav(monster.value.slug)
+  toast.show(added ? `已收藏「${monster.value.name}」` : `已取消收藏「${monster.value.name}」`)
+}
 
 /** 打开顶部配置抽屉（事件冒泡到 App 的 provide 或直接派发） */
 function openConfig() {
@@ -126,7 +137,21 @@ const stateBadge = (s) => {
         </div>
       </div>
       <div class="min-w-0 flex-1">
-        <h2 class="text-lg font-bold leading-tight text-parch">{{ monster.name }}</h2>
+        <div class="flex items-start gap-2">
+          <h2 class="text-lg font-bold leading-tight text-parch">{{ monster.name }}</h2>
+          <button
+            type="button"
+            class="-mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-full active:scale-90"
+            :aria-label="isFav(monster.slug) ? '取消收藏' : '收藏'"
+            :aria-pressed="isFav(monster.slug)"
+            @click="onStar"
+          >
+            <Star
+              :size="18"
+              :class="isFav(monster.slug) ? 'fill-gold text-gold' : 'text-parch-dim/40'"
+            />
+          </button>
+        </div>
         <div class="mt-1.5 flex flex-wrap items-center gap-1.5">
           <span
             v-if="monster.species"
@@ -159,6 +184,13 @@ const stateBadge = (s) => {
       class="mb-3 grid grid-cols-3 gap-2"
     >
       <div
+        v-if="monster.info.Species"
+        class="rounded-xl border border-ink-line bg-ink-card px-2 py-2.5 text-center"
+      >
+        <div class="text-[10px] text-parch-dim">物种</div>
+        <div class="mt-0.5 truncate text-sm font-bold text-parch">{{ monster.info.Species }}</div>
+      </div>
+      <div
         v-if="monster.info.BaseHealth"
         class="rounded-xl border border-ink-line bg-ink-card px-2 py-2.5 text-center"
       >
@@ -175,13 +207,6 @@ const stateBadge = (s) => {
         <div class="mt-0.5 text-sm font-bold tabular-nums text-parch">
           {{ monster.info.HunterRankPoint }}
         </div>
-      </div>
-      <div
-        v-if="monster.info.Species"
-        class="rounded-xl border border-ink-line bg-ink-card px-2 py-2.5 text-center"
-      >
-        <div class="text-[10px] text-parch-dim">物种</div>
-        <div class="mt-0.5 truncate text-sm font-bold text-parch">{{ monster.info.Species }}</div>
       </div>
     </div>
 

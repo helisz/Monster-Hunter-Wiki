@@ -3,6 +3,7 @@ import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ChevronLeft, Settings, ArrowUp } from '@lucide/vue'
 import { useSettings, WEAPON_TYPES } from './composables/useSettings'
+import AppToast from './components/AppToast.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -166,6 +167,7 @@ const BASE = import.meta.env.BASE_URL
         </div>
       </div>
     </Transition>
+    <AppToast />
   </div>
 </template>
 

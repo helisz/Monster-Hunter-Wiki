@@ -1,6 +1,9 @@
 <script setup>
 import { computed } from 'vue'
+import { Star } from '@lucide/vue'
 import { useSettings } from '../composables/useSettings'
+import { useFavorites } from '../composables/useFavorites'
+import { useToast } from '../composables/useToast'
 import { buildAdvice } from '../utils/advice'
 
 const props = defineProps({
@@ -9,10 +12,19 @@ const props = defineProps({
 })
 
 const { settings } = useSettings()
+const { isFav, toggle } = useFavorites()
+const toast = useToast()
 
 const icon = (name) => `${import.meta.env.BASE_URL}ui-icons/${name}.png`
 
 const WEAPON_HIT = { slash: 'hit_slash', strike: 'hit_strike', shell: 'hit_shell' }
+
+function onStar(e) {
+  e.preventDefault()
+  e.stopPropagation()
+  const added = toggle(props.monster.slug)
+  toast.show(added ? `已收藏「${props.monster.name}」` : `已取消收藏「${props.monster.name}」`)
+}
 
 /** 列表模式简写：优先用当前武器；未配置时用斩/打/弹里最优的一列 */
 const adviceBrief = computed(() => {
@@ -42,6 +54,18 @@ const adviceBrief = computed(() => {
       >
         大型
       </span>
+      <button
+        type="button"
+        class="absolute right-1 top-1 flex size-8 items-center justify-center rounded-full bg-black/50 backdrop-blur-sm active:scale-90"
+        :aria-label="isFav(monster.slug) ? '取消收藏' : '收藏'"
+        :aria-pressed="isFav(monster.slug)"
+        @click="onStar"
+      >
+        <Star
+          :size="16"
+          :class="isFav(monster.slug) ? 'fill-gold text-gold' : 'text-white/60'"
+        />
+      </button>
     </div>
     <div class="px-2.5 py-2">
       <div class="truncate text-sm font-semibold text-parch">{{ monster.name }}</div>
@@ -71,6 +95,18 @@ const adviceBrief = computed(() => {
       >
         大型
       </span>
+      <button
+        type="button"
+        class="-mr-1 flex size-9 shrink-0 items-center justify-center rounded-full active:scale-90"
+        :aria-label="isFav(monster.slug) ? '取消收藏' : '收藏'"
+        :aria-pressed="isFav(monster.slug)"
+        @click="onStar"
+      >
+        <Star
+          :size="17"
+          :class="isFav(monster.slug) ? 'fill-gold text-gold' : 'text-parch-dim/40'"
+        />
+      </button>
     </div>
 
     <!-- 建议简写：属性 + 建议部位 -->

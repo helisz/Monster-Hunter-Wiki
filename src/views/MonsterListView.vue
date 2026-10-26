@@ -1,5 +1,7 @@
 <script setup>
 import { ref, computed, onMounted } from 'vue'
+import { Star } from '@lucide/vue'
+import { useFavorites } from '../composables/useFavorites'
 import { useRouter } from 'vue-router'
 import { Search, LayoutGrid, List, X, SlidersHorizontal } from '@lucide/vue'
 import MonsterCard from '../components/MonsterCard.vue'
@@ -44,9 +46,13 @@ const speciesList = computed(() => {
   return [...set].sort((a, b) => a.localeCompare(b, 'zh-Hans-CN'))
 })
 
+const { favorites, count: favCount, isFav } = useFavorites()
+const onlyFav = ref(false)
+
 const filtered = computed(() => {
   const kw = keyword.value.trim().toLowerCase()
   let list = monsters.value.filter((m) => {
+    if (onlyFav.value && !isFav(m.slug)) return false
     if (sizeFilter.value === 'large' && !m.isLarge) return false
     if (sizeFilter.value === 'small' && m.isLarge) return false
     if (speciesFilter.value !== 'all' && m.species !== speciesFilter.value) return false
@@ -163,6 +169,21 @@ const sorts = [
 
       <!-- 筛选面板 -->
       <div v-if="showFilters" class="mt-2.5 space-y-2.5 rounded-xl border border-ink-line bg-ink-card p-3">
+        <div>
+          <div class="mb-1.5 text-[11px] font-medium tracking-wider text-parch-dim">收藏</div>
+          <button
+            type="button"
+            class="flex h-8 items-center gap-1.5 rounded-lg px-3 text-xs font-medium transition-colors"
+            :class="onlyFav ? 'bg-gold/15 text-gold ring-1 ring-gold/40' : 'bg-ink-soft text-parch-dim'"
+            :aria-pressed="onlyFav"
+            @click="onlyFav = !onlyFav"
+          >
+            <Star :size="13" :class="onlyFav ? 'fill-gold' : ''" />
+            只看收藏
+            <span class="tabular-nums opacity-70">{{ favCount }}</span>
+          </button>
+        </div>
+
         <div>
           <div class="mb-1.5 text-[11px] font-medium tracking-wider text-parch-dim">体型</div>
           <div class="flex gap-1.5">

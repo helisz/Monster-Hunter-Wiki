@@ -16,11 +16,18 @@ const weapon = computed(() => WEAPON_TYPES.find((w) => w.key === props.advice.we
 const suggested = computed(() => WEAPON_TYPES.find((w) => w.key === props.advice.suggestedWeapon))
 
 const icon = (name) => `${import.meta.env.BASE_URL}ui-icons/${name}.png`
+const BASE = import.meta.env.BASE_URL
 </script>
 
 <template>
-  <section class="rounded-2xl border border-gold/30 bg-gradient-to-b from-gold/8 to-transparent p-3.5">
-    <div class="mb-3 flex items-center gap-2">
+  <section class="relative overflow-hidden rounded-2xl border border-gold/30 bg-gradient-to-b from-gold/8 to-transparent p-3.5">
+    <!-- 部落纹理背景（极淡） -->
+    <div
+      aria-hidden="true"
+      class="pointer-events-none absolute inset-0 bg-repeat opacity-[0.045]"
+      :style="{ backgroundImage: `url(${BASE}tribal.svg)`, backgroundSize: '110px 110px' }"
+    />
+    <div class="relative mb-3 flex items-center gap-2">
       <Sword :size="16" class="shrink-0 text-gold" />
       <h3 class="shrink-0 text-sm font-semibold text-gold">出战建议</h3>
 
@@ -85,11 +92,11 @@ const icon = (name) => `${import.meta.env.BASE_URL}ui-icons/${name}.png`
       </div>
     </div>
 
-    <div v-if="advice.empty" class="rounded-lg bg-ink-card/60 px-3 py-4 text-center text-xs text-parch-dim">
+    <div v-if="advice.empty" class="relative rounded-lg bg-ink-card/60 px-3 py-4 text-center text-xs text-parch-dim">
       {{ advice.reason }}
     </div>
 
-    <div v-else class="space-y-3">
+    <div v-else class="relative space-y-3">
       <!-- 属性推荐 -->
       <div v-if="advice.elementRank.length" class="flex gap-2.5">
         <div class="flex w-16 shrink-0 items-center gap-1.5 pt-0.5">
