@@ -220,7 +220,23 @@
 ]
 }
 ],
-"paragraphs": []
+"paragraphs": [],
+"overview": "mh3g-maps/莫迦之森__image001.png",
+"spotImages": [
+"mh3g-maps/莫迦之森__image002.png",
+"mh3g-maps/莫迦之森__image003.png",
+"mh3g-maps/莫迦之森__image004.png",
+"mh3g-maps/莫迦之森__image005.png",
+"mh3g-maps/莫迦之森__image006.png",
+"mh3g-maps/莫迦之森__image007.png",
+"mh3g-maps/莫迦之森__image008.png",
+"mh3g-maps/莫迦之森__image009.png",
+"mh3g-maps/莫迦之森__image010.png",
+"mh3g-maps/莫迦之森__image011.png",
+"mh3g-maps/莫迦之森__image012.png",
+"mh3g-maps/莫迦之森__image013.png",
+"mh3g-maps/莫迦之森__image014.png"
+]
 },
 {
 "name": "孤岛",
@@ -452,7 +468,23 @@
 ]
 }
 ],
-"paragraphs": []
+"paragraphs": [],
+"overview": "mh3g-maps/孤岛__image001.png",
+"spotImages": [
+"mh3g-maps/孤岛__image002.png",
+"mh3g-maps/孤岛__image003.png",
+"mh3g-maps/孤岛__image004.png",
+"mh3g-maps/孤岛__image005.png",
+"mh3g-maps/孤岛__image006.png",
+"mh3g-maps/孤岛__image007.png",
+"mh3g-maps/孤岛__image008.png",
+"mh3g-maps/孤岛__image009.png",
+"mh3g-maps/孤岛__image010.png",
+"mh3g-maps/孤岛__image011.png",
+"mh3g-maps/孤岛__image012.png",
+"mh3g-maps/孤岛__image013.png",
+"mh3g-maps/孤岛__image014.png"
+]
 },
 {
 "name": "砂原",
@@ -607,7 +639,21 @@
 ]
 }
 ],
-"paragraphs": []
+"paragraphs": [],
+"overview": "mh3g-maps/砂原__image001.png",
+"spotImages": [
+"mh3g-maps/砂原__image002.png",
+"mh3g-maps/砂原__image003.png",
+"mh3g-maps/砂原__image004.png",
+"mh3g-maps/砂原__image005.png",
+"mh3g-maps/砂原__image006.png",
+"mh3g-maps/砂原__image007.png",
+"mh3g-maps/砂原__image008.png",
+"mh3g-maps/砂原__image009.png",
+"mh3g-maps/砂原__image010.png",
+"mh3g-maps/砂原__image011.png",
+"mh3g-maps/砂原__image012.png"
+]
 },
 {
 "name": "水没林",
@@ -779,7 +825,21 @@
 ]
 }
 ],
-"paragraphs": []
+"paragraphs": [],
+"overview": "mh3g-maps/水没林__image001.png",
+"spotImages": [
+"mh3g-maps/水没林__image002.png",
+"mh3g-maps/水没林__image003.png",
+"mh3g-maps/水没林__image004.png",
+"mh3g-maps/水没林__image005.png",
+"mh3g-maps/水没林__image006.png",
+"mh3g-maps/水没林__image007.png",
+"mh3g-maps/水没林__image008.png",
+"mh3g-maps/水没林__image009.png",
+"mh3g-maps/水没林__image010.png",
+"mh3g-maps/水没林__image011.png",
+"mh3g-maps/水没林__image012.png"
+]
 },
 {
 "name": "冻土",
@@ -891,7 +951,18 @@
 ]
 }
 ],
-"paragraphs": []
+"paragraphs": [],
+"overview": "mh3g-maps/冻土__image001.png",
+"spotImages": [
+"mh3g-maps/冻土__image002.png",
+"mh3g-maps/冻土__image003.png",
+"mh3g-maps/冻土__image004.png",
+"mh3g-maps/冻土__image005.png",
+"mh3g-maps/冻土__image006.png",
+"mh3g-maps/冻土__image007.png",
+"mh3g-maps/冻土__image008.png",
+"mh3g-maps/冻土__image009.png"
+]
 },
 {
 "name": "火山",
@@ -1040,7 +1111,20 @@
 ]
 }
 ],
-"paragraphs": []
+"paragraphs": [],
+"overview": "mh3g-maps/火山__image001.png",
+"spotImages": [
+"mh3g-maps/火山__image002.png",
+"mh3g-maps/火山__image003.png",
+"mh3g-maps/火山__image004.png",
+"mh3g-maps/火山__image005.png",
+"mh3g-maps/火山__image006.png",
+"mh3g-maps/火山__image007.png",
+"mh3g-maps/火山__image008.png",
+"mh3g-maps/火山__image009.png",
+"mh3g-maps/火山__image010.png",
+"mh3g-maps/火山__image011.png"
+]
 },
 {
 "name": "溪流",
@@ -1327,7 +1411,19 @@
 ]
 }
 ],
-"paragraphs": []
+"paragraphs": [],
+"overview": "mh3g-maps/溪流__image001.png",
+"spotImages": [
+"mh3g-maps/溪流__image002.png",
+"mh3g-maps/溪流__image003.png",
+"mh3g-maps/溪流__image004.png",
+"mh3g-maps/溪流__image005.png",
+"mh3g-maps/溪流__image006.png",
+"mh3g-maps/溪流__image007.png",
+"mh3g-maps/溪流__image008.png",
+"mh3g-maps/溪流__image009.png",
+"mh3g-maps/溪流__image010.png"
+]
 },
 {
 "name": "大沙漠",
@@ -1382,7 +1478,9 @@
 ]
 }
 ],
-"paragraphs": []
+"paragraphs": [],
+"overview": "",
+"spotImages": []
 },
 {
 "name": "海底遗迹",
@@ -1415,7 +1513,11 @@
 ]
 }
 ],
-"paragraphs": []
+"paragraphs": [],
+"overview": "mh3g-maps/海底遗迹__image001.png",
+"spotImages": [
+"mh3g-maps/海底遗迹__image002.png"
+]
 },
 {
 "name": "塔",
@@ -1445,7 +1547,9 @@
 ]
 }
 ],
-"paragraphs": []
+"paragraphs": [],
+"overview": "",
+"spotImages": []
 },
 {
 "name": "厄海",
@@ -1503,14 +1607,18 @@
 ]
 }
 ],
-"paragraphs": []
+"paragraphs": [],
+"overview": "",
+"spotImages": []
 },
 {
 "name": "神域",
 "tables": [],
 "paragraphs": [
 "◆ 进入 1 区后，除了使用モドリ玉之外无其他方法离开。 ◆ 如把煌黒龍 アルバトリオン吸引到（突进）左右两端的高台处，它的角就会刺进去暂时无法动弹。这个时候如果能让它进入胆怯状态，高台就不会坏掉。之后可以再利用，如不能让它进入胆怯状态，高台就会被破坏。"
-]
+],
+"overview": "mh3g-maps/神域__image001.png",
+"spotImages": []
 },
 {
 "name": "陆地斗技场",
@@ -1552,7 +1660,11 @@
 ]
 }
 ],
-"paragraphs": []
+"paragraphs": [],
+"overview": "mh3g-maps/陆地斗技场__image001.png",
+"spotImages": [
+"mh3g-maps/陆地斗技场__image002.png"
+]
 },
 {
 "name": "水中斗技场",
@@ -1592,7 +1704,9 @@
 ]
 }
 ],
-"paragraphs": []
+"paragraphs": [],
+"overview": "",
+"spotImages": []
 }
 ]
 }

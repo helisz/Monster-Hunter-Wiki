@@ -30,6 +30,7 @@ onMounted(load)
 
 const KEY = 'mhw.mh3gMapIdx'
 const idx = ref(Number(localStorage.getItem(KEY) || 0))
+const zoom = ref('')
 
 const maps = computed(() => (data.value.maps || []).filter((m) => m.tables.length || m.paragraphs.length))
 const cur = computed(() => maps.value[idx.value] || maps.value[0])
@@ -105,6 +106,18 @@ const spotCols = computed(() => {
           </p>
         </div>
 
+        <!-- 全景地图 -->
+        <div v-if="cur.overview" class="mb-3 overflow-hidden rounded-lg border border-ink-line bg-ink-card p-2">
+          <button type="button" class="block w-full" @click="zoom = BASE + cur.overview">
+            <img
+              :src="BASE + cur.overview"
+              :alt="`${cur.name} 全景地图`"
+              class="mx-auto block w-full max-w-[340px] rounded"
+              loading="lazy"
+            />
+          </button>
+        </div>
+
         <!-- 采集点 -->
         <div v-if="spots.length" class="space-y-2">
           <div
@@ -117,6 +130,24 @@ const spotCols = computed(() => {
                 {{ s['场所'] || `点 ${i + 1}` }}
               </span>
             </div>
+            <button
+              v-if="cur.spotImages?.[i]"
+              type="button"
+              class="relative mb-1.5 block"
+              @click="zoom = BASE + cur.spotImages[i]"
+            >
+              <img
+                :src="BASE + cur.spotImages[i]"
+                :alt="`${cur.name} 采集点 ${s['场所'] || i + 1}`"
+                class="block w-full max-w-[180px] rounded"
+                loading="lazy"
+              />
+              <span
+                class="absolute bottom-1 right-1 rounded bg-black/70 px-1.5 py-0.5 text-[9px] text-parch-dim"
+              >
+                {{ i + 1 }} / 点击放大
+              </span>
+            </button>
             <div class="space-y-1">
               <div v-for="c in spotCols" :key="c" class="flex gap-2 text-[10.5px] leading-snug">
                 <span class="w-[74px] shrink-0 text-parch-dim/70">{{ c }}</span>
@@ -128,6 +159,15 @@ const spotCols = computed(() => {
 
         <div v-else class="py-16 text-center text-sm text-parch-dim">该地图暂无采集点数据</div>
       </template>
+    </div>
+
+    <!-- 图片放大遮罩 -->
+    <div
+      v-if="zoom"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-black/92 p-3"
+      @click="zoom = ''"
+    >
+      <img :src="zoom" alt="地图大图" class="max-h-full max-w-full rounded object-contain" />
     </div>
   </div>
 </template>
