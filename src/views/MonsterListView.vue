@@ -105,50 +105,73 @@ const sorts = [
   <div>
     <!-- 搜索栏 -->
     <div class="sticky top-14 z-20 border-b border-ink-line bg-ink/95 px-3 py-2.5 backdrop-blur">
-      <div class="flex items-center gap-2">
-        <div class="relative flex-1">
-          <Search
-            :size="16"
-            class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-parch-dim"
-          />
-          <input
-            v-model="keyword"
-            type="search"
-            inputmode="search"
-            placeholder="搜索怪物名称、物种"
-            class="h-10 w-full rounded-xl border border-ink-line bg-ink-card pl-9 pr-9 text-sm text-parch placeholder:text-parch-dim/70 focus:border-gold/50 focus:outline-none"
-          />
-          <button
-            v-if="keyword"
-            type="button"
-            class="absolute right-1.5 top-1/2 flex size-7 -translate-y-1/2 items-center justify-center rounded-full text-parch-dim"
-            aria-label="清空"
-            @click="keyword = ''"
-          >
-            <X :size="15" />
-          </button>
-        </div>
+      <!-- 搜索框：全宽 -->
+      <div class="relative">
+        <Search
+          :size="16"
+          class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-parch-dim"
+        />
+        <input
+          v-model="keyword"
+          type="search"
+          inputmode="search"
+          placeholder="搜索怪物名称、物种"
+          class="h-10 w-full rounded-xl border border-ink-line bg-ink-card pl-9 pr-9 text-sm text-parch placeholder:text-parch-dim/70 focus:border-gold/50 focus:outline-none"
+        />
+        <button
+          v-if="keyword"
+          type="button"
+          class="absolute right-1.5 top-1/2 flex size-7 -translate-y-1/2 items-center justify-center rounded-full text-parch-dim"
+          aria-label="清空"
+          @click="keyword = ''"
+        >
+          <X :size="15" />
+        </button>
+      </div>
+
+      <!-- 操作行：收藏 / 筛选 / 视图切换 -->
+      <div class="mt-2 flex items-center gap-2">
+        <button
+          type="button"
+          class="flex h-9 items-center gap-1.5 rounded-xl border px-2.5 text-xs font-medium transition-colors"
+          :class="
+            onlyFav
+              ? 'border-gold/50 bg-gold/15 text-gold'
+              : 'border-ink-line bg-ink-card text-parch-dim'
+          "
+          :aria-pressed="onlyFav"
+          @click="onlyFav = !onlyFav"
+        >
+          <Star :size="14" :class="onlyFav ? 'fill-gold' : ''" />
+          收藏
+          <span class="tabular-nums opacity-70">{{ favCount }}</span>
+        </button>
 
         <button
           type="button"
-          class="relative flex size-10 shrink-0 items-center justify-center rounded-xl border border-ink-line bg-ink-card text-parch-dim"
-          :class="activeFilterCount ? 'border-gold/50 text-gold' : ''"
+          class="relative flex h-9 items-center gap-1.5 rounded-xl border px-2.5 text-xs font-medium transition-colors"
+          :class="
+            showFilters || activeFilterCount
+              ? 'border-gold/50 bg-gold/15 text-gold'
+              : 'border-ink-line bg-ink-card text-parch-dim'
+          "
           aria-label="筛选"
           @click="showFilters = !showFilters"
         >
-          <SlidersHorizontal :size="17" />
+          <SlidersHorizontal :size="15" />
+          筛选
           <span
             v-if="activeFilterCount"
-            class="absolute -right-1 -top-1 flex size-4 items-center justify-center rounded-full bg-gold text-[9px] font-bold text-ink"
+            class="flex size-4 items-center justify-center rounded-full bg-gold text-[9px] font-bold text-ink"
           >
             {{ activeFilterCount }}
           </span>
         </button>
 
-        <div class="flex shrink-0 overflow-hidden rounded-xl border border-ink-line">
+        <div class="ml-auto flex overflow-hidden rounded-xl border border-ink-line">
           <button
             type="button"
-            class="flex size-10 items-center justify-center"
+            class="flex size-9 items-center justify-center"
             :class="settings.viewMode === 'card' ? 'bg-gold/15 text-gold' : 'bg-ink-card text-parch-dim'"
             aria-label="卡片视图"
             @click="setViewMode('card')"
@@ -157,7 +180,7 @@ const sorts = [
           </button>
           <button
             type="button"
-            class="flex size-10 items-center justify-center border-l border-ink-line"
+            class="flex size-9 items-center justify-center border-l border-ink-line"
             :class="settings.viewMode === 'list' ? 'bg-gold/15 text-gold' : 'bg-ink-card text-parch-dim'"
             aria-label="列表视图"
             @click="setViewMode('list')"

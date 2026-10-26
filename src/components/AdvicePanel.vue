@@ -1,13 +1,11 @@
 <script setup>
 import { ref, computed } from 'vue'
-import { Sword, Crosshair, ShieldAlert, Sparkles, AlertTriangle, HelpCircle, Settings } from '@lucide/vue'
+import { Sword, Crosshair, ShieldAlert, Sparkles, AlertTriangle, HelpCircle } from '@lucide/vue'
 import { WEAPON_TYPES } from '../composables/useSettings'
 
 const props = defineProps({
   advice: { type: Object, required: true },
 })
-
-const emit = defineEmits(['open-config'])
 
 // 帮助提示：点击切换；用全屏遮罩层关闭，避开事件冒泡/捕获的顺序坑
 const showHelp = ref(false)
@@ -54,15 +52,6 @@ const BASE = import.meta.env.BASE_URL
           <HelpCircle :size="15" />
         </button>
 
-        <button
-          type="button"
-          class="-mr-1 flex size-7 items-center justify-center rounded-full text-gold active:bg-ink-card"
-          aria-label="打开配置"
-          @click="emit('open-config')"
-        >
-          <Settings :size="15" />
-        </button>
-
         <!-- 遮罩：点任意处关闭 -->
         <div
           v-if="showHelp"
@@ -86,7 +75,7 @@ const BASE = import.meta.env.BASE_URL
               <span class="rounded bg-gold/15 px-1 py-0.5 font-medium text-gold">{{ weapon?.label || '当前' }}</span>
               这一列肉质算出来的。
             </p>
-            <p class="mt-1.5">换武器后结论会变，建议参考下方给出的推荐武器类型再决定带什么。</p>
+            <p class="mt-1.5">换武器后结论会变。点击右上角 ⚙ 可以切换武器类型。</p>
           </div>
         </Transition>
       </div>

@@ -95,6 +95,16 @@ const BASE = import.meta.env.BASE_URL
         {{ pageTitle }}
       </h1>
 
+      <!-- 详情页显示配置齿轮 -->
+      <button
+        v-if="route.name === 'monster-detail'"
+        type="button"
+        class="-mr-1 flex size-10 shrink-0 items-center justify-center rounded-lg text-gold active:bg-ink-card"
+        aria-label="打开配置"
+        @click="showConfig = true"
+      >
+        <Settings :size="20" />
+      </button>
     </header>
 
     <main class="flex-1 pb-24">

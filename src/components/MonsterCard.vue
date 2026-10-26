@@ -1,7 +1,6 @@
 <script setup>
 import { computed } from 'vue'
 import { Star } from '@lucide/vue'
-import { useSettings } from '../composables/useSettings'
 import { useFavorites } from '../composables/useFavorites'
 import { useToast } from '../composables/useToast'
 import { buildAdvice } from '../utils/advice'
@@ -11,11 +10,14 @@ const props = defineProps({
   mode: { type: String, default: 'card' },
 })
 
-const { settings } = useSettings()
 const { isFav, toggle } = useFavorites()
 const toast = useToast()
 
 const icon = (name) => `${import.meta.env.BASE_URL}ui-icons/${name}.png`
+
+function onImgError(e) {
+  e.target.style.visibility = 'hidden'
+}
 
 const WEAPON_HIT = { slash: 'hit_slash', strike: 'hit_strike', shell: 'hit_shell' }
 
@@ -26,15 +28,20 @@ function onStar(e) {
   toast.show(added ? `已收藏「${props.monster.name}」` : `已取消收藏「${props.monster.name}」`)
 }
 
-/** 列表模式简写：优先用当前武器；未配置时用斩/打/弹里最优的一列 */
+/** 列表简写：统一用系统推荐武器类型（不看用户当前选择） */
 const adviceBrief = computed(() => {
-  if (settings.weaponType) return buildAdvice(props.monster, settings.weaponType)
-
-  // 未配置武器：取三列中"该打部位"最多的那一种，作为通用参考
   const cands = ['slash', 'strike', 'shell']
     .map((w) => buildAdvice(props.monster, w))
     .filter((a) => a && !a.empty)
   if (!cands.length) return null
+
+  // 优先取 buildAdvice 算出的推荐武器列
+  const base = buildAdvice(props.monster, 'slash')
+  const suggested = base?.suggestedWeapon
+  const hit = cands.find((a) => a.weaponType === suggested)
+  if (hit) return hit
+
+  // 兜底：该打部位最多的一列
   return cands.sort((a, b) => b.good.length - a.good.length)[0]
 })
 </script>
@@ -47,6 +54,7 @@ const adviceBrief = computed(() => {
         :alt="monster.name"
         loading="lazy"
         class="icon-blend size-full object-cover"
+        @error="onImgError"
       />
       <span
         v-if="monster.isLarge"
@@ -83,6 +91,7 @@ const adviceBrief = computed(() => {
           :alt="monster.name"
           loading="lazy"
           class="icon-blend size-full object-cover"
+          @error="onImgError"
         />
       </div>
       <div class="min-w-0 flex-1">
