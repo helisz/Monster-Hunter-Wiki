@@ -43,6 +43,14 @@ const features = [
     ready: true,
   },
   {
+    id: 'recommend',
+    title: '推荐装备',
+    desc: '各等级推荐武器 / 防具 127 条',
+    icon: Sparkles,
+    to: '/mh3g/recommend',
+    ready: true,
+  },
+  {
     id: 'quests',
     title: '任务',
     desc: '村/港任务 1354 条，含关键任务',

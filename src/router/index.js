@@ -78,6 +78,12 @@ const routes = [
     meta: { title: '防具' },
   },
   {
+    path: '/mh3g/recommend',
+    name: 'mh3g-recommend',
+    component: () => import('../views/Mh3gRecommendView.vue'),
+    meta: { title: '推荐装备' },
+  },
+  {
     path: '/mh3g/skills',
     name: 'mh3g-skills',
     component: () => import('../views/Mh3gSkillsView.vue'),
