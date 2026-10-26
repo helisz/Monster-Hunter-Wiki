@@ -61,10 +61,11 @@ function hasInAppBack() {
 function fallbackTarget() {
   const name = route.name
   if (name === 'monster-detail') return '/wilds/monsters'
-  if (name === 'drops') return '/wilds/monsters'
+  if (name === 'drops') return '/wilds'
   if (name === 'monsters') return '/wilds'
   if (name === 'hub') return '/'
   if (name === 'sunbreak-detail') return '/sunbreak/monsters'
+  if (name === 'sunbreak-drops') return '/sunbreak'
   if (name === 'sunbreak-monsters') return '/sunbreak'
   if (name === 'sunbreak-hub') return '/'
   return '/'
