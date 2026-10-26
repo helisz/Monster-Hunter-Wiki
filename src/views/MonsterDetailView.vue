@@ -42,6 +42,26 @@ const iconSrc = computed(() => {
 
 const severColor = (s) => SEVER_COLORS[s] || '#8A8071'
 
+/** 详情页小节锚点：只列出当前怪物实际存在的小节 */
+const sections = computed(() => {
+  const m = monster.value
+  if (!m) return []
+  const out = []
+  if (hzGroups.value.length) out.push({ id: 'sec-hitzone', label: '肉质部位' })
+  if (m.parts?.length) out.push({ id: 'sec-durability', label: '耐久' })
+  if (m.statusResist?.length) out.push({ id: 'sec-status', label: '状态抗性' })
+  if (m.rewards?.length) out.push({ id: 'sec-rewards', label: '素材' })
+  return out
+})
+
+function jumpTo(id) {
+  const el = document.getElementById(id)
+  if (!el) return
+  // 顶部栏 h-14 = 56px，留 8px 呼吸
+  const top = el.getBoundingClientRect().top + window.scrollY - 64
+  window.scrollTo({ top, behavior: 'smooth' })
+}
+
 const stateBadge = (s) => {
   if (s === '伤口') return 'bg-rose-500/15 text-rose-300'
   if (s === '弱点') return 'bg-emerald-500/15 text-emerald-300'
@@ -61,6 +81,23 @@ const stateBadge = (s) => {
   </div>
 
   <div v-else-if="monster" class="px-3 pb-20 pt-3">
+    <!-- 小节快速跳转 -->
+    <nav
+      v-if="sections.length > 1"
+      class="mb-3 flex flex-wrap gap-1.5"
+      aria-label="小节跳转"
+    >
+      <button
+        v-for="s in sections"
+        :key="s.id"
+        type="button"
+        class="rounded-full border border-ink-line bg-ink-card px-2.5 py-1 text-[11px] text-parch-dim active:border-gold/50 active:text-gold"
+        @click="jumpTo(s.id)"
+      >
+        {{ s.label }}
+      </button>
+    </nav>
+
     <!-- 头部 -->
     <div class="mb-3 flex gap-3 rounded-2xl border border-ink-line bg-ink-card p-3">
       <div class="size-24 shrink-0 overflow-hidden rounded-xl bg-black">
@@ -141,7 +178,7 @@ const stateBadge = (s) => {
     </div>
 
     <!-- 肉质 -->
-    <section class="mb-4">
+    <section id="sec-hitzone" class="mb-4 scroll-mt-16">
       <h3 class="mb-2 flex items-center gap-2 px-0.5 text-sm font-semibold text-parch">
         肉质
         <span class="text-[11px] font-normal text-parch-dim">{{ hzGroups.length }} 个部位</span>
@@ -153,7 +190,7 @@ const stateBadge = (s) => {
     </section>
 
     <!-- 部位耐久 -->
-    <section v-if="monster.parts?.length" class="mb-4">
+    <section v-if="monster.parts?.length" id="sec-durability" class="mb-4 scroll-mt-16">
       <h3 class="mb-2 px-0.5 text-sm font-semibold text-parch">部位耐久</h3>
       <div class="overflow-hidden rounded-xl border border-ink-line bg-ink-card">
         <div
@@ -183,7 +220,7 @@ const stateBadge = (s) => {
     </section>
 
     <!-- 状态抗性 -->
-    <section v-if="monster.statusResist?.length" class="mb-4">
+    <section v-if="monster.statusResist?.length" id="sec-status" class="mb-4 scroll-mt-16">
       <h3 class="mb-2 px-0.5 text-sm font-semibold text-parch">状态抗性</h3>
       <div class="space-y-2">
         <div
@@ -211,7 +248,7 @@ const stateBadge = (s) => {
     </section>
 
     <!-- 素材 -->
-    <section v-if="monster.rewards?.length" class="mb-4">
+    <section v-if="monster.rewards?.length" id="sec-rewards" class="mb-4 scroll-mt-16">
       <h3 class="mb-2 px-0.5 text-sm font-semibold text-parch">素材</h3>
       <div class="overflow-hidden rounded-xl border border-ink-line bg-ink-card">
         <div

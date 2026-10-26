@@ -1,7 +1,7 @@
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { ChevronLeft, Settings } from '@lucide/vue'
+import { ChevronLeft, Settings, ArrowUp } from '@lucide/vue'
 import { useSettings, WEAPON_TYPES } from './composables/useSettings'
 
 const route = useRoute()
@@ -35,6 +35,18 @@ function fallbackTarget() {
 function goBack() {
   if (hasInAppBack()) router.back()
   else router.push(fallbackTarget())
+}
+
+// 回到顶部按钮：滚动超过 300px 才显示
+const showBackToTop = ref(false)
+const onScroll = () => {
+  showBackToTop.value = window.scrollY > 300
+}
+onMounted(() => window.addEventListener('scroll', onScroll, { passive: true }))
+onUnmounted(() => window.removeEventListener('scroll', onScroll))
+
+function backToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 function chooseWeapon(key) {
@@ -92,15 +104,34 @@ const BASE = import.meta.env.BASE_URL
       <router-view />
     </main>
 
-    <!-- 右下角配置按钮 -->
-    <button
-      type="button"
-      class="fixed bottom-5 right-4 z-40 flex size-14 items-center justify-center rounded-full border border-gold/40 bg-ink-card text-gold shadow-lg shadow-black/60 active:scale-95 transition-transform"
-      aria-label="配置"
-      @click="showConfig = true"
-    >
-      <Settings :size="22" />
-    </button>
+    <!-- 右下角浮动按钮组：回到顶部 + 配置 -->
+    <div class="fixed bottom-5 right-4 z-40 flex flex-col items-center gap-2.5">
+      <Transition
+        enter-active-class="transition duration-200"
+        enter-from-class="opacity-0 translate-y-2 scale-90"
+        leave-active-class="transition duration-150"
+        leave-to-class="opacity-0 translate-y-2 scale-90"
+      >
+        <button
+          v-if="showBackToTop"
+          type="button"
+          class="flex size-11 items-center justify-center rounded-full border border-ink-line bg-ink-card/95 text-parch-dim shadow-lg shadow-black/60 backdrop-blur active:scale-95"
+          aria-label="回到顶部"
+          @click="backToTop"
+        >
+          <ArrowUp :size="19" />
+        </button>
+      </Transition>
+
+      <button
+        type="button"
+        class="flex size-14 items-center justify-center rounded-full border border-gold/40 bg-ink-card text-gold shadow-lg shadow-black/60 active:scale-95 transition-transform"
+        aria-label="配置"
+        @click="showConfig = true"
+      >
+        <Settings :size="22" />
+      </button>
+    </div>
 
     <!-- 配置抽屉 -->
     <Transition name="fade">
