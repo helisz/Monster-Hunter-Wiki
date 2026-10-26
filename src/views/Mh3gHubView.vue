@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
-import { BookOpen, Package, Swords, Shield, Sparkles, ScrollText, Gem } from '@lucide/vue'
+import { BookOpen, Package, Swords, Shield, Sparkles, ScrollText, Gem, Map } from '@lucide/vue'
 import { useSettings } from '../composables/useSettings'
 
 const router = useRouter()
@@ -53,18 +53,34 @@ const features = [
   {
     id: 'quests',
     title: '任务',
-    desc: '村/港任务 1354 条，含关键任务',
+    desc: '村/港/斗技/配信 1014 条，含关键任务',
     icon: ScrollText,
     to: '/mh3g/quests',
-    ready: false,
+    ready: true,
   },
   {
     id: 'items',
     title: '道具',
-    desc: '道具、素材、调和表 1275 条',
+    desc: '道具素材 1014 / 调和 176 条',
     icon: Gem,
     to: '/mh3g/items',
-    ready: false,
+    ready: true,
+  },
+  {
+    id: 'maps',
+    title: '地图',
+    desc: '14 张地图采集点与素材分布',
+    icon: Map,
+    to: '/mh3g/maps',
+    ready: true,
+  },
+  {
+    id: 'extras',
+    title: '资料',
+    desc: '奇面族 / 村情报 / 称号 580 / 勋章 44',
+    icon: BookOpen,
+    to: '/mh3g/extras',
+    ready: true,
   },
   {
     id: 'drops',

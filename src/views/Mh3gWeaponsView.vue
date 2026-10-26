@@ -117,8 +117,8 @@ const SHARP_PX = 3.0
 
 <template>
   <div>
-    <div class="sticky top-14 z-20 border-b border-ink-line bg-ink/95 backdrop-blur">
-      <div class="no-scrollbar flex gap-1 overflow-x-auto px-3 py-2">
+    <div class="sticky top-14 z-20 min-w-0 overflow-hidden border-b border-ink-line bg-ink/95 backdrop-blur">
+      <div class="no-scrollbar flex w-full gap-1 overflow-x-auto px-3 py-2">
         <button
           v-for="c in WEAPON_CATS"
           :key="c"
@@ -241,7 +241,7 @@ const SHARP_PX = 3.0
             <div
               v-if="w.d > 0"
               class="relative shrink-0"
-              :style="{ width: treeInfo(w).indent.length * 9 + 11 + 'px' }"
+              :style="{ width: Math.min(treeInfo(w).indent.length, 8) * 9 + 11 + 'px' }"
               aria-hidden="true"
             >
               <!-- 祖先竖线 -->
@@ -305,10 +305,10 @@ const SHARP_PX = 3.0
               <div v-if="w.sharp && w.sharp.length" class="mt-1">
                 <button
                   type="button"
-                  class="flex items-center gap-1.5"
+                  class="flex max-w-full items-center gap-1.5"
                   @click="toggleSharp(`${w.n}|${i}`)"
                 >
-                  <span class="flex h-[8px] shrink-0 items-stretch gap-px overflow-hidden rounded-[1px]">
+                  <span class="flex h-[8px] min-w-0 shrink items-stretch gap-px overflow-hidden rounded-[1px]">
                     <span
                       v-for="(s, si) in w.sharp[0].segs"
                       :key="si"
@@ -326,7 +326,7 @@ const SHARP_PX = 3.0
                   class="mt-1 flex items-center gap-1.5"
                 >
                   <span class="text-[8px] text-parch-dim/45">+1</span>
-                  <span class="flex h-[8px] shrink-0 items-stretch gap-px overflow-hidden rounded-[1px]">
+                  <span class="flex h-[8px] min-w-0 shrink items-stretch gap-px overflow-hidden rounded-[1px]">
                     <span
                       v-for="(s, si) in w.sharp[1].segs"
                       :key="si"

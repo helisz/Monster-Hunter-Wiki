@@ -84,6 +84,30 @@ const routes = [
     meta: { title: '推荐装备' },
   },
   {
+    path: '/mh3g/items',
+    name: 'mh3g-items',
+    component: () => import('../views/Mh3gItemsView.vue'),
+    meta: { title: '道具素材' },
+  },
+  {
+    path: '/mh3g/quests',
+    name: 'mh3g-quests',
+    component: () => import('../views/Mh3gQuestsView.vue'),
+    meta: { title: '任务' },
+  },
+  {
+    path: '/mh3g/maps',
+    name: 'mh3g-maps',
+    component: () => import('../views/Mh3gMapsView.vue'),
+    meta: { title: '地图' },
+  },
+  {
+    path: '/mh3g/extras',
+    name: 'mh3g-extras',
+    component: () => import('../views/Mh3gExtrasView.vue'),
+    meta: { title: '资料' },
+  },
+  {
     path: '/mh3g/skills',
     name: 'mh3g-skills',
     component: () => import('../views/Mh3gSkillsView.vue'),

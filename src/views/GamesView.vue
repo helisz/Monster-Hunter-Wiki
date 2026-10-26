@@ -48,15 +48,15 @@ function enter(game) {
       <p class="mt-2 text-sm text-parch-dim">选择作品查看怪物图鉴</p>
     </div>
 
-    <div class="space-y-3">
+    <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
       <button
         v-for="g in games"
         :key="g.id"
         type="button"
-        class="w-full overflow-hidden rounded-2xl border border-ink-line bg-ink-card text-left transition-colors active:border-gold/50"
+        class="w-full overflow-hidden rounded-xl border border-ink-line bg-ink-card text-left transition-colors active:border-gold/50 sm:rounded-2xl"
         @click="enter(g)"
       >
-        <div class="relative w-full bg-black">
+        <div class="relative w-full bg-black" style="aspect-ratio: 3 / 4">
           <img :src="g.cover" :alt="g.title" class="block size-full object-cover" />
           <span
             class="absolute right-2 top-2 rounded px-1.5 py-0.5 text-[10px] font-medium backdrop-blur-sm"
@@ -71,17 +71,14 @@ function enter(game) {
             <span class="text-lg font-semibold tracking-wider text-gold/80">{{ g.title }}</span>
           </span>
         </div>
-        <div class="flex items-center gap-3 px-3 py-3">
-          <div class="min-w-0 flex-1">
-            <div class="truncate text-base font-semibold text-parch">{{ g.title }}</div>
-            <div class="truncate text-xs text-parch-dim">{{ g.subtitle }}</div>
-          </div>
-          <ChevronRight :size="20" class="shrink-0 text-parch-dim" />
+        <div class="px-2 py-2">
+          <div class="truncate text-[13px] font-semibold leading-tight text-parch">{{ g.title }}</div>
+          <div class="mt-0.5 truncate text-[10.5px] text-parch-dim">{{ g.subtitle }}</div>
         </div>
       </button>
 
       <div
-        class="flex w-full items-center gap-4 rounded-2xl border border-dashed border-ink-line/70 bg-ink-soft/50 p-4"
+        class="col-span-2 flex w-full items-center gap-4 rounded-xl border border-dashed border-ink-line/70 bg-ink-soft/50 p-3 sm:col-span-3 sm:rounded-2xl"
       >
         <div class="flex size-12 shrink-0 items-center justify-center rounded-xl border border-ink-line">
           <span class="text-xl text-parch-dim/40">?</span>
